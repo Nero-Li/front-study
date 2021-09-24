@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>行间样式和内部样式</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background: blue;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- css 出现的位置,行间,内部,外部 -->
+    <!--  行间样式表 给单独的标签添加样式
+            语法:<div style="width: 100px; background: pink;">div1</div>
+            缺点:不利于修改
+    -->
+
+    <div style="width: 100px; background: pink;">div1</div>
+    <div style="width: 100px; background: green;">div2</div>
+    <div style="width: 100px; background: red;">div3</div>
+    <div style="width: 100px; background: rebeccapurple;">div4</div>
+    <div style="width: 100px; background: coral;">div5</div>
+
+<!-- 内部样式表 样式写在一对<style></style>中
+    一般放在<head/>标签中
+    内部样式默认情况比行间样式优先级低:相同的以行间样式为准,行间样式没有的,也会添加内部样式
+    缺点:内部样式表的作用只作用于当前页面,复用性低
+   -->
+    <div>div6</div>
+
+</body>
+</html>

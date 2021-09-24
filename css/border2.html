@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>第二种方式</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            /*边框有三个部分组成: 顺序可以调换,但是不建议
+                1. 边框的粗细
+                2. 边框的线条(常用如下)
+                    solid:实线
+                    dashed:虚线
+                    dotted:点划线(不同的浏览器可能显示不一样,不兼容,尽量避免使用)
+                    ridge:3D
+                3. 边框的颜色
+                    red 颜色的英文单词
+                    #f00 颜色的16进制
+                    rgb(255,0,0)颜色的rgb表示方式
+                    rgba(255,0,0,0.5)最后一个a代表透明度,css3中出现
+            */
+            /*border: 3px dotted rgba(255,0,0,1); !**这种方式成为复合样式*!*/
+            border-width: 4px;
+            border-style: groove;
+            /*border-color: red;*/
+            /*顺时针方向设置 向右下左 */
+            border-color: red saddlebrown darkblue firebrick;
+            border-bottom-color: green;
+            border-left-color: rebeccapurple;
+        }
+    </style>
+</head>
+<body>
+    <div>SB2</div>
+</body>
+</html>
