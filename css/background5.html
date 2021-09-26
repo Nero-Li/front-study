@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>背景复合属性使用</title>
+    <style>
+        div{
+            width: 2000px;
+            height: 2000px;
+            border: 10px solid red;
+            /*和顺序无关,但是位置相关的两个属性一定要在一起*/
+            background: rebeccapurple url(./IU.jpg) no-repeat center bottom fixed;
+        }
+    </style>
+</head>
+<body>
+<!--  background-attachment 背景图片是否滚动
+            1.scroll(默认):背景图片是否跟着滚动条滚动(会看不见)
+            2.fixed:背景图片不会随着滚动条滚动而看不见
+-->
+<div>
+
+</div>
+</body>
+</html>
