@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>行高</title>
+    <style>
+        div {
+            /* lighter=>normal=>bold */
+            /*font-weight: bold;*/
+            /*默认16px*/
+            /*font-size: 16px;*/
+            /*italic:倾斜*/
+            /*font-style: italic;*/
+            /*主要字体,备用字体1,备选字体2,表示如果用户电脑上有主要字体就用主要字体,否则一次往后匹配,如果都没有,就走默认字体*/
+            /*font-family: 腾祥范笑歌楷书简繁合集;*/
+
+            border: #ff1133 1px solid;
+            height: 30px;
+            /*行高和容器行高一致,则能保证文字垂直居中*/
+            /*line-height: 30px;*/
+            /*font font-weight font-style font-size(必须)/line-height font-family(必须)*/
+            font: bold italic 26px/30px 牙签体;
+        }
+    </style>
+</head>
+<body>
+<!--
+        行高代表某一行文字在所在容器所占高度
+        line-height代表行高
+  -->
+    <div>欢迎学html和css</div>
+</body>
+</html>

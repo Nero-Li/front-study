@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文本</title>
+    <style>
+        div {
+            width: 100px;
+            border: #ff1133 solid 1px;
+            /*文本颜色*/
+            color: rebeccapurple;
+            /*文本对齐方式 left(默认) center right*/
+            text-align: center;
+            /*默认的font-size是16px,所以32px代表两个默认字符*/
+            /*text-indent: 32px; */
+            /*如果font-size是动态的,不是16px,那么用em,字体大小不管怎么变,1em总代表一个字体大小*/
+            text-indent: 1em;
+            text-decoration: line-through;
+            /*字母之间的间距,可以用px和em*/
+            /*letter-spacing: 10px;*/
+            word-spacing: 1em;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+<!--
+        文本:
+        color:颜色
+        text-align 文本对齐方式
+        text-indent 文本缩进(em缩进符)
+        text-decoration 文本装饰
+            - underline 下划线
+            - overline 上划线
+            - line-through 中划线
+            - none 去掉下划线
+        letter-space 文本间距
+        word-spacing 单词间距(以空格来解析) eg:欢迎学html 和 css
+        white-space 强制不换行
+            - nowrap 不换行
+            - normal 正常
+  -->
+    <div>欢迎学html 和 css</div>
+</body>
+</html>
