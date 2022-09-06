@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			/*
+			 * 属性操作的方法
+			 * 	1、.属性名
+			 * 	2、[属性名]
+			 * 
+			 * getAttribute
+			 * 	用来获取元素的属性
+			 * 	元素.getArrtibute(属性名)
+			 * 
+			 * 	如果参数是一个src或者href的话，那它取到的结果就是引号里面的值（相对地址）
+			 * 	它取不到js的自定义属性
+			 * 	它可以取到html标签的自定义属性
+			 */
+			window.onload=function(){
+				var box=document.getElementById("box");
+				var pic=document.getElementById("pic");
+				
+				console.log(box.id);			//box
+				console.log(pic['src']);		//http://127.0.0.1:8020/javascript%E7%B2%BE%E5%93%81%E8%AF%BE%E7%A8%8B/%E7%AC%AC%E4%BA%94%E7%AB%A0/image/1.jpg
+				
+				console.log(box.getAttribute('class'));		//color
+				console.log(pic.getAttribute('src'));		//image/1.jpg
+				
+				box.index=1;
+				console.log(box.index);		//1
+				console.log(box.getAttribute('index'));		//null
+				
+				console.log(box);
+				
+				console.log(box.n);		//undefined
+				console.log(box['n']);	//undefined
+				
+				console.log(box.getAttribute('n'));		//kaivon
+				
+				console.log(box['data-v']);		//undefined
+				console.log(box.dataset.v);		//haitang
+			}
+		</script>
+	</head>
+	<body>
+		<div id="box" n='kaivon' data-v="haitang" class="color">
+			<img id="pic" src="image/1.jpg"/>
+		</div>
+	</body>
+</html>

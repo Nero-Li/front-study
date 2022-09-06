@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*
+			 * 作用域链
+			 * 	变量与函数的查找规则
+			 * 
+			 * 查找规则
+			 * 	如果一个函数需要用到一个变量，那它会先在自己的作用域里去找这个变量。如果自己有那它就直接使用自己的，如果自己没有，那它就会一层一层往外找，直到找到外面的变量，找到后就用外面的变量
+			 * 
+			 * 	注意：作用域链会一层一层往外找，不会往里面找
+			 */
+			var a=12;
+			function fn(){
+				console.log(a);	//12		函数先会在自己的作用域里去找a，发现没找到，它就会找它父级，在父级身上找了到一个a，那它就用这个a
+			}
+			fn();
+			
+			function fn2(){
+				var a=20;
+				console.log(a);	//20		函数在自己的作用域里找到了一个变量a，那它就不会再去找外面的a
+			}
+			fn2();
+			
+			
+			var b=15;
+			function fn3(){
+				function fn4(){
+					//var b=30;
+					function fn5(){
+						//console.log(c);	//报错
+						function fn6(){
+							var c=28;
+							console.log(b);		//15
+						}
+						fn6();
+					}
+					fn5();
+				}
+				fn4();
+			}
+			fn3();
+		</script>
+		<div style="color: #f00;">
+			这是div
+			<p style="color: #00f;">
+				这是p
+				<span style="color: #f0f;">
+					这是span
+				</span>
+			</p>
+		</div>
+	</body>
+</html>

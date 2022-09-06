@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*
+			 * window.open()
+			 * 		参数
+			 * 			1、要找开的新网页的地址
+			 * 			2、找开方式_blank _self ... iframName
+			 * 			3、打开新窗口的一些信息
+			 * 			
+			 */
+			window.onload=function(){
+				var btn=document.getElementById("btn");
+				
+				btn.onclick=function(){
+					//window.open('http://www.apeclass.com/');
+					//window.open('http://www.apeclass.com/','_self');		//默认是在新窗口打开
+					window.open('http://www.baidu.com/','_blank','width=200,height=300,left=100,top=300');
+				};
+			};
+		</script>
+		<input type="button" id="btn" value="打开新窗口" />
+	</body>
+</html>

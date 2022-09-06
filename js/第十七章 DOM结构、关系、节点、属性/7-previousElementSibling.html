@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*
+			 * previousElementSibling
+			 * 	找到上一个兄弟节点
+			 * 	如果找不到的话就返回一个null
+			 */
+			window.onload=function(){
+				var lis=document.querySelectorAll("li");
+				
+				lis[3].previousElementSibling.style.background='red';
+				
+				console.log(lis[0].previousElementSibling);			//null
+				lis[0].previousElementSibling.style.background='red';		//报错
+			}
+		</script>
+		
+		<ul>
+			<li><span>隐藏1</span></li>
+			<li><span>隐藏2</span></li>
+			<li><span>隐藏3</span></li>
+			<li><span>隐藏4</span></li>
+			<li><span>隐藏5</span></li>
+		</ul>
+	</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*
+			 * 元素的宽
+			 * 	offsetWidth			带边框
+			 * 	clientWidth			不带边框
+			 * 
+			 * 元素的高
+			 * 	offsetHeight			带边框
+			 * 	clientHeight			不带边框
+			 * 
+			 * 可视区的宽/高(DOM)
+			 * 	document.documentElement.clientWidth
+			 * 	document.documentElement.clientHeight
+			 * 
+			 * 可视区的宽/高(BOM)
+			 * 	window.innerWidth
+			 * 	window.innerHeight
+			 * 	不兼容低版本的浏览器
+			 */
+			
+			console.log(window.innerWidth,window.innerHeight);
+			console.log(document.documentElement.clientWidth,document.documentElement.clientHeight)
+		</script>
+	</body>
+</html>

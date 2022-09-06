@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#box{
+				width: 300px;
+				height: 200px;
+				padding: 10px;
+				border: 10px solid #000;
+			}
+		</style>
+		<script>
+			/*
+			 * 元素的宽度
+			 * 		元素.offsetWidth
+			 * 			返回元素的宽度，包含边框的
+			 * 		元素.clientWidth
+			 * 			返回元素的宽度，不包含边框
+			 * 
+			 * 元素的高度
+			 * 		元素.offsetHeight
+			 * 			返回元素的高度，包含边框的
+			 * 		元素.clientHeight
+			 * 			返回元素的高度，不包含边框
+			 * 			
+			 */
+			window.onload=function(){
+				var box=document.getElementById("box");
+				
+				box.onclick=function(){
+					console.log(this.offsetWidth);		//340	
+					console.log(box.clientWidth);		//320
+					
+					console.log(this.offsetHeight);		//240
+					console.log(box.clientHeight);		//220
+				};
+			};
+		</script>
+	</head>
+	<body>
+		<div id="box"></div>
+	</body>
+</html>

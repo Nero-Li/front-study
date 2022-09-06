@@ -1,0 +1,58 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*
+			 * cloneNode
+			 * 	作用
+			 * 		克隆一个节点
+			 * 	语法
+			 * 		要克隆的节点.cloneNode(boolean)
+			 * 	参数
+			 * 		true			克隆元素和元素包含的子孙节点
+			 * 		false		克隆元素但是不包含子孙节点
+			 * 		如果不写参数的话，默认为false
+			 * 		克隆只克隆html、css，js是不会被克隆的，如果克隆元素身上有js的功能，那克隆后的元素是不具备的
+			 * 		如果克隆的元素本身有id，那克隆后的元素也会有id，两个就会重名，这样的话是不符合标准，手动去改一下id
+			 * 	返回值
+			 * 		返回被克隆的节点
+			 * 		
+			 */
+			
+			window.onload=function(){
+				var box=document.getElementById("box");
+				var spans=document.querySelectorAll("span");
+				var divs=document.querySelectorAll("#box div");
+				
+				//给每个span标签添加一个事件
+				for(var i=0;i<spans.length;i++){
+					spans[i].onclick=function(){
+						alert(this.innerHTML);
+					}
+				}
+				
+				var newDiv=divs[0].cloneNode(true);
+				//var newDiv=divs[0].cloneNode(false);
+				//var newDiv=divs[0].cloneNode();
+				console.log(newDiv);
+				box.appendChild(newDiv);
+				
+				var blue=divs[2].cloneNode(true);
+				blue.id='blue1';
+				box.appendChild(blue);
+				
+				console.log(blue);		//<div id="blue1">blue</div>
+			};
+		</script>
+		<div id="box">
+			<div style='color: #f00'><span>red</span><span>green</span></div>
+			<div>yellow</div>
+			<div id="blue">blue</div>
+			<div>pink</div>
+		</div>
+	</body>
+</html>

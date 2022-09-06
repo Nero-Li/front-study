@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*
+			 * concat
+			 * 	作用
+			 * 		连接数组，组成一个新数组
+			 * 	语法
+			 * 		数组.concat(varlue1,value2,value3...)
+			 * 	参数
+			 * 		需要与原数组进行合并的数据
+			 * 		参数可以是数组，也可以是非数组
+			 * 	返回值
+			 * 		合并后的新数组，原数组是不变的
+			 * 		
+			 */
+			
+			var color=['red','green','blue','pink'];
+			
+			var newColor=color.concat('yellow');
+			console.log(newColor);		//["red", "green", "blue", "pink", "yellow"]
+			console.log(color);			//["red", "green", "blue", "pink"]
+			
+			var newColor2=color.concat(['yellow','gold']);
+			console.log(newColor2);		//["red", "green", "blue", "pink", "yellow", "gold"]
+			
+			var newColor3=color.concat(1,2,3);
+			console.log(newColor3);		//["red", "green", "blue", "pink", 1, 2, 3]
+		</script>
+	</body>
+</html>

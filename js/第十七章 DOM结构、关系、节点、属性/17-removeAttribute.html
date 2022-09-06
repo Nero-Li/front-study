@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"> 
+		<title></title>
+		<script>
+			/*
+			 * removeAttribute
+			 * 	删除属性
+			 * 	元素.removeAttribute(属性名)
+			 * 	
+			 */
+			window.onload=function(){
+				var box=document.getElementById("box");
+				
+				box.removeAttribute('n');
+				console.log(box);
+			};
+		</script>
+	</head>
+	<body>
+		<div id="box" n='kaivon' data-v="haitang" class="color" style="width: 100px;">
+			<img id="pic" src="image/1.jpg"/>
+		</div>
+	</body>
+</html>

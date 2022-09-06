@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			/*
+			 * createElement
+			 * 	作用
+			 * 		创建元素：通过标签名的形式来创建一个元素
+			 * 	语法
+			 * 		document.createElement(tagName)
+			 * 		createElement前面的主语只能document，其它的元素都没有这个方法
+			 * 	参数
+			 * 		标签名
+			 * 	返回值
+			 * 		返回创建的标签元素
+			 * 	注意
+			 * 		只能用来创建元素节点，不能创建文本、注释节点
+			 * 		创建后的标签可以对它进行操作
+			 * 		
+			 */
+			window.onload=function(){
+				var btn=document.getElementById("btn");
+				btn.onclick=function(){
+					var div=document.createElement('div');
+					div.style.background='red';
+					div.className='active';
+					
+					console.log(div);
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" id="btn" value="创建元素" />
+	</body>
+</html>

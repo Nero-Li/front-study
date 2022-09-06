@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#box1,#box2{
+				width: 100px;
+				height: 100px;
+				background: #f00;
+				position: absolute;
+				left: 0;
+				top: 50px;
+			}
+			#box2{
+				top:200px;
+			}
+		</style>
+		<script>
+		/*
+		 * 运动的问题3
+		 * 	如果有多个元素要同时运动，那前面的运动会没有效果
+		 * 		原因：是因为每次运动开始都会清除上一个定时器，所以导致后面的运动会把前面的定时器清除了，前面就不会运动了
+		 * 		解决：
+		 */
+			window.onload=function(){
+				var btn=document.getElementById("btn");
+				var box1=document.getElementById("box1");
+				var box2=document.getElementById("box2");
+				var t;		//所有的元素都共用了一个定时器
+				
+				function move(obj,attr,target){
+					clearInterval(obj.t);		//一上来只清除自己身上的定时器，不会清除别人的定时器
+					obj.t=setInterval(function(){
+						var value=parseInt(getComputedStyle(obj)[attr]);		//获取到属性的值
+						
+						value+=7;		//让属性不断的加个7
+						
+						//如果属性的值已经超过目标了，要清除定时器，同是为了避免越界，要把它拉回来
+						if(value>=target){
+							clearInterval(t);
+							value=target;
+						}
+						
+						//修改元素的属性值
+						obj.style[attr]=value+'px';
+					},16);
+				}
+				
+				btn.onclick=function(){
+					move(box1,'left',300);
+					move(box2,'left',400);
+				}
+			};
+		</script>
+	</head>
+	<body>
+		<input type="button" id="btn" value="开始" />
+		<div id="box1"></div>
+		<div id="box2"></div>
+	</body>
+</html>

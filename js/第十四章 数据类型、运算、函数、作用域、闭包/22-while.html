@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head> 
+	<body>
+		<script>
+			/*
+			 * while
+			 * 	循环，条件循环。只有当条件满足的情况下才会去循环
+			 * 
+			 * 语法
+			 * 	while(条件语句){
+			 * 		当条件满足的时候，会循环执行这里的代码
+			 * 	}
+			 * 	
+			 * 注意：当while的条件不具备停止条件的时候，一定要在循环体内给一个条件变化，否则就是一个死循环
+			 * 
+			 * for		次数循环
+			 * while		条件循环，它一般用在嵌套的元素，或者有嵌套的数据
+			 * 
+			 * 要做循环的时候，首先考虑for，如果for做不出来，那就选择用while
+			 */
+			var i=0;
+			while(i<5){
+				console.log(i);
+				i++;
+			}
+			
+			window.onload=function(){
+				var box=document.getElementById("box");
+				
+				//children		找到元素的第一层子元素，取到的是一组集合
+				
+				while(box.children.length!=0){
+					box=box.children[0];
+				}
+				
+				console.log(box);
+			}
+		</script>
+		<div id="box">
+			<ul>
+				<li>
+					<p>
+						<a href="#">kaivon</a>
+					</p>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				width: 100px;
+				height: 100px;
+				background: #f00;
+				position: absolute;
+				left: 0;
+				top: 50px;
+			}
+		</style>
+		<script>
+			/*
+			 * 运动的原理
+			 * 	在定时器里不断的去修改元素的属性，修改完成以后再把结果重新赋给元素
+			 * 
+			 * 运动的问题
+			 * 	1、如果每次的步长如果与目标值不成倍数的话，就到达不了目标值
+			 * 		解决：把判断条件改成大于等于就可以
+			 * 	2、如果用户连续点击开始按钮的话速度就会越来越快
+			 * 		原因：用户不断去点击按钮话会重复开启多个定时器，造成速度累加
+			 * 		解决：在点击的时候先把上一个定时器给它清除了
+			 * 
+			 * 	
+			 */
+			window.onload=function(){
+				var begin=document.getElementById("begin");
+				var box=document.getElementById("box");
+				var t;
+				
+				begin.onclick=function(){
+					clearInterval(t);	//清除一个不存在的定时器是不会有问题的
+					t=setInterval(function(){
+						var l=parseInt(getComputedStyle(box).left);
+						
+						l+=7;
+						
+						//当box走到300的时候，就让它停下来
+						//console.log(l);
+						if(l>=500){
+							clearInterval(t);
+							l=500;
+						}
+						
+						box.style.left=l+'px';
+					},16);
+				};
+				
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" id="begin" value="开始" />
+		<div id="box"></div>
+	</body>
+</html>

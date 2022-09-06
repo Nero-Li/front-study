@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				width: 100px;
+				height: 100px;
+				border: 10px solid #f00;
+				margin: 70px 0 0 70px;
+			}
+			body{
+				border: 1px solid #f00;
+			}
+			/*#box2{
+				position: absolute;
+			}*/
+		</style>
+		<script>
+			/*
+			 * offsetLeft
+			 * 	作用
+			 * 		找到元素最左边离最近的有定位的父级之间的距离，不带单位，并且不带边框
+			 * 	语法
+			 * 		元素.offsetLeft
+			 * 
+			 * offsetTop
+			 * 	作用
+			 * 		找到元素最上边离最近的有定位父级之间的距离，不带单位，并且不带边框
+			 * 
+			 * 注意
+			 * 		如果没有定位的父级，那默认是到html的距离
+			 * 		遵循一个原则：1、给父级定位；2、一上来把默认样清掉
+			 * 
+			 */
+			window.onload=function(){
+				var box3=document.getElementById("box3");
+				console.log(box3.offsetLeft);		//70
+				console.log(box3.offsetTop);			//86
+			}
+		</script>
+	</head>
+	<body>
+		<div id="box1">box1
+			<div id="box2">box2
+				<div id="box3">box3</div>
+			</div>
+		</div>
+	</body>
+</html>

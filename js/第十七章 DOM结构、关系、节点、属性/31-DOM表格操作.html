@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			/*
+			 * tbody
+			 * 	表格中的tbody是可以不写的，在游览器解析的时候，会自动帮你加上
+			 * 	建议大家写的时候要加上
+			 * 
+			 * 表格操作
+			 * 	获取表格头
+			 * 		表格.tHead
+			 * 		返回整个表格头，thead里的所有内容
+			 * 		注意：一个表格里只能有一个表格头
+			 * 
+			 * 	获取表格主体
+			 * 		表格.tBodies
+			 * 		返回的是整个表格的主体内容，是一个数组
+			 * 
+			 * 	获取表格底部
+			 * 		表格.tFoot
+			 * 		返回这个表格的底部，tfoot里的所有内容
+			 * 		注意：一个表格只有一个tfoot
+			 * 
+			 * 	获取表格行
+			 * 		表格.rows/tHead.rows/tBodies.rows/tFoot.rows
+			 * 		返回各自对应的行，是个数组
+			 * 		注意：可以设置整个行的样式
+			 * 
+			 * 	获取表格的单元格
+			 * 		行.cells
+			 * 		返回这一行的所有单元格，是个数组
+			 * 		注意：它不能对整个单元格进行操作，只能取到某一个单元格进行操作
+			 */
+			
+			window.onload=function(){
+				var table=document.querySelector("table");
+				
+				var head=table.tHead;
+				var tbody=table.tBodies;
+				var foot=table.tFoot;
+				
+				
+				head.style.background='red';
+				tbody[0].style.background='green';
+				foot.style.background='blue';
+				
+				head.rows[0].style.color='#ccc';
+				tbody[0].rows[2].style.color='#f90';
+				foot.rows[0].style.color='#a9a';
+				
+				head.rows[0].cells[0].style.fontSize='30px';
+				tbody[0].rows[0].cells[1].style.fontSize='40px';
+				foot.rows[0].cells[0].style.fontSize='50px';
+			};
+		</script>
+	</head>
+	<body>
+		<table>
+			<thead>
+				<tr>
+					<th>编号</th>
+					<th>姓名</th>
+					<th>性别</th>
+					<th>年龄</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>赵四</td>
+					<td>男</td>
+					<td>50</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>刘能</td>
+					<td>男</td>
+					<td>53</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>谢广坤</td>
+					<td>女</td>
+					<td>40</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td colspan="4">全是人</td>
+				</tr>
+			</tfoot>
+		</table>
+	</body>
+</html>

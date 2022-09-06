@@ -1,0 +1,42 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body style="height: 3000px;">
+		<script>
+			/*
+			 * 滚动条的距离（DOM）
+			 * 	
+			 * 	chrom		document.body.scrollTop
+			 * 	其它			document.documentElement.scrollTop
+			 * 
+			 * 
+			 * 滚动条的距离（BOM）
+			 * 	window.pageXOffset/window.pageYOffset
+			 * 
+			 * 设置滚动条的距离
+			 * 		window.scrollTop(x,y)
+			 * 		全兼容，两个参数必需同时出现
+			 */
+			
+			window.onload=function(){
+				document.onclick=function(){
+					console.log(document.body.scrollTop)	;
+					console.log(window.pageYOffset)
+					
+					
+					//window.scrollTo(0,100);
+					
+					var t=window.pageYOffset;
+					var time=setInterval(function(){
+						t-=100;
+						
+						window.scrollTo(0,t);
+					},16);
+				};
+			};
+		</script>
+	</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*
+			 * slice
+			 * 	作用
+			 * 		截取字符串
+			 * 	语法
+			 * 		字符串.slice(beginSlice,endSlice)
+			 * 	参数
+			 * 		beginSlice		开始的位置
+			 * 		endSlice			结束的位置
+			 * 
+			 * 		如果一个参数都没有的话，直接返回整个字符串
+			 * 		如果只有一个参数，代表开始的位置，那结束的位置默认为最后一位字符
+			 * 		如果有两个参数，第二个参数为结束位置，但是不包含它
+			 * 		参数可以放负数，但是开始位置不能大于结束位置
+			 * 			开始的位置是最后一位，代表-1
+			 * 		
+			 * 	返回值
+			 * 		返回截取到的那个字符串，原字符串没有变化
+			 * 	
+			 */
+			
+			var str='kaiovn';
+			var s1=str.slice();
+			console.log(s1);		//kaiovn
+			
+			var s2=str.slice(3);
+			console.log(s2);		//ovn
+			
+			var s3=str.slice(2,4);
+			console.log(s3);		//io
+			
+			var s4=str.slice(-3,-2);
+			console.log(s4);		//o
+			
+			console.log(str);	//kaiovn
+		</script>
+	</body>
+</html>
+
+
+
+
+
+

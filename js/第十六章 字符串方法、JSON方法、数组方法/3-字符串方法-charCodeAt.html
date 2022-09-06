@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*
+			 * charCodeAt
+			 * 	作用
+			 * 		通过索引找字符，找到后转为Unicode编码
+			 * 	语法
+			 * 		字符串.charCodeAt(index)
+			 * 	参数
+			 * 		索引
+			 * 		取值范围：0-length-1
+			 * 		没有参数，默认为第0个
+			 * 		如果参数超过了范围，那它就返回NaN
+			 * 	返回值
+			 * 		返回字符对应的Unicode编码
+			 * 
+			 */
+			var str='kaivon';
+			var s1=str.charCodeAt(1);
+			console.log(s1);		//97
+			
+			var s2=str.charCodeAt();
+			console.log(s2);		//107
+			
+			var s3=str.charCodeAt(10);
+			console.log(s3);		//NaN
+		</script>
+	</body>
+</html>

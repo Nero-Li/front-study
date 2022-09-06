@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*
+			 * 获取日期对象的一些方法
+			 * 	日期对象.getFullYear()			获取年
+			 * 	日期对象.getMonth()				获取月，月份是从0开始的
+			 * 	日期对象.getDate()				获取日
+			 * 	日期对象.getDay()				获取星期，从0开始，0代表周日
+			 * 	日期对象.getHours()				获取小时
+			 * 	日期对象.getMinutes()			获取分钟
+			 * 	日期对象.getSeconds()			获取秒钟
+			 * 	日期对象.getMilliseconds()		获取毫秒
+			 * 	日期对象.getTime()				获取1970-01-01 00:00:00到目前日期对象的时间差（单位:毫秒）
+			 * 	1s=1000ms
+			 */
+			
+			window.onload=function(){
+				var dateBox=document.getElementById("dateBox");
+				var d=new Date();
+				
+				dateBox.innerHTML=''+d.getFullYear()+'年'+(d.getMonth()+1)+'月'+d.getDate()+'号 星期'+d.getDay()+' '+d.getHours()+'点'+d.getMinutes()+'分'+d.getSeconds()+'秒';
+			}
+		</script>
+		<div id="dateBox"></div>
+	</body>
+</html>

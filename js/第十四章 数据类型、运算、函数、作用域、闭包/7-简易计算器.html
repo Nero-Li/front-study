@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			window.onload=function(){
+				var text1=document.getElementById("text1");
+				var text2=document.getElementById("text2");
+				var btn=document.getElementById("btn");
+				var result=document.getElementById("result");
+				
+				btn.onclick=function(){
+					var val1=parseFloat(text1.value);
+					var val2=parseFloat(text2.value);
+					
+					result.innerHTML=val1+val2;
+					//从页面当中拿到的内容都是字符串
+				};
+			};
+		</script>
+	</head>
+	<body>
+		<input type="text" id="text1" value="" />
+		<span>+</span>
+		<input type="text" id="text2" value="" />
+		<button id="btn">=</button>
+		<strong id="result"></strong>
+	</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*
+			 * Math.random()
+			 * 	作用
+			 * 		取0-1之间的随机数，包含0但是不包含1
+			 * 	语法
+			 * 		Math.random()
+			 */
+			
+			console.log(Math.random());
+			
+			/*
+			 * 常用的一些随机取值方法
+			 * 
+			 * x ~ y : Math.round(Math.random()*(y-x) + x)
+				0 ~ x : Math.round(Math.random()*x)
+				1 ~ x : Math.ceil(Math.random()*x)||1
+				0 ~ x-1 : Math.floor(Math.random()*x)
+			 */
+			
+			//0-10
+			console.log(Math.round(Math.random()*10));
+		</script>
+	</body>
+</html>

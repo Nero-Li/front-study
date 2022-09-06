@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#box{
+				width: 100px;
+				height: 100px;
+				border: 1px solid #f00;
+				font-size: 50px;
+			}
+		</style>
+		<script>
+			/*
+			 * 定时器里的this指向
+			 * 	定时器里的this是指向window的，因为定时器是window身上的一个方法，所以this指向window
+			 */
+			
+			window.onload=function(){
+				var box=document.getElementById("box");
+				var i=0;
+				
+				//console.log(this);			//window		这里的this指向window
+				
+				box.onclick=function(){
+					//console.log(this);		//box		这里的this指向box
+					
+					var This=this;	//在这里把box存给了This，在这个函数内都可访问到它
+					setInterval(function(){
+						//console.log(this);	//window		这里的this指向window
+						
+						i++;
+						This.innerHTML=i;
+					},1000);
+				};
+			}
+		</script>
+	</head>
+	<body>
+		<div id="box"></div>
+	</body>
+</html>

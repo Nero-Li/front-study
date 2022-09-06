@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*
+			 * 关系运算符
+			 * 	<、>、<=、>=、==、!=、===、!==
+			 * 	关系运算符会把结果转成布尔值
+			 * 	==		比较的是两个值是否相同
+			 * 	===		首先先比较两个值的类型，如果说类型不同，那直接返回false
+			 * 			如果类型相同，如果值相等的话，返回true
+			 * 	!=		比较的是两个值是不相同，如果两个值不相同的话返回true，相同的话返回false
+			 * 	!==		只有当两个数据类型不同，值不同才会返回true
+			 * 
+			 * 
+			 * 	undefined只与null相等
+			 * 	字符串相对比的话，比较的是字符对应的ascii码
+			 */
+			
+			var a=10;
+			var b='10';
+			var c='10';
+			var d=20;
+			var e='20';
+			
+			console.log(a==b);	//true
+			console.log(b===c);	//true
+			console.log(a===c);	//false
+			console.log(d!=e);	//false
+			console.log(d!==c);	//true
+			
+			console.log(undefined==0);		//false
+			console.log(undefined==false);	//false
+			console.log(null==0);			//false
+			console.log(null==false);		//false
+			console.log(undefined==null);	//true
+			
+			
+			console.log('a'>'A');		//true
+		</script>
+	</body>
+</html>

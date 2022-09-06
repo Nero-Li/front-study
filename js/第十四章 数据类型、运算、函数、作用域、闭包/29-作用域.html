@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"> 
+	</head>
+	<body>
+		<script>
+			/*
+			 * 作用域
+			 * 	变量戓者函数可访问的一个范围，以函数来划分，一个函数块就是一个作用域
+			 * 
+			 * 全局作用域
+			 * 局部作用域
+			 */
+			
+			var a=12;
+			console.log(a);
+			
+			function fn(){
+				var b=20;
+			}
+			fn()
+			console.log(b);	//报错
+		</script>
+	</body>
+</html>

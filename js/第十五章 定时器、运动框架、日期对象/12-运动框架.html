@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"> 
+		<title></title>
+		<script src="js/move.js"></script>
+		<style>
+			#box{
+				width: 100px;
+				height: 100px;
+				background: #f00;
+				position: absolute;
+				left: 0;
+				top: 50px;
+			}
+		</style>
+		<script>
+			window.onload=function(){
+				var btn=document.getElementById("btn");
+				var box=document.getElementById("box");
+				
+				btn.onclick=function(){
+					/*move(box,{left:300,top:400},1000,'linear',function(){
+						alert('运动完成了');
+					});*/
+					
+					move(box,{left:300},1000,'linear',function(){
+						move(box,{top:300},1000,'linear');
+					});
+				};
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" id="btn" value="开始" />
+		<div id="box"></div>
+	</body>
+</html>

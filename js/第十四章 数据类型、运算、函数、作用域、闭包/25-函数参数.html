@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"> 
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*
+			 * 函数参数
+			 * 	从函数外面向里面传数据，在函数里可以接收到这些数据，并且能够使用它它。这些数据就叫参数
+			 * 	参数是放在小括号里，可以放0个或者多个，每个参数用逗号隔开
+			 * 	
+			 * 	1、形参
+			 * 		形式上的参数，在函数声明的小括号里
+			 * 		形参的值是由实参决定的
+			 * 	2、实参
+			 * 		实际上的参数，放在了函数调用的小括号里
+			 * 		实参必需与形参一一对应，在调用函数的时候，要把实参传够数量。如果有一个实参没有传，那它的值就是undefined
+			 */
+			
+			function person(name,age){
+				//形参实际上是在函数里声明的变量，变量的初始值是undefined。在函数调用的时候，传实参的时候会把初始值给改了真实的值
+				var name='kaivon';
+				var age=2;
+				
+				console.log(name,age);
+			}
+			
+			person('kaivon',20);
+			
+			function fn(a,b,c){
+				/*var a=1;
+				var b=2;
+				var c=undefined;*/
+				
+				console.log(a,b,c);
+			}
+			fn(1,2);
+		</script>
+	</body>
+</html>

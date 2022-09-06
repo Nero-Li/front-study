@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#div1{
+				width: 100px;
+				height: 100px;
+				background: red;
+				font: 20px/100px "微软雅黑";
+				color: #fff;
+				text-align: center;
+				position: fixed;
+				right: 0;
+				bottom: 0;
+				display: none;
+			}
+		</style>
+		<script>
+			window.onload=function(){
+				var div=document.getElementById("div1");
+				
+				window.onscroll=function(){
+					var t=window.pageYOffset;
+					
+					if(t>200){
+						div1.style.display='block';
+					}else{
+						div1.style.display='none';
+					}
+					
+					div.onclick=function(){
+						window.scrollTo(0,0);
+					};
+				};
+			};
+		</script>
+	</head>
+	<body style="height: 3000px;">
+			<div id="div1">加到顶部</div>
+	</body>
+</html>

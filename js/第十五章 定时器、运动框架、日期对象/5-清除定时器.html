@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*
+			 * 清除定时器
+			 * 	
+			 * 定时器的编号
+			 * 	定时器的一个返回值，返回一个数字，代表当前定时器的编号，我们可根据这个来清除定时器
+			 * 	它返回的编号在不同的浏览器里面是不同的，所以没办法直接拿编号去清除定时器。
+			 * 	可以声明一个变量，把定时器的返回值都存到这个变量里，然后拿这个变量去清除定时器
+			 * 
+			 * 清除定时器的方法
+			 * 	1、清除重复执行定时器
+			 * 		clearInterval(定时器的返回值)
+			 * 	2、清除延迟执行定时器
+			 * 		clearTimeout(定时器的返回值)
+			 */
+			
+			var n=0;
+			function add(){
+				n++;
+				console.log(n);
+				
+				//清除定时器的条件一般会放在定时器执行的函数里
+				if(n==8){
+					//clearInterval(1);
+					clearInterval(timer);
+				}
+			}
+			
+			/*
+			 * 1、直接把定时器调用放在了一个变量赋值的后面，定时器还会走么？
+			 * 2、这个timer是在下在声明的，而用它的时候是在上面，能到到么？
+			 */
+			
+			var timer=setInterval(add,1000);
+			
+			//console.log(setInterval(add,1000));		//1
+			//setInterval(add,1000);
+			
+			//定时器在走的过程中，下面的代码也会走
+			//alert(1);
+			
+		</script>
+	</body>
+</html>

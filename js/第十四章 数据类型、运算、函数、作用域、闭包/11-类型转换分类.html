@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*
+			 * 类型转换分为两种
+			 * 	1、显式类型转换
+			 * 		通过一些方法，很明确的将某种数据类型转换为另一种数据类型
+			 * 			Number()、parseInt()、parseFloat()		明确将数据转数字类型
+			 * 			String()		明确将数据转成字符串
+			 * 			Boolean()	明确将数据转成布尔值
+			 * 	2、隐式类型转换
+			 * 		在进行一些操作的时候，根本目的不是做类型转换。但是如果要进行操作的话，那数据必需符合某种类型。js会在内部对数据进行一些转换
+			 * 			+ - * /
+			 */
+			
+			console.log(1+2);		//3
+			console.log(1+'a');		//1a
+			console.log(true+1);		//2		加号两边没有字符中，那就是数学中的加法运算，会把true转成数字
+			console.log(true+'1');	//true1	加号右边是字符串，那就是字符串连接的意思，会把true转成字符串true
+			console.log(false-true);	//-1		减号的作用就是数学上的减法运算，会把两边都转成数字
+			console.log(''-1);		//-1
+		</script>
+	</body>
+</html>

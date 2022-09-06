@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*
+			 * children
+			 * 	父级.children
+			 * 	获取到父级下的第一层子元素，它是一个集合，代表所有的子元素
+			 * 	每个子元素都有一个对应的下标
+			 * 	它还有一个length属性，代表子元素的个数
+			 * 	非标准
+			 * 	
+			 * childNodes
+			 * 	获取元素的第一层的所有子节点，包含文本、注释
+			 */
+			window.onload=function(){
+				var ul=document.querySelector("ul");
+				
+				console.log(ul.children);
+				
+				function getChild(parent){
+					var child=parent.childNodes;
+					var arr=[];
+					
+					for(var i=0;i<child.length;i++){
+						if(child[i].nodeType==1){
+							arr.push(child[i]);
+						}
+					}
+					
+					return arr;
+				}
+				
+				var lis=getChild(ul);
+				console.log(lis);
+			}
+		</script>
+		<ul>
+			<li><span>隐藏1</span></li>
+			<li><span>隐藏2</span></li>
+			<li><span>隐藏3</span></li>
+			<li><span>隐藏4</span></li>
+			<li><span>隐藏5</span></li>
+			<!--这里是注释-->
+		</ul>
+	</body>
+</html>

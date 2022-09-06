@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#box{
+				width: 100px;
+				height: 100px;
+				border: 1px solid #f00;
+			}
+		</style>
+	</head>
+	<body>
+		<script>
+			/*
+			 * css(box,'width')			两个参数代表获取属性的值
+			 * css(box,'width','300px')	三个参数代表设置属性的值
+			 * 
+			 * 
+			 * getComputedStyle		获取计算后的样式集合
+			 * 
+			 */
+			window.onload=function(){
+				var box=document.getElementById("box");
+				console.dir(getComputedStyle(box).width);		//100px
+				
+				//getComputedStyle(box).width		用来获取box的width属性
+				//box.style.width='300px';			用来设置box的width属性
+				
+				function css(){
+					if(arguments.length==2){
+						//说明现在传了两个参数，获取元素的属性值
+						//arguments[0]		box
+						//width				arguments[1]
+						return getComputedStyle(arguments[0])[arguments[1]];
+					}
+					
+					if(arguments.length==3){
+						//说明现在传了三个参数，设置元素的属性值
+						arguments[0].style[arguments[1]]=arguments[2];
+					}
+				}
+				
+				console.log(css(box,'height'));	//100px
+				css(box,'height','300px');
+			}
+			
+		</script>
+		<div id="box"></div>
+	</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#box1,#box2{
+				font-size: 50px;
+				width: 100px;
+				height: 100px;
+				border: 1px solid #f00;
+			}
+		</style>
+		<script>
+			window.onload=function(){
+				var box1=document.getElementById("box1");
+				var box2=document.getElementById("box2");
+				var btn1=document.getElementById("btn1");
+				var btn2=document.getElementById("btn2");
+				
+				var n=10;
+				function add(){
+					n++;
+					box1.innerHTML=n;
+				}
+				
+				function cut(){
+					n--;
+					box2.innerHTML=n;
+				}
+				
+				var timer1=setInterval(add,1000);
+				var timer2=setTimeout(cut,3000);
+				
+				//定时器返回一个数字，定时器编号。清除定时器的方法其它清掉的是编号。所以可以用任何一种方法清除定时器，即使它们不对应，也没有关系
+				btn1.onclick=function(){
+					//clearInterval(timer1);
+					clearTimeout(timer1);
+				};
+				
+				btn2.onclick=function(){
+					//clearTimeout(timer2);
+					clearInterval(timer2);
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" id="btn1" value="清除1" />
+		<input type="button" id="btn2" value="清除2" />
+		<div id="box1"></div>
+		<div id="box2"></div>
+	</body>
+</html>

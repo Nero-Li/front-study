@@ -1,0 +1,61 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*var c=undefined;
+			function fn1(){
+				console.log(c);
+				c=20;
+			}*/
+			
+			var c=10;
+			function fn1(){
+				console.log(c);		//10
+				c=20;
+			}
+			fn1();
+			console.log(c);			//20
+			
+			
+			/*
+			 * var d=undefined;
+			 * function fn2(d){
+					console.log(d);		//undefined
+					d=24;
+				}	
+			 */
+			
+			var d=12;
+			function fn2(d){
+				var d=undefined;
+				console.log(d);		//undefined
+				d=24;
+			}
+			fn2();
+			console.log(d);			//12
+			
+			
+			/*
+			 * var e=undefined;
+			 * function fn3(e){
+					console.log(e);	
+					e=54;
+				}
+			 */
+			var e=13;
+			function fn3(e){
+				//var e=undefined;
+				var e=13;
+				console.log(e);		//13
+				e=54;
+			}
+			fn3(e);
+			console.log(e);			//13
+			
+		</script>
+	</body>
+</html>

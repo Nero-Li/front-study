@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			/*
+			 * setAttribute
+			 * 	设置属性
+			 * 	元素.setAttribute(attr,value);
+			 * 	两个参数必需同时出现
+			 */
+			window.onload=function(){
+				var box=document.getElementById("box");
+				
+				box.setAttribute('id','box2');
+				console.log(box);
+				
+				box.setAttribute('n','海棠');
+				console.log(box);
+				
+				box.setAttribute('style','width:200px;height:100px');
+				console.log(box);
+			}
+		</script>
+	</head>
+	<body>
+		<div id="box" n='kaivon' data-v="haitang" class="color" style="width: 100px;">
+			<img id="pic" src="image/1.jpg"/>
+		</div>
+	</body>
+</html>

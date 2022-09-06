@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html> 
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*
+			 * charAt
+			 * 	作用
+			 * 		通过索引找字符
+			 * 	语法
+			 * 		字符串.charAt(index)
+			 * 	参数
+			 * 		索引值
+			 * 		取值范围：0-length-1
+			 * 		如果不写参数，那默认为0
+			 * 		如果index超出了范围后，它会返回一个空
+			 * 	返回值
+			 * 		返回取到的那个字符，类型为字符串
+			 * 
+			 */
+			var str='kaivon';
+			
+			var s1=str.charAt(1);
+			console.log(s1);		//a
+			
+			var s2=str.charAt();
+			console.log(s2);		//k
+			
+			var s3=str.charAt(10);
+			console.log(s3);		//空
+		</script>
+	</body>
+</html>

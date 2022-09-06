@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*
+			 * 日期对象
+			 * 	js中的一个内置方法，用于处理日期与时间相关的操作
+			 * 
+			 * 创建日期对象
+			 * 	new Date()
+			 * 		创建一个跟日期有关系的对象
+			 * 
+			 * 	new Date()里可以接收参数
+			 * 		1、没有参数
+			 * 			它是以本机的时间做为参考，创建一个日期对象
+			 * 		2、new Date(年,月,日,时,分,秒)
+			 * 			参数是数字，每个参数用逗号隔开
+			 * 			注意：参数是可以省略，省略的部分默认为0，队了日期（默认为1）
+			 * 		3、new Date('June 10,2013 12:12:12')
+			 * 			参数是字符串，外国人常用的日期表示方式
+			 * 		4、new Date(时间戳)
+			 * 			参数为是时间戳
+			 * 			时间戳：从1970年1月1日0时0分0秒到指定一个时间点之间的毫秒数
+			 * 					new Date().getTime()
+			 * 
+			 * 	注意：你拿到的date对象只是本机的时间，修改的是date对象的日期，而不是本机的日期
+			 * 			本机的日期只能获取不能修改
+			 */
+			var d1=new Date();
+			console.log(d1);
+			//Mon Jul 25 2021 01:16:03 GMT+0800 (CST)
+			//星期	月份	日期	年份	时：分：秒	格林尼治时间	东八区	中国标准时间
+			
+			var d2=new Date(2021,10,29,15,40,32);
+			console.log(d2);
+			//Tue Nov 29 2021 15:40:32 GMT+0800 (CST)
+			
+			var d3=new Date('June 10,2013 12:12:12');
+			console.log(d3);
+			//Mon Jun 10 2013 12:12:12 GMT+0800 (CST)
+			
+			
+			var d4=new Date(new Date().getTime());
+			console.log(d4);		//Mon Jul 25 2021 01:29:29 GMT+0800 (CST)
+		</script>
+	</body>
+</html>

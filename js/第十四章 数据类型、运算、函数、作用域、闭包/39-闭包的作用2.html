@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="{CHARSET}"> 
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*
+			 * 我想在函数外面访问a与fn2，怎么去访问到？？？
+			 * 
+			 * 闭包的作用
+			 * 	让函数内的局部变量与局部函数，在外面可以访问到
+			 * 
+			 */
+			
+			function fn1(){
+				var n=10;
+				function fn2(){
+					n++;
+					console.log(n);
+				}
+				
+				return fn2;
+			}
+			console.log(fn1());		//11
+			
+			var newFn=fn1();
+			newFn();		//11
+			newFn();		//12
+			
+			
+			function fn3(){
+				var newFn=fn1();
+				
+				newFn();
+				newFn();
+			}
+			fn3();
+		</script>
+	</body>
+</html>

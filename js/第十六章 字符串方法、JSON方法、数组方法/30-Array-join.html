@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*
+			 * join
+			 * 	作用
+			 * 		将数组中的所有元素都连接成一个字符串
+			 * 	语法
+			 * 		数组.join(separator)
+			 * 	参数
+			 * 		separator就是一个连接符，用来把数据连成一个字符串
+			 * 		没参数的话，默认为一个逗号
+			 * 		参数是一个空字符，那么数组中的每个数据将被直接连接
+			 * 	返回值
+			 * 		返回数组转成的字符串，原数组不变
+			 * 
+			 * 
+			 */
+			
+			var color=['red','green','blue','pink'];
+			
+			var newColor=color.join();
+			console.log(newColor);		//red,green,blue,pink
+			console.log(color);			//["red", "green", "blue", "pink"]
+			
+			var new1=color.join('');
+			console.log(new1);			//redgreenbluepink
+			
+			var new2=color.join(' ');
+			console.log(new2);			//red green blue pink
+			
+			var new3=color.join('&');
+			console.log(new3);			//red&green&blue&pink
+		</script>
+	</body>
+</html>

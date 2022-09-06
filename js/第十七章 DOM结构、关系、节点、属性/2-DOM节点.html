@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*
+			 * arrtibutes
+			 * 	属性节点
+			 * 	返回元素身上的所有属性节点，每个属性都会有一个自己对应的下标
+			 * 	它有一个length属性，代表元素身上有多少个属性节点
+			 * 
+			 * childNodes
+			 * 	元素身上的第一层子节点，返回元素身上的所有子节点的集合（第一层）
+			 * 
+			 * nodeName
+			 * 	节点的名称
+			 * 
+			 * nodeType
+			 * 	节点的类型
+			 * 	返回的是一个数字
+			 * 	
+			 */
+			window.onload=function(){
+				var box=document.getElementById("box");
+				var attr=box.attributes;		//元素属性节点的集合
+				console.log(attr);
+				console.log(attr[0]);		//id="box"
+				
+				var child=box.childNodes;	//元素子节点的集合
+				console.log(child);
+				
+				//元素节点（标签）
+				console.log(box.nodeName);		//DIV
+				console.log(box.nodeType);		//1
+				
+				//属性节点
+				console.log(attr[0].nodeName);	//id
+				console.log(attr[0].nodeType);	//2
+				
+				//文本节点
+				console.log(child[0].nodeName);	//#text
+				console.log(child[0].nodeType);	//3
+				
+				//注释节点
+				console.log(child[3].nodeName);	//#comment
+				console.log(child[3].nodeType);	//8
+				
+				//文档节点
+				console.log(document.nodeName);	//#document
+				console.log(document.nodeType);	//9
+				
+			}
+		</script>
+		<div id="box" class="color" style="width: 100px;">
+			<p><span></span></p>
+			kaivon
+			<!--这里是注释-->
+		</div>
+	</body>
+</html>

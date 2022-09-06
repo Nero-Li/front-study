@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*
+			 * appendChild/insertBefore/replaceChild在操作一个已有的元素时，是将已有的元素移动，而不是复制一份进行操作(剪切)
+			 */
+			
+			window.onload=function(){
+				var color1=document.getElementById("color1");
+				var color2=document.getElementById("color2");
+				
+				var lis1=document.querySelectorAll("#color1 li");
+				var lis2=document.querySelectorAll("#color2 li");
+				
+				color1.appendChild(lis2[0]);
+				color2.insertBefore(lis1[0],lis2[1]);
+				color2.replaceChild(lis2[2],lis2[3]);
+			}
+		</script>
+		<ul id="color1">
+			<li>red</li>
+			<li>green</li>
+			<li>blue</li>
+			<li>yellow</li>
+		</ul>
+		<ul id="color2">
+			<li>white</li>
+			<li>black</li>
+			<li>pink</li>
+			<li>orange</li>
+		</ul>
+	</body>
+</html>

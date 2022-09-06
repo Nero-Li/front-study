@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*
+			 * 函数返回值
+			 * 	函数的运算结果
+			 * 
+			 * return
+			 * 	1、返回函数的运算结果
+			 * 		return 值
+			 * 		如果说函数里有return,那这个函数的返回结果就是return后的值（运算后的结果）
+			 * 		如果函数里没有return，那这个函数的返回结果就是undefined
+			 * 	2、阻止函数继续运行
+			 * 		return 后面的代码是不会执行的
+			 */
+			
+			function fn(a,b){
+				return a+b;
+				alert(1);		//因为这行代码放在了return后面，所以它不会执行
+				
+				
+				//return
+			}
+			console.log(fn(3,4));
+			var result=fn(3,4);
+			console.log(result);
+			
+			function fn2(a,b){
+				var c=a+b;
+			}
+			//fn2(2,6);
+			var result1=fn2(2,6);
+			console.log(result1);	//undefined
+		</script>
+	</body>
+</html>

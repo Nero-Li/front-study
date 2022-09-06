@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*
+			 * insertBefore
+			 * 	作用
+			 * 		插入元素，把第一个参数插入到第二个参数的前面
+			 * 	语法
+			 * 		父级.insertBefore(childNode1,childNode2)
+			 * 	参数
+			 * 		childNode1			要插入的元素
+			 * 		chilsNod2			决定childNod1插入的位置
+			 * 		
+			 * 		两个参数必需同时存在，否则就会报错
+			 * 		第二个参数如果为null或者undefined的时候，insertBefore的作用相当于appedChild
+			 * 	返回值
+			 * 		返回要插入的那个元素（第一个参数）
+			 * 		
+			 */
+			window.onload=function(){
+				var ul=document.querySelector("ul");
+				var lis=document.querySelectorAll("li");
+				
+				var newLi=document.createElement('li');
+				newLi.innerHTML='white';
+				
+				ul.insertBefore(newLi,lis[2]);
+				
+				var newLi2=document.createElement("li");
+				newLi2.innerHTML='black';
+				
+				var result=ul.insertBefore(newLi2,lis[10]);
+				//ul.insertBefore(newLi2);
+				
+				console.log(result);		//<li>black</li>
+				
+			}
+		</script>
+		<ul>
+			<li>red</li>
+			<li>green</li>
+			<li>blue</li>
+			<li>yellow</li>
+			<li>pink</li>
+		</ul>
+	</body>
+</html>

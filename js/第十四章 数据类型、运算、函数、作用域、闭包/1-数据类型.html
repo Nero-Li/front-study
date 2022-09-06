@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*
+			 * js中的数据类型
+			 * 	一、基本（简单）数据类型
+			 * 		1、字符串	String
+			 * 			放在一对单引号或者双引号里，由0个或者多个字符组成的串
+			 * 			注意：
+			 * 				引号是成对出现的
+			 * 				如果说字符串里面有引号，外在的引号一定要与里面的引号相反
+			 * 				如果说想要在字符串里输入的引号与外在的引号相同，那就用转义字符（\'）
+			 * 		2、数字		Number
+			 * 			1.由0-9之间的任意数字组合而成，可是整数也可以是小数。数字的范围在正无穷（+Infinity）与负无穷（-Infinity）之间
+			 * 				数字最大值：Number.MAX_VALUE
+			 * 				数字最小值：Number.MIN_VALUE
+			 * 			2.NaN
+			 * 				not a number
+			 * 				当运算失败的时候会出现
+			 * 				自己与自己都不相等
+			 * 		3、布尔值	Boolean
+			 * 			true		真
+			 * 			false	假
+			 * 		4、未定义	Undefined
+			 * 			有且只有一个值undefined
+			 * 		5、空		Null
+			 * 			有且只有一个值null
+			 * 			
+			 * 
+			 * 	二、复合（复杂）数据类型
+			 * 		对象		Object
+			 * 		格式：由简单数据类型与复合数据类型任意组合而成的。它的数据是放在一对大括号当中，每个数据由一个键值对组成的，数据可以是0个也可以是多个，每个数据之间用逗号隔开，最后一个数据不能加逗号（如果加了逗号，那就会报错）
+			 * 			键值对：key:value
+			 * 				key	数据名称，它可以加引号也可以不加引号，当这个名字不符合变量命名规则的时候需要加上引号（数字除外），引号是成对出现的
+			 * 				value	数据对应的值，这个值可以是简单数据类型也可以是复杂数据类型
+			 * 
+			 * 		操作对象用的方法就是属性的方法
+			 * 		
+			 */
+			
+			var s1='a';
+			var s2="kaivon";
+			var s3='';
+			var s4=' ';
+			var s5="It 's me";
+			var s6='It \'s me';
+			//var s5='学辉";		//报错
+			console.log(s1);		//a
+			console.log(s2);		//kaivon
+			console.log(s3);		//什么都没有的字符串
+			console.log(s4);		//空格字符串
+			console.log(s5);		//It 's me
+			console.log(s6);		//It 's me
+			
+			
+			var n1=12;
+			var n2=23.56;
+			var n3=Number.MAX_VALUE;
+			var n4=Number.MIN_VALUE;
+			console.log(n1);		//12
+			console.log(n2);		//23.56
+			console.log(n3);		//1.7976931348623157e+308
+			console.log(n4);		//5e-324
+			console.log(n3*2);	//Infinity
+			console.log('a'-1);	//NaN
+			console.log(NaN==NaN);		//false
+			
+			
+			var b1=true;
+			var b2=false;
+			console.log(b1);		//true
+			console.log(b2);		//false
+			
+			
+			var u1=undefined;
+			var u2;
+			console.log(u1);		//undefined
+			console.log(u2);		//undefined		声明一个变量，但没给它赋值，那它就是undefined
+			
+			var nul=null;
+			var btn=document.getElementById('btn');
+			console.log(nul);	//null
+			console.log(btn);	//null
+			
+			
+			var person={
+				name:'老王',
+				age:30,
+				height:'180cm',
+				weight:'90kg',
+				drive:true,
+				'girl-firend':null,
+				language:['汉语','日语','英语']
+			};
+			
+			
+			console.log(person.name);	//老王
+			console.log(person['girl-firend']);		//null
+			
+			person.age=25;
+			
+			console.dir(person);
+		</script>
+	</body>
+</html>

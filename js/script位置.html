@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <!--   一般来说,代码是从上到下依次执行的,所以页面被加载的时候,7~17行代码执行是优先于第20行代码加载的,所以结果会出错   -->
+        <script>
+            //页面加载完毕,再去执行
+            //当js需要获取页面中的元素,最好加上,避免因为js所在位置影响效果
+            window.onload = function (){
+                //在js中可以使用//作为注释
+                //1.根据id拿到元素
+                var element = document.getElementById('btn');
+                //2.第二种输出:控制台打印
+                console.log(element)
+                //3.添加点击事件
+                element.onclick = function () {
+                    alert("又被点了")
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <input id="btn" type="button" value="点我">
+    </body>
+</html>

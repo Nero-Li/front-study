@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			/*
+			 * 操作表单 
+			 * 	获取表单的值
+			 * 		node.value
+			 * 			input
+			 * 			select
+			 * 			textarea
+			 * 	
+			 * 给每个表单都添加了一个name属性，用这个属性去获取到相应的表单元素
+			 * 
+			 * selectedIndex
+			 * 	获取到下拉框里内容对应的索引值，它的索引值是默认添加上去的
+			 * 
+			 * oninput
+			 * 	只要在输入框里输入内容的时候就会触发这个事件
+			 * 
+			 * onchange
+			 * 	当下拉框里的内容有变化的时候就会触发这个事件
+			 * 
+			 * onsubmit
+			 * 	当表单提交的时候会触发（点击submit按钮才能触发）
+			 * 	表单.onsubmit
+			 * 
+			 * onreset
+			 * 	当表单被重置的时候会触发（点击重置按钮才能触发）
+			 * 	表单.onreset
+			 * 
+			 * 表单的方法
+			 * 	表单.submit()		提交表单
+			 * 	表单.reset()			重置表单，会触发onreset事件
+			 * 		
+			 */
+			window.onload=function(){
+				var form=document.getElementById("form");
+				
+				form.btn.onclick=function(){
+					console.log(form.username.value)	;		//获取到输入框里的值
+					console.log(form.sex.value);				//获取单先框的值
+					console.log(form.sel.value,form.sel.selectedIndex);	//获取select框里的值
+					
+					//获取到checkBox的值
+					//console.log(form.interest[0].value);	
+					
+					var arr=[];
+					
+					for(var i=0;i<form.interest.length;i++){
+						if(form.interest[i].checked){
+							arr.push(form.interest[i].value);
+						}
+					}
+					
+					console.log(arr);
+				};
+				
+				form.username.oninput=function(){
+					console.log('你有输入内容了')
+				};
+				
+				form.sel.onchange=function(){
+					console.log('你选择的内容有变化了');
+				};
+				
+				form.onsubmit=function(){
+					alert('你的表单要被提交了');
+				};
+				form.onreset=function(){
+					alert('你的表单要被重置了');
+				};
+				
+				form.send.onclick=function(){
+					//form.submit();
+					form.reset();
+				};
+			};
+		</script>
+	</head>
+	<body>
+		<form action="#" id="form">
+			<input type="text" name="username" value="" />
+			<p>
+				性别
+				<input type="radio" name="sex" value="男" />男
+				<input type="radio" name="sex" value="女" />女
+			</p>
+			<p>
+				兴趣
+				<input type="checkbox" name="interest" value="吃饭" />吃饭
+				<input type="checkbox" name="interest" value="睡觉" />睡觉
+				<input type="checkbox" name="interest" value="打豆豆" />打豆豆
+			</p>
+			<p>
+				来自于
+				<select name="sel">
+					<option value="北京">北京</option>
+					<option value="上海">上海</option>
+					<option value="广州">广州</option>
+				</select>
+			</p>
+			<textarea name="text" rows="10" cols="30"></textarea>
+			
+			<input type="button" name="btn" value="点击" />
+			<input type="submit" name="sub" value="提交" />
+			<input type="reset" name="res" value="重置" />
+			<input type="button" name="send" value="发送" />
+		</form>
+	</body>
+</html>

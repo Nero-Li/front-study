@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			/*
+			 * appendChild
+			 * 	作用
+			 * 		添加元素：往父节点里在添加一个元素
+			 * 		注意：它是添加到父节点的最后面
+			 * 	语法
+			 * 		父节点.appendChild(childNode)
+			 * 	参数
+			 * 		子元素，一般为用caeateElement创建后的节点
+			 * 	返回值
+			 * 		返回创建的那个标签元素
+			 * 	注意
+			 * 		只能添加标签节点，不能添加其它节点
+			 * 	
+			 */
+			window.onload=function(){
+				var btn=document.getElementById("btn");
+				
+				btn.onclick=function(){
+					var div=document.createElement('div');
+					div.style.width='200px';
+					div.style.height='300px';
+					div.style.background='red';
+					
+					var p=document.createElement('p');
+					p.innerHTML='这里是文字';
+					
+					var a=document.body.appendChild(p);		//返回值
+					console.log(a);		//<p>这里是文字</p>
+					
+					document.body.appendChild(div);
+				};
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" id="btn" value="创建元素" />
+	</body>
+</html>

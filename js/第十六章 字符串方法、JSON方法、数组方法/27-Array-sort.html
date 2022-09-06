@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*
+			 * sort
+			 * 	作用
+			 * 		对数组进行排序
+			 * 	语法
+			 * 		数组.sort(compareFunction)
+			 * 	参数
+			 * 		用来指定按某种顺序对数组进行排序
+			 * 		如果没有参数的话，会按照每个字符对应的Unicode码值进行排序
+			 * 
+			 * 		函数里有两个参数
+			 * 			a,b
+			 * 			return a-b			按从小到大的顺序去排
+			 * 			return b-a			按从大到小的顺序去排
+			 * 
+			 * 	返回值
+			 * 		返回排序后的数组，原数组变了，变成排序后的数组
+			 */
+			
+			var arr=[4,2,7,8,3,1,10];
+			arr.sort(function(a,b){
+				return a-b;
+			})
+			
+			console.log(arr);			//[1, 2, 3, 4, 7, 8, 10]
+			
+			var arr1=[4,2,7,8,3,1,10];
+			arr1.sort(function(a,b){
+				return b-a;
+			});
+			console.log(arr1);			//[10, 8, 7, 4, 3, 2, 1]
+			
+			
+			//随机排序
+			var arr2=[4,2,7,8,3,1,10];
+			
+			arr2.sort(function(){
+				return 0.5-Math.random();
+			})
+			
+			console.log(arr2);
+			
+			//没有参数
+			var arr3=[4,2,7,8,3,1,10];
+			arr3.sort();
+			
+			console.log(arr3);
+		</script>
+	</body>
+</html>

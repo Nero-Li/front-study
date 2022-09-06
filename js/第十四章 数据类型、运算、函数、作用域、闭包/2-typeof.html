@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*
+			 * typeof
+			 * 	检测一个数据的类型，返回这个类型对应的字符串（全小写）
+			 * 	返回的结果与系统当中定义的类型是有区别
+			 * 	它是一个运算符
+			 * 
+			 * 语法
+			 * 	typeof 数据
+			 * 	typeof(数据)
+			 * 
+			 * 系统定义的数据类型				typeof返回的数据类型
+			 * 	String							string
+			 * 	Number							number
+			 * 	Boolean							boolean
+			 * 	Undefine							undefined
+			 * 	Null								object
+			 * 	Object							object
+			 * 
+			 * null的typeof的结果是object，函数的typeof结果为function，但是js当中没有给函数定义一个类型
+			 */
+			var s='kaivon';
+			console.log(typeof s);		//string
+			
+			var n=12;
+			console.log(typeof n);		//number
+			
+			var b=true;
+			console.log(typeof b);		//boolean
+			
+			var u=undefined;
+			console.log(typeof u);		//undefined
+			
+			var nul=null;
+			console.log(typeof nul);		//object
+			
+			var o={left:10};
+			console.log(typeof o);		//object
+			
+			var fn=function(){alert(1)}
+			console.log(typeof fn);		//function
+		</script>
+	</body>
+</html>

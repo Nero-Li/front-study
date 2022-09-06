@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head> 
+	<body>
+		<script>
+			/*
+			 * 任意类型转数字
+			 * 	Number(要转换的值)	把任意类型都转为数字
+			 * 		1、Undefined	
+			 * 			转数字的结果为NaN
+			 * 		2、Null
+			 * 			转数字的结果为0
+			 * 		3、Boolean
+			 * 			true		转数字的结果为1
+			 * 			falae	转数字的结果为0
+			 * 		4、String
+			 * 			空字符串，空格字符串转数字的结果为0
+			 * 			字符串里的内容是不是一个纯数字，如果是个纯数字的话，就转成对应的数字
+			 * 			如果说不是一个纯数字，那结果就是NaN
+			 * 		5、Number
+			 * 			数字转数字的结果还为原来的数字
+			 * 		6、Object
+			 * 			
+			 */
+			
+			var u=undefined;
+			console.log(Number(u));		//NaN
+			
+			var nul=null;
+			console.log(Number(nul));	//0
+			
+			var b1=true;
+			var b2=false;
+			console.log(Number(b1),Number(b2));	//1 0
+			
+			var s1='';
+			var s2=' ';
+			var s3='kaivon';
+			var s4='012';
+			var s5='12a';
+			var s6='12*12';
+			console.log(Number(s1));		//0
+			console.log(Number(s2));		//0
+			console.log(Number(s3));		//NaN
+			console.log(Number(s4));		//12
+			console.log(Number(s5));		//NaN
+			console.log(Number(s6));		//NaN
+			
+			
+			var o1=[];
+			var o2={};
+			console.log(Number(o1));		//0
+			console.log(Number(o2));		//NaN
+		</script>
+	</body>
+</html>

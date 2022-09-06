@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*
+			 * 任意类型转布尔值
+			 * 	Boolean(要转换的值)
+			 * 		1、Undefined转布尔值
+			 * 			false
+			 * 		2、Null
+			 * 			false
+			 * 		3、Number
+			 * 			0、NaN转布尔值的结果为false，其它的转布尔值的结果为true
+			 * 		4、Boolean转布尔值
+			 * 			转为对应的值
+			 * 		5、String转布尔值
+			 * 			空字符串转布尔值的结果为false，其它（包括空格字符串）的都转成true
+			 * 			
+			 */
+			var u=undefined;
+			console.log(Boolean(u));		//false
+			
+			var nul=null;
+			console.log(Boolean(nul));	//false
+			
+			var n1=0;
+			var n2=NaN;
+			var n3=Infinity;
+			var n4=12;
+			console.log(Boolean(n1));	//false
+			console.log(Boolean(n2));	//false
+			console.log(Boolean(n3));	//true
+			console.log(Boolean(n4));	//true
+			
+			
+			var s1='kaivon';
+			var s2='';
+			var s3=' ';
+			console.log(Boolean(s1));	//true
+			console.log(Boolean(s2));	//false
+			console.log(Boolean(s3));	//true
+		</script>
+	</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			/*
+			 * firstElementChild
+			 * 	父级.firstElementChild
+			 * 	找到第一个子节点
+			 */
+			window.onload=function(){
+				var lis=document.querySelectorAll("li");
+				var ul=document.querySelector("ul");
+				
+				ul.firstElementChild.style.background='red';
+			}
+		</script>
+	</head>
+	<body>
+		<ul>
+			<li><span>隐藏1</span></li>
+			<li><span>隐藏2</span></li>
+			<li><span>隐藏3</span></li>
+			<li><span>隐藏4</span></li>
+			<li><span>隐藏5</span></li>
+		</ul>
+	</body>
+</html>

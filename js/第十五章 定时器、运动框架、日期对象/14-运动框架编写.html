@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/tween.js" type="text/javascript" charset="utf-8"></script>
+		<style>
+			#box{
+				width: 100px; 
+				height: 100px;
+				background: #f00;
+				position: absolute;
+				left: 0;
+				top: 50px;
+			}
+		</style>
+		<script>
+			/*
+			 * obj			运动的对象
+			 * attr			要运动的属性
+			 * target		要运动到的目标
+			 * duration		要运动的时间
+			 * fx			运动的形式
+			 * callBack		运动完成以后调用的函数
+			 */
+			
+			function move(obj,attr,target,duration,fx,callBack){
+				 var d=duration;
+				 var b=parseFloat(getComputedStyle(obj)[attr]);		//起始值
+				 var c=target-b;		//总的要运动的距离
+				 
+				 var startTime=new Date().getTime();
+				 
+				 clearInterval(obj.timer);
+				 obj.timer=setInterval(function(){
+				 	var t=new Date().getTime()-startTime;
+				 	
+				 	//运动停止
+				 	if(t>=d){
+				 		t=d;
+				 		clearInterval(obj.timer);
+				 	}
+				 	
+				 	//var value=c/d*t+b;
+				 	var value=Tween[fx](t,b,c,d);
+				 	obj.style[attr]=value+'px';
+				 	
+				 	if(t==d){
+				 		/*if(callBack){
+				 			callBack();
+				 		}*/
+				 		
+				 		callBack && callBack();
+				 	}
+				 },16);
+			}
+			
+			
+			window.onload=function(){
+				var btn=document.getElementById("btn");
+				var box=document.getElementById("box");
+				
+				btn.onclick=function(){
+					move(box,'left',400,1000,'bounceIn');
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" id="btn" value="开始" />
+		<div id="box"></div>
+	</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*
+			 * nodeName
+			 * 	节点名称，任何一个节点都有这个属性
+			 * 
+			 * tagName
+			 * 	标签名称
+			 * 	只有元素节点才有这个属性
+			 */
+			window.onload=function(){
+				var box=document.getElementById("box");		//元素节点
+				
+				console.log(box.nodeName);		//DIV
+				console.log(box.tagName);		//DIV
+				
+				console.log(document.nodeName);	//#document
+				console.log(document.tagName);	//undefined
+			}
+		</script>
+		<div id="box"></div>
+	</body>
+</html>

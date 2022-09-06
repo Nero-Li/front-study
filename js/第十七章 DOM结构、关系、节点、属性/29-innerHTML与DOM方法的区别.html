@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"> 
+		<title></title>
+		<script>
+			/*
+			 * innerHTML
+			 * 	它会把原来的内容先清空，然后再添加新的内容，原来的内容已经没有了。只不过是新添加的内容与原来的内容长得一样而已
+			 * DOM方法
+			 * 	会把新的内容追加到原来的内容里面，原来内容所具有的事件，依然会在
+			 */
+			window.onload=function(){
+				var color=document.getElementById("color");
+				var lis=document.querySelectorAll("li");
+				
+				for(var i=0;i<lis.length;i++){
+					lis[i].onclick=function(){
+						alert(this.innerHTML);
+					};
+				}
+				
+				//innerHTML方法给color添加元素
+				//color.innerHTML+='<li>white</li>';
+				
+				
+				//DOM方法给color添加元素
+				var newLi=document.createElement("li");
+				newLi.innerHTML='white';
+				
+				color.appendChild(newLi);
+				
+			};
+		</script>
+	</head>
+	<body>
+		<ul id="color">
+			<li>red</li>
+			<li>green</li>
+			<li>blue</li>
+			<li>yellow</li>
+			<li>pink</li>
+		</ul>
+	</body>
+</html>

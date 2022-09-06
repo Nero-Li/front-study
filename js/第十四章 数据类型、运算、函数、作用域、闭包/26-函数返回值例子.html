@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"> 
+		<title></title>
+		<script>
+			window.onload=function(){
+				var btns=document.querySelectorAll("input[type=button]");
+				var texts=document.querySelectorAll("input[type=text]");
+				
+				function add(){
+					var result=0;
+					
+					for(var i=0;i<arguments.length;i++){
+						result+=arguments[i];
+					}
+					
+					return result;
+				}
+				
+				btns[0].onclick=function(){
+					texts[0].value=add(123,25,7)	;
+				};
+				
+				btns[1].onclick=function(){
+					texts[1].value=add(100,36,3,90);	
+				};
+				
+				btns[2].onclick=function(){
+					texts[2].value=add(123,60,38,9,20);	
+				};
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" id="" value="按钮一" />
+		<input type="text" id="" value="" />
+		<input type="button" id="" value="按钮二" />
+		<input type="text" id="" value="" />
+		<input type="button" id="" value="按钮三" />
+		<input type="text" id="" value="" />
+	</body>
+</html>

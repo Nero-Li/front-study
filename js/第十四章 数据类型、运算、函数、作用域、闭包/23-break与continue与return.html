@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head> 
+	<body>
+		<script>
+			/*
+			 * break
+			 * 	停止循环，剩下的循环就不会走了（break后的代码是不会执行的）
+			 * 
+			 * continue
+			 * 	停止循环，只不过它停止的是当次的循环，后面的循环还是会走的
+			 * 
+			 * return 
+			 * 	返回，让函数停止执行，它只能用在函数内
+			 */
+			
+			for(var i=0;i<5;i++){
+				if(i==3){
+					break;	//从3开始以后的循环就不走了，breadk后面的代码也不会执行
+				}
+				console.log(i);
+			}
+			
+			for(var i=0;i<5;i++){
+				if(i==3){
+					continue;	//当循环到第3次的时候，这次的循环不会走，会跳到下一次的循环
+				}
+				console.log(i);
+			}
+			
+			function fn(){
+				console.log('kaivon');
+				return;
+				console.log('学辉');
+			}
+			fn();
+		</script>
+	</body>
+</html>

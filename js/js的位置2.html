@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--  2. 内嵌js  -->
+</head>
+<body>
+
+    <input id="btn" type="button" value="点我">
+    <!--  定义的js必须在元素定义之后  -->
+    <script>
+        //在js中可以使用//作为注释
+        //1.根据id拿到元素
+        var element = document.getElementById('btn');
+        //2.第二种输出:控制台打印
+        console.log(element)
+        //3.添加点击事件
+        element.onclick = function () {
+            alert("又被点了")
+        }
+    </script>
+</body>
+</html>

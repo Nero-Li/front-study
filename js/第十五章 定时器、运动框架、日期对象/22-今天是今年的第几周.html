@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*
+			 * 今天是今年的第几周
+			 * 
+			 * 差一周的原因是：今天的星期比今年第一天的星期小，就会缺一周。是因为不断的减到最后的话，会跳到上一年，这个时候while的条件就不满足了，那n就会少加一次
+			 * 	解决办法：取到今年的第一天是周几，然后再取到今天是周几。拿这两个值做对比，如果今天的星期比今年第一天的星期要小，就让n再加个1
+			 * 
+			 */
+			var d=new Date();
+			var n=0;		//用来存储周数
+			var fisetDay=new Date(2021,0,1).getDay();	//获取今年第一天是周几
+			var tody=d.getDay();		//获取到今天是周几
+			
+			while(d.getFullYear()==2021){
+				n++;
+				d.setDate(d.getDate()-7);
+			}
+			
+			if(tody<fisetDay){
+				n++;
+			}
+			
+			console.log(n);	//今天是今年中的第31周
+		</script>
+	</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*
+			 * slice 
+			 * 	作用
+			 * 		截取数组
+			 * 	语法
+			 * 		数组.slice(begin,end)
+			 * 	参数
+			 * 		begin		开始的位置
+			 * 		end			结束的位置(不包含最后一位)
+			 * 
+			 * 		一个参数都没有，直接返回原来的数组
+			 * 		参数只有一个数字，那从数字开始的位置一直到数组的最全截掉
+			 * 	返回值
+			 * 		返回截到的数组，原数组不会变
+			 */
+			
+			var color=['red','green','blue','pink','yellow'];
+			var n1=color.slice();
+			console.log(n1);		//["red", "green", "blue", "pink", "yellow"]
+			
+			var n2=color.slice(2);
+			console.log(n2);		//["blue", "pink", "yellow"]
+			
+			var n3=color.slice(3,4);
+			console.log(n3);		//["pink"]
+			
+			console.log(color);		//["red", "green", "blue", "pink", "yellow"]
+		</script>
+	</body>
+</html>

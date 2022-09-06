@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*
+			 * switch
+			 * 	用来做判断的
+			 * 	根据一个变量的值，做不同的事情
+			 * 	case是可以累加的，有多个情况的话就可以放多个case
+			 * 
+			 * 	语法
+			 * 		switch(变量){
+			 * 			case 值:
+			 * 				当这个值与变量的值相同的时候，才会走这里的代码
+			 * 				break;	停止以下代码继续执行
+			 * 			case 值:
+			 * 				当这个值与变量的值相同的时候，才会走这里的代码
+			 * 				break;	停止以下代码继续执行
+			 * 			case 值:
+			 * 				当这个值与变量的值相同的时候，才会走这里的代码
+			 * 				break;	停止以下代码继续执行
+			 * 			default:
+			 * 				当以上变量都不满足的时候，会执行这里的代码
+			 * 		}
+			 */
+			
+			var n=8;
+			switch(n){
+				case 1:
+					console.log('今天是星期一');
+					break;
+				case 2:
+					console.log('今天是星期二');
+					break;
+				case 3:
+					console.log('今天是星期三');
+					//break;
+				case 4:
+					console.log('今天是星期四');
+					//break;
+				case 5:
+					console.log('今天是星期五');
+					break;
+				case 6:
+					console.log('今天是星期六');
+					break;
+				case 7:
+					console.log('今天是星期日');
+					break;
+				case 8:
+					console.log('你傻了，今天周几不知道么？');
+					break;
+			}
+		</script>
+	</body>
+</html>

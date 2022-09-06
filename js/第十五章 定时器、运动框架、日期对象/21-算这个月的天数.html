@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body> 
+		<script>
+			/*
+			 * 算这个月的天数
+			 * 算出这个月的第一天是星期几
+			 */
+			
+			var d=new Date();	//声明一个日期对象
+			//console.log(d);
+			
+			//alert(d.getMonth());
+			d.setMonth(d.getMonth()+1);		//把月份设置为下个月
+			
+			console.log(d);
+			
+			d.setDate(0);	//把日期设置成0，因为没有0号，所以date对象会自动的把日期回滚到上个月的最后一天
+			console.log(d);
+			
+			console.log(d.getDate());	//算出这个月的最后一天，也就表示这个月有多少天
+			
+			
+			var d1=new Date();		//声明一个新的日期对象用来取星期
+			console.log(d1);
+			d1.setDate(1);			//把这个参数设为1就会回到这个月的第一天
+			console.log(d1);
+			console.log(d1.getDay());	//获取到了这个月第一天是周几
+		</script>
+	</body>
+</html>

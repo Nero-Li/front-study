@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*
+			 * replaceChild
+			 * 	作用
+			 * 		替换元素，用第一个参数替换第二个参数
+			 * 	语法
+			 * 		父级.replaceChild(node,childNode)
+			 * 	参数
+			 * 		node			要替换的元素
+			 * 		childNode	被替换的元素
+			 * 		两个参数必需同时出现，不然会报错
+			 * 
+			 * 	返回值
+			 * 		返回被替换的那个元素（第二个参数）
+			 * 
+			 * 	注意
+			 * 		如果用父级里的元素去替换另一个元素
+			 * 		替换的那个元素会跑到被替换元素的位置
+			 * 		被替换的那个元素会被删掉
+			 * 	
+			 */
+			window.onload=function(){
+				var ul=document.querySelector("ul");
+				var lis=document.querySelectorAll("li");
+				
+				var newLi=document.createElement("li");
+				newLi.innerHTML='white';
+				
+				var result=ul.replaceChild(newLi,lis[2]);
+				console.log(result);		//<li>blue</li>
+				
+				ul.replaceChild(lis[3],lis[0]);
+				//ul.replaceChild(lis[0]);		//报错
+			};
+		</script>
+		<ul>
+			<li>red</li>
+			<li>green</li>
+			<li>blue</li>
+			<li>yellow</li>
+			<li>pink</li>
+		</ul>
+	</body>
+</html>

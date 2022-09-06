@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body style="height: 3000px;">
+		<script>
+			/*
+			 * window.onscroll()
+			 * 	当滚动条滚动的时候触发这个方法
+			 * 
+			 * window.onresize()
+			 * 	当窗口改变大小的时候触发这个方法
+			 * 
+			 * 
+			 * 它们会按照一定的频率去触发，这个频率是由浏览器决定的
+			 */
+			
+			var i=0;
+			
+			window.onscroll=function(){
+				i++;
+				console.log(i);
+			}
+			
+			window.onresize=function(){
+				i--;
+				console.log(i);
+			};
+		</script>
+	</body>
+</html>

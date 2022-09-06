@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*
+			 * 逻辑运算符
+			 * 	&& 与、|| 或、! 否 、三元运算符
+			 * 	&&	并且的意思
+			 * 		如果当左边与右边的条件同时成立的时候，整个条件才成立
+			 * 		当左边为真的时候，返回右边的值。当左边为假的话，返回左边的值
+			 * 
+			 * 	||	或者的意思
+			 * 		如果有一个条件成立的话，整个条件就成立
+			 * 		当左边为真的时候，返回左边的值。当左边为假的时候，返回右边的值
+			 * 	
+			 * 	!	非，取反的意思
+			 * 		返回一个布尔值，把值转为布尔值
+			 * 		一个!代表先把数据转成布尔值，然后再取反
+			 * 		二个!代表把数据转成布尔值
+			 * 
+			 * 	三元运算符（三目运算符）
+			 * 	元：操作数
+			 * 	一元操作符：操作数据只有一个
+			 * 	++、--、!、typeof
+			 * 
+			 * 	二元操作符：操作数据有两个
+			 * 	+ - * / %
+			 * 
+			 * 	三元操作符：操作的数据有三个
+			 * 	a?b:c
+			 * 	如果a的值为真，返回b，否则返回c
+			 */
+			var n1=10;
+			var n2=3;
+			
+			if(n1<5&&n2<6){
+				alert('成立');
+			}
+			
+			console.log(1&&2);				//2		左侧为真，返回右侧的值
+			console.log(false&&true);		//false	左侧为假，返回左边的值
+			console.log(0&&false);			//0		左侧为假，返回左边的值
+			
+			var a=1;
+			var b=10;
+			if(a<12||b>20){
+				console.log('成立');
+			}
+			
+			console.log(true||false);	//true		左边为真，返回左边的值
+			console.log(false||1);		//1			左边为假，返回右边的值
+			
+			var c=1;
+			var d='';
+			console.log(!c);		//false
+			console.log(!!d);	//false
+			
+			
+			var e=1;
+			var f=e>0?10:20;
+			console.log(f);	//10
+			
+			/*if(e>0){
+				var f=10;
+			}else{
+				var f=20;
+			}*/
+			
+			var g=true;
+			var h=e<0?100:g?200:300;
+			console.log(h);		//200
+			
+			if(e<0){
+				var h=100;
+			}else{
+				if(g==true){
+					var h=200;
+				}else{
+					var h=300;
+				}
+			}
+		</script>
+	</body>
+</html>

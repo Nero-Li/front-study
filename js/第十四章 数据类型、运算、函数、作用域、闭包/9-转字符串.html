@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*
+			 * 任意类型转字符串
+			 * 	String(要转换的值)
+			 * 		1、Undefined转字符串
+			 * 			'undefined'
+			 * 		2、Null转字符串
+			 * 			null
+			 * 		3、Number转字符串
+			 * 			把数字加上引号
+			 * 		4、Boolean转字符串
+			 * 			true	转字符串的结果为'true'
+			 * 			false转字符串的结果为'false'
+			 * 		5、String转字符串
+			 * 			结果就是本身
+			 * 		6、Object转字符串
+			 * 			结果也是给对象加上引号
+			 * 			
+			 */
+			
+			var u=undefined;
+			console.log(String(u));		//undefined
+			
+			var nul=null;
+			console.log(String(nul));	//null
+			
+			var num=12;
+			console.log(String(num));	//12
+			
+			var b1=true;
+			var b2=false;
+			console.log(String(b1));		//true
+			console.log(String(b2));		//false
+		</script>
+	</body>
+</html>

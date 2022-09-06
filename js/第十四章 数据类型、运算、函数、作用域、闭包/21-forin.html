@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"> 
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*
+			 * for in
+			 * 	循环，用来遍历对象当中的数据
+			 * 
+			 * 语法
+			 * 	for(var 变量名 in 对象){
+			 * 		变量名			对象里的属性名（key）
+			 * 		对象[属性名]		属性名对应的值
+			 * 	}
+			 */
+			
+			for(var i=0;i<5;i++){
+				console.log(i,'kaivon');
+			}
+			
+			var color=['red','green','blue','yellow','pink'];
+			for(var i=0;i<color.length;i++){
+				console.log(color[i]);
+			}
+			
+			console.dir(color);
+			
+			var person={
+				name:'老王',
+				age:30,
+				height:'180cm',
+				weight:'90kg'
+			}
+			
+			//要取到一个对象里的所有数据，只能用for in方法
+			for(var attr in person){
+				console.log(attr,person[attr]);
+			}
+			
+			for(var attr in color){
+				console.log(attr,color[attr]);
+			}
+			
+		</script>
+	</body>
+</html>
