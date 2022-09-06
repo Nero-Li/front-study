@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			/*
+			 * 需求：
+			 * 	改变所有的li的背景色，让它变成红色
+			 */
+			window.onload=function(){
+				//获取到所有的li
+				var lis1=document.getElementsByTagName('li');
+				var lis2=document.querySelectorAll('li');
+				
+				//把所有的li的背景色全部变为红色
+				lis1[0].style.background='red';
+				lis1[1].style.background='red';
+				lis1[2].style.background='red';
+				lis1[3].style.background='red';
+				lis1[4].style.background='red';
+				
+			};
+		</script>
+	</head>
+	<body>
+		<ul>
+			<li>red</li>
+			<li>green</li>
+			<li>blue</li>
+			<li>yellow</li>
+			<li>pink</li>
+		</ul>
+	</body>
+</html>

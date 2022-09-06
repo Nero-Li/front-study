@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#box{
+				width: 100px;
+				height: 100px;
+				background: #f00;
+			}
+			/*
+			 * 这里放的是css的注释
+			 */
+		</style>
+	</head>
+	<body>
+		<input type="button" name="btn" id="btn" value="按钮" />
+		<div id="box"></div>
+		<!--
+			html的注释放在这里
+		-->
+		
+		<script>
+			document.getElementById('btn').onclick=function(){
+				document.getElementById('box').style.width='200px';
+				document.getElementById('box').style.height='200px';
+			};
+			//单行注释
+			/*
+			 * 多行注释
+			 */
+		</script>
+	</body>
+</html>

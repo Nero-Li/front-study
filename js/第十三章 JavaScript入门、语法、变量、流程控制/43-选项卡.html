@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				width: 200px;
+				height: 200px;
+				border: 1px solid #f00;
+				display: none;
+			}
+		</style>
+		<script>
+			/*
+			 * 需求：
+			 * 	点击按钮显示对应的div，让其它的按钮背景色去掉，让其它的div都隐藏
+			 * 
+			 * 
+			 * 分析
+			 * 	1、获取到所有的按钮以及div
+			 * 	2、给每一个按钮添加点击事件
+			 * 		1、把所有按钮的背景色全部清空
+			 * 		2、把所有的div全部隐藏
+			 * 		3、给当前点击的按钮添加一个背景色
+			 * 		4、让当前点击的按钮对应的div，让它显示
+			 */
+			
+			window.onload=function(){
+				var inputs=document.querySelectorAll("input");
+				var divs=document.querySelectorAll("div");
+				
+				for(var i=0;i<inputs.length;i++){
+					inputs[i].index=i;
+					inputs[i].onclick=function(){
+						//点击的时候一下来要把所有的样式清空，再让所有div隐藏
+						for(var i=0;i<inputs.length;i++){
+							inputs[i].style.background='';
+							divs[i].style.display='none';
+						}
+						
+						//给当前的按钮添加背景色，让对应的div显示
+						this.style.background='yellow';
+						divs[this.index].style.display='block';
+					};
+				}
+			};
+		</script>
+	</head>
+	<body>
+		<input type="button" id="" value="选项1 " style="background: yellow;" />
+		<input type="button" id="" value="选项2" />
+		<input type="button" id="" value="选项3" />
+		<div style="display: block;">内容一</div>
+		<div>内容二</div>
+		<div>内容三</div>
+	</body>
+</html>

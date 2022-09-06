@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			/*
+			 * 需求：
+			 * 	点击某个li，让点击的那个li背景色变为红色
+			 * 
+			 * 循环的速度是非常快的，我们手动点击的时候，for已经循环完毕了，那这个时候i的是值是5
+			 * 循环里添加的点击事件，点击事件里的i的值是循环结束后那个值，而不是对应的循环的值
+			 */
+			window.onload=function(){
+				//获取到所有的li
+				var lis1=document.getElementsByTagName('li');
+				var lis2=document.querySelectorAll('li');
+				
+				//给每一个li都添加点击事件
+				for(var i=0;i<lis1.length;i++){
+					
+					lis1[i].onclick=function(){
+						//找点击的那个对象
+						
+						//这里的this代表谁点击了就指向谁
+						
+						//在循环的时候，给每个元素都添加了点击事件，想要在点击事件里找到点击的那个对象，不能用i的值作为下标去取，要用this,this指的就是点击的那个对象
+						this.style.background='red';
+					};
+				}
+			};
+		</script>
+	</head>
+	<body>
+		<ul>
+			<li>red</li>
+			<li>green</li>
+			<li>blue</li>
+			<li>yellow</li>
+			<li>pink</li>
+		</ul>
+	</body>
+</html>

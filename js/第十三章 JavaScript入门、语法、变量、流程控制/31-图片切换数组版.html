@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"> 
+		<title></title>
+		<style>
+			img{
+				display: block;
+			}
+		</style>
+		<script>
+			/*
+			 * 需求
+			 * 	点击下一张按钮，让图片切换成下一张图
+			 * 	点击上一张按钮，让图片切换成上一张图
+			 * 
+			 * 分析
+			 * 	1、获取到下一张按钮、图片
+			 * 	2、给按钮添加点击事件
+			 * 		1、用属性操作的方法去修改图片的src
+			 * 		2、把数字存到一个变量里，点击下一张，就让这个变量加1。用字符串拼接的方法去修改图片的src属性
+			 * 	累加
+			 * 		n=n+1
+			 * 		n+=1
+			 * 		n++
+			 */
+			
+			window.onload=function(){
+				var next=document.getElementById("next");
+				var prev=document.getElementById("prev");
+				var pic=document.getElementById("pic");
+				var n=0;
+				
+				//把每个图片的名字存到一个数组中
+				var imgArr=['asasdfasdf','asdqwrqwerqwer','cvbsrgwgw','ssbsdfgsfg'];
+				
+				
+				//console.log(pic);	//null
+				
+				//下一张按钮点击事件
+				next.onclick=function(){
+					//点击一下让n加个1
+					//n=n+1;
+					//n+=1;
+					n++;
+					
+					//console.log(n);
+					
+					if(n>imgArr.length-1){
+						n=imgArr.length-1;
+					}
+					
+					pic.src='img2/'+imgArr[n]+'.jpg';
+				};
+				
+				
+				//上一张按钮点击事件
+				prev.onclick=function(){
+					//点上一张按钮后要让图片递减
+					n--;
+					
+					if(n<0){
+						n=0;
+					}
+					
+					pic.src='img2/'+imgArr[n]+'.jpg';
+				};
+			};
+		</script>
+	</head>
+	<body>
+		<input type="button" id="prev" value="上一张" />
+		<input type="button" id="next" value="下一张" />
+		<img src="img2/asasdfasdf.jpg" id="pic" alt="" />
+	</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*
+			 * 变量全名规则
+			 * 	1、允许是字母，数字，下划线(_)，美元符($)任意组合而成
+			 * 	2、不允许数字开头
+			 * 	3、不允许使用关键字和保留字
+			 * 		关键字：当前语法中正在使用的单词
+			 * 				http://www.w3school.com.cn/js/pro_js_keywords.asp
+			 * 		保留字：将来可能在语法中使用的单词
+			 * 				http://www.w3school.com.cn/js/pro_js_reservedwords.asp
+			 * 	
+			 * 变量的命名风格
+			 * 	语义化
+			 * 		写的变量名尽量贴近实际的意思
+			 * 			nav
+			 * 	驼峰命名
+			 * 		大驼峰
+			 * 			首字母就大写
+			 * 				Math、Date
+			 * 		小驼峰
+			 * 			从第二个单词开始首字母大写
+			 * 			getElementById
+			 * 			get			获取
+			 * 			Element		元素
+			 * 			By			通过
+			 * 			Id			id
+			 * 
+			 * 			getelementbyid
+			 */
+			
+			var a3=12;	//字母+数字
+			console.log(a3);		//12
+			
+			var _b5=20;	//_+字母+数字
+			console.log(_b5);	//20
+			
+			var $k=40;	//美元符+字母
+			console.log($k);		//40
+			
+			
+			//var 3c=22;		//不允许数字开头（报错）
+			
+			//var var=11;	//不允许用关键字作为变量名
+			
+			
+		</script>
+	</body>
+</html>

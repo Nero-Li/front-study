@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				width: 200px;
+				height: 200px;
+				border: 1px solid #f00;
+				display: none;
+			}
+		</style>
+		<script>
+			/*
+			 * 需求：
+			 * 	点击按钮显示对应的div，让其它的按钮背景色去掉，让其它的div都隐藏
+			 * 
+			 * 关键点
+			 * 	如何上一个点击的input
+			 * 
+			 * 分析
+			 * 	1、获取到所有的按钮以及div
+			 * 	2、给每一个按钮添加点击事件
+			 * 		1、把上一个点击的按钮背景色去掉
+			 * 		2、把上一个点击的按钮对应的div，让它隐藏
+			 * 		3、给当前点击的按钮添加一个背景色
+			 * 		4、让当前点击的按钮对应的div，让它显示
+			 */
+			window.onload=function(){
+				var inputs=document.querySelectorAll('input');
+				var divs=document.querySelectorAll('div');
+				var last=inputs[0];		//这个变量存的是上一次点击的对象，在一上来默认为第0个
+				
+				/*
+				 * 每一个按钮都对应一个div，它们的下标值都是相同的
+				 * 如果取到一个下标值，通过下标值就能找到对应的按钮与div
+				 */
+				console.dir(inputs);
+				console.dir(divs);
+				
+				
+				//给每个按钮添加点击事件
+				for(var i=0;i<inputs.length;i++){
+					//i的值	0 1 2
+					inputs[i].index=i;	//给每个按钮添加一个自定义属性，存的是它们对应的索引值
+					/*
+					 * inputs[0].index=0;
+					 * inputs[1].index=1;
+					 * inputs[2].index=2;
+					 */
+					inputs[i].onclick=function(){
+						//把上一次点击对象的背景色去掉
+						last.style.background='';
+						
+						//如果在这里能找到点击按钮的下标值就能找到它对应的div
+						//inputs[1]
+						//divs[1]
+						
+						//点击的那个对象是this
+						//点击的那个对象的索引值是this.index
+						
+						//把上一个对应的div，让它隐藏
+						divs[last.index].style.display='none';
+						
+						//给当前点击的那个按钮添加背景色
+						this.style.background='yellow';
+						
+						//让当前点击的按钮对应的div，让它显示
+						divs[this.index].style.display='block';
+						
+						//当前对象相对于下一次点击来说，它就是上一次点击的对象
+						//谁的背景色为黄，那谁就是上一次点击对象（一定要放在所有代码之后）
+						last=this;	//把上一次点击的对象更新成当前点击的对象
+					};
+				}
+			};
+		</script>
+	</head>
+	<body>
+		<input type="button" id="" value="选项1 " style="background: yellow;" />
+		<input type="button" id="" value="选项2" />
+		<input type="button" id="" value="选项3" />
+		<div style="display: block;">内容一</div>
+		<div>内容二</div>
+		<div>内容三</div>
+	</body>
+</html>

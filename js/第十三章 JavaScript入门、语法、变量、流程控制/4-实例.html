@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#box{
+				width: 100px;
+				height: 100px;
+				background: #f00;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button" name="btn" id="btn" value="按钮" />
+		<div id="box"></div>
+		<!--
+			需求：
+				1、点击按钮，让按钮的背影色变为黄色
+				
+			步骤：
+				1、拿到按钮
+					document.getElementById('btn')
+				2、给按钮添加点击事件
+					按钮.onclick=function(){
+						//把点击后要做的事件放到这个里面
+						//让按钮的背景色变为黄色
+						//修改按钮的属性
+					}
+					
+					修改属性
+					元素.style.样式＝值；
+		-->
+		<script>
+			document.getElementById('btn').onclick=function(){
+				document.getElementById('btn').style.background='red';
+			};
+		</script>
+	</body>
+</html>
