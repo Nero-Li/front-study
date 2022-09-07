@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e974bdb5-d67c-41e9-9f7c-0ce45aaf753d" name="Changes" comment="# 海棠" />
+    <list default="true" id="e974bdb5-d67c-41e9-9f7c-0ce45aaf753d" name="Changes" comment="# 海棠js">
+      <change afterPath="$PROJECT_DIR$/js/JS第一节课.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/js中的switch.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/第十三章 JavaScript入门、语法、变量、流程控制/23-if.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十三章 JavaScript入门、语法、变量、流程控制/23-if.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/第十三章 JavaScript入门、语法、变量、流程控制/24-ifels.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十三章 JavaScript入门、语法、变量、流程控制/24-ifels.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/第十三章 JavaScript入门、语法、变量、流程控制/25-elseif.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十三章 JavaScript入门、语法、变量、流程控制/25-elseif.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/第十三章 JavaScript入门、语法、变量、流程控制/37-for.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十三章 JavaScript入门、语法、变量、流程控制/37-for.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/第十三章 JavaScript入门、语法、变量、流程控制/38-for例子修改.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十三章 JavaScript入门、语法、变量、流程控制/38-for例子修改.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,7 +45,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "/Users/lyming/WebstormProjects/front-study/js",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -58,7 +68,8 @@
       <updated>1662102806631</updated>
       <workItem from="1662102808413" duration="15000" />
       <workItem from="1662451276672" duration="162000" />
-      <workItem from="1662452015158" duration="5520000" />
+      <workItem from="1662452015158" duration="6776000" />
+      <workItem from="1662531055117" duration="12977000" />
     </task>
     <task id="LOCAL-00001" summary="# 海棠">
       <created>1662460306951</created>
@@ -67,7 +78,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662460306951</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="# 海棠js">
+      <created>1662462630008</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1662462630008</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -86,6 +104,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="# 海棠" />
-    <option name="LAST_COMMIT_MESSAGE" value="# 海棠" />
+    <MESSAGE value="# 海棠js" />
+    <option name="LAST_COMMIT_MESSAGE" value="# 海棠js" />
   </component>
 </project>

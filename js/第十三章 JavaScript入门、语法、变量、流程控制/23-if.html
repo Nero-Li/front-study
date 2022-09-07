@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-	<head> 
+	<head>
 		<meta charset="UTF-8">
 		<title></title>
 	</head>
@@ -9,35 +9,77 @@
 			/*
 			 * 页面代码执行的顺序
 			 * 	在一般情况下，页面中的代码会按从上到下，从左往右的顺序执行
-			 * 
+			 *
 			 * if	如果
 			 * 	当代码有不同的情况需要去处理，这个时候就要用if
-			 * 
+			 *
 			 * 语法
 			 * 	if(判断条件){
 			 * 		当判断条件成立的时候，会执行这里的代码
 			 * 	}
-			 * 
+			 *
 			 * if的判断条件为被转化成一个布尔值
 			 * 布尔值
 			 * 		true			真
 			 * 		false		假
-			 * 
+			 *
 			 * 	if的条件会被转化成布尔值，如果布尔值为true（真）,大括号里的代码就会被执行，如果布尔值的结果为false(假)，那大括号里的代码就不会被执行
 			 */
-			
+
+
+			//1. 和Java的if一样的用法,小括号中的判断条件判定为true就执行大括号中的内容
 			if(1<2){
 				//当1<2这个条件成立，这里的代码才会执行
-				alert('成立');
+				console.log('1<2成立')
 			}
-			
-			if(1<0){
-				//1<0是不成立的，所以这里面的代码不会执行
-				alert('不成立');
+			console.log(1<2);	//true
+			console.log(1<0);	//false
+			//2. 特别的,如果判断的条件为具体数值,也认为是true
+			if (1) {
+				console.log('1')
 			}
-			
-			alert(1<2);	//true
-			alert(1<0);	//false
+			//变量也一样
+			var i = 1
+			if (i) {
+				console.log(i)
+			}
+			var str = 'string'
+			if (str) {
+				console.log(str)
+			}
+
+			// 对象也一样
+			var student = {name:'木子'};
+			if (student) {
+				console.log(student+"成立")
+			}
+			if (student.name) {
+				console.log(student.name+"成立")
+			}
+
+			//3. undefined/null/NaN 作为判断条件,都被认为是false
+			if (undefined) {
+				console.log("undefined认为是true")
+			}
+			if (null) {
+				console.log("null认为是true")
+			}
+			if (NaN) {
+				console.log("NaN认为是true")
+			}
+
+			//4. 特别的,对象类型,即便没有属性,也认为是true,因为它不是undefined,也不是null
+			//相当于java中的调用了new 对象,但是没有赋值,这个对象也是存在的
+			var obj = {}
+			if (obj) {
+				console.log('没有属性的对象也认为是true')
+			}
+			//在js中可以直接对没有属性的对象加属性
+			console.log(obj.name); //undefined
+			obj.name = '木子'
+			console.log(obj.name) //木子
+
+
 		</script>
 	</body>
 </html>
