@@ -140,9 +140,79 @@
     //     console.log(value)
     //     console.log('--')
     // })
+
+    var keys = Object.keys(student);
+
+    console.log(keys);
+
+    keys.forEach(function(key) {
+      console.log(student[key])
+    });
 </script>
 ```
 
 ---
 
-#### 1.3 
+#### 1.3 switch
+
+```javascript
+<script>
+    var num = 3;
+    var str = '3'
+    //==比较值是否相等
+    console.log("num==str:"+(num==str))
+    console.log("num==str:"+(num===str))
+
+    // case后面是用的===来比较的
+    // switch (num) {
+    switch (str) {
+        case 2:
+            console.log('case的值是2');
+            break;
+        case 3:
+            console.log('case的值是3');
+            break;
+        case 4:
+            console.log('case的值是4');
+        case 5:
+            console.log('case的值是5');
+        default:
+            console.log('没有匹配到值');
+    }
+</script>
+```
+
+---
+
+#### 1.4 三目运算符
+
+```javascript
+<script>
+  var age=17
+  console.log(age>18?'成年人':'未成年人')
+</script>
+```
+
+#### 1.5 while/do...while
+
+```javascript
+<script>
+  // var num = '0'
+  var num = 0
+  while (num <= 100) {
+      if (num % 2===0) {
+          console.log('偶数:'+num);
+      }
+      num++;
+  }
+  console.log("num="+num)
+
+
+  do {
+      if (num % 2==1) {
+          console.log('奇数:' + num)
+      }
+      num--
+  }while(num>=0)
+</script>
+```

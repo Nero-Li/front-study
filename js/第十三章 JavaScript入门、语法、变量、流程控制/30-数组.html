@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html> 
+<html>
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
@@ -9,33 +9,68 @@
 			/*
 			 * 数组
 			 * 	数据的组合
-			 * 
+			 *
 			 * 语法
 			 * 	[]
 			 * 	每个数据之间是用逗号隔开的，最后一个数据是没有逗号
-			 * 
+			 *
 			 * 每个数据都会对应一个下标（序号）
 			 * 		下标代表的意思是，每个数据都有一个自己的标识，用于方便获取
 			 * 		下标值是从0开始
-			 * 
+			 *
 			 * 数据会有一个length属性，代表数组中数据的个数
-			 * 
+			 *
 			 * 取数组中的某个数据
 			 * 	数组[下标值]
-			 * 
-			 * 
+			 *
+			 *
 			 */
 			//			0		1		2		3		4
 			var color=['red','green','blue','white','black','pink'];
 			console.dir(color);
-			
+
 			console.log(color[1]);	//green
 			console.log(color[4]);	//black
-			
+
 			console.log(color[color.length-1]);	//pink
-			
-			
-			
+
+			var arr = new Array(1,2,3);
+			console.log(typeof color); //数组的类型是object,但是原型是Array
+			console.log(typeof arr);
+
+
+			function Car(color, maxSpeed) {
+				console.log('方法被调用')
+				this.color = color;
+				this.maxSpeed = maxSpeed;
+			}
+			var car = new Car('red', 9999999);
+
+			console.log(car);
+			function xar(color, maxSpeed) {
+				console.log('方法被调用')
+				this.color = color;
+				this.maxSpeed = maxSpeed;
+
+			}
+
+			var s = new xar('pink',1)
+			console.log(s);
+
+
+			var parent = {
+				walk: function() {
+					console.log('走路');
+				},
+			};
+
+			var son = Object.create(parent);
+
+			console.log(parent === son);
+			console.log(parent);
+			console.log(son);
+
+			son.walk();
 		</script>
 	</body>
 </html>

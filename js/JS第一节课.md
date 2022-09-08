@@ -216,6 +216,37 @@ console.log("学生姓名:"+student.name);
 console.log("学生年龄:"+student.age);
 //通过对象调用函数
 student.study()
+  
+//使用Object创建对象
+var obj1 = new Object({
+  age: 11,
+  name: '长睫毛',
+});
+  
+//声明构造函数,创建对象,构造函数一般首字母大写  
+function Car(color, maxSpeed) {
+  this.color = color;
+  this.maxSpeed = maxSpeed;
+}
+
+var car = new Car('red', 9999999);
+
+console.log(car);
+
+
+// Object.create创建对象
+// Object.create 会根据传递过去的对象生成一个新的对象，作为参数传递的对象会作为新对象的原型
+var parent = {
+  walk: function() {
+    console.log('走路');
+  },
+};
+
+var son = Object.create(parent);
+
+console.log(parent === son);
+
+son.walk();
 ```
 
 ---
@@ -240,4 +271,47 @@ console.log(arr1.length);
 arr1.forEach(function (item) {
     console.log("==>"+item)
 })
+  
+//还可以这么创建数组,使用new  
+var arr = new Array(1,2,3);
+console.log(typeof color); //数组的类型是object,但是原型是Array
+console.log(typeof arr);
 ```
+
+---
+
+### 3. 内置对象
+
+#### 3.1 Function
+
+> 不常用,知道有这个东西就行了
+
+```js
+var fn = new Function(函数参数1, 函数参数2, ..., 函数参数n, 函数体);
+
+var fn = new Function('a', 'b', 'return a + b');
+var result = fn(1, 3);
+console.log(result); // 输出：4
+```
+
+```js
+var num = 20;
+
+function fn() {
+  var num = 10;
+
+  var func = new Function('console.log(num)');
+
+  console.log(num);
+
+  func();
+}
+
+fn();
+
+// 输出：
+//  10
+//  20
+// 函数体内在执行的时候作用域是在全局的
+```
+
