@@ -1,5 +1,8 @@
 ## JS第二节课
 
+> 1. 流程控制
+> 2. 内置对象
+
 ### 1. 流程控制
 
 #### 1.1 if/if...else/if...else if...else
@@ -216,3 +219,74 @@
   }while(num>=0)
 </script>
 ```
+
+---
+
+### 2. 内置对象
+
+#### 2.1 Function
+
+复习函数
+
+```javascript
+//声明无参的函数,名字为fn
+function fn(){
+   console.log('这是一个函数');
+}
+//根据名字调用
+fn();
+
+//声明有参的函数,参数个数可以有多个
+function fn1(name){
+   console.log(name);
+}
+//根据名字调用
+fn1('muzi');
+console.log('--------------')
+//1. 函数声明的方式
+function fn(name){
+  console.log(name);
+}
+fn('这是一个函数声明');
+
+//2. 函数表达式的方式,但是此时不能用fn3来调用
+var fn2=function fn3(name){
+  console.log(name);
+}
+//fn3('这是一个函数表达式');	//报错
+fn2('这是一个函数表达式');
+//函数表达式的另一种调用方式
+var fn4=function(){
+  console.log('这是第二个函数表达式');
+}
+fn4()
+
+//把函数声明变成函数表达式
+//在函数声明前面加 !/~/+/-
+/*!function fn5(){
+	console.log('这是第二个函数声明');
+ }();*/
+
+/*~function fn5(){
+	console.log('这是第二个函数声明');
+}();*/
+
+/*+function fn5(){
+	console.log('这是第二个函数声明');
+}();*/
+
+/*-function fn5(){
+	console.log('这是第二个函数声明');
+ }();*/
+
+//匿名函数自执行
+//下一行代码以()打头的情况,必须加终止符 分号
+console.log('-------');
+//匿名函数
+(function(){
+  console.log('匿名')
+})()
+```
+
+Function
+

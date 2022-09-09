@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html> 
+<html>
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
@@ -25,55 +25,63 @@
 			 * 		调用
 			 * 			1、变量(参数)
 			 * 			2、直接在后面加上一对小括号
-			 * 		
+			 *
 			 * 			注意：函数表达式里的function后面如果有名字的话，在调用的时候是不能拿这个名字去调用
 			 */
-			
+
+			//1. 函数声明的方式
 			function fn(name){
 				console.log(name);
 			}
 			fn('这是一个函数声明');
-			
-			
+
+			//2. 函数表达式的方式,但是此时不能用fn3来调用
 			var fn2=function fn3(name){
 				console.log(name);
 			}
 			//fn3('这是一个函数表达式');	//报错
 			fn2('这是一个函数表达式');
-			
-			document.onclick=function(){
-				console.log('documnet点击了');
-			};
-			document.onclick();
-			
-			
+
+			// document.onclick=function(){
+			// 	console.log('documnet点击了');
+			// };
+			// document.onclick();
+
+
 			//函数表达式的另一种调用方式
 			var fn4=function(){
 				console.log('这是第二个函数表达式');
-			}();		//函数表达式可以直接在后面加上一个小括号就能调用
-			
-			
+			}	//函数表达式可以直接在后面加上一个小括号就能调用
+			fn4()
+
+
 			//把函数声明变成函数表达式
 			/*!function fn5(){
 				console.log('这是第二个函数声明');
 			}();*/
-			
+
 			/*~function fn5(){
 				console.log('这是第二个函数声明');
 			}();*/
-			
+
 			/*+function fn5(){
 				console.log('这是第二个函数声明');
 			}();*/
-			
+
 			/*-function fn5(){
 				console.log('这是第二个函数声明');
 			}();*/
-			
-			(function fn5(){
-				console.log('这是第二个函数声明');
-			})();
-			
+
+			// (function fn5(){
+			// 	console.log('这是第二个函数声明');
+			// })();
+			//下一行代码以()打头的情况,必须加终止符 分号
+			console.log('-------');
+			//匿名函数
+			(function(){
+				console.log('匿名')
+			})()
+
 		</script>
 	</body>
 </html>

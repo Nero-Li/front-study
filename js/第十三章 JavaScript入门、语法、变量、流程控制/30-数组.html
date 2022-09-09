@@ -71,6 +71,20 @@
 			console.log(son);
 
 			son.walk();
+
+
+			var obj = {
+				null: null,
+				infinity1: +Infinity,
+				infinity2: -Infinity,
+				NaN: NaN,
+				und:undefined
+			};
+
+			var result = JSON.stringify(obj);
+
+			console.log(result); // 输出：{"null":null,"infinity1":null,"infinity2":null,"NaN":null}
+
 		</script>
 	</body>
 </html>
