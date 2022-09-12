@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
-	</head> 
+	</head>
 	<body>
 		<script>
 			/*
@@ -15,31 +15,31 @@
 			 * 	参数
 			 * 		separator		分隔符
 			 * 		limit			分隔成数组数据的个数
-			 * 
+			 *
 			 * 		一个参数都没有以及参数是一个空格字符的话，会把整个字符串作为数组中的一个数据
 			 * 		如果参数为一个空字符，它会把字符串里的每个字符做为数组中的数据
 			 * 		如果参数为两个，分隔后的数组的个数第二个参数的值
 			 * 	返回值
 			 * 		返回一个数组，原字符串没有变化
 			 */
-			
-			var str='kaivon';
+
+			var str='softeem';
 			var s1=str.split();
-			console.log(s1);		//["kaivon"]
-			
+			console.log(s1);		//["softeem"]
+
 			var s2=str.split('');
-			console.log(s2);		//["k", "a", "i", "v", "o", "n"]
-			
+			console.log(s2);		//["s", "o", "f", "t", "e", "e","m"]
+
 			var s3=str.split(' ');
-			console.log(s3);		//["kaivon"]
-			
-			var s4=str.split('a');
-			console.log(s4);		//["k", "ivon"]
-			
-			var s5=str.split('i',1);
-			console.log(s5);		//["ka"]
-			
-			console.log(str);	//kaivon
+			console.log(s3);		//["softeem"]
+
+			var s4=str.split('f');
+			console.log(s4);		//["so", "teem"]
+
+			var s5=str.split('f',1);
+			console.log(s5);		//["so"]
+
+			console.log(str);	//softeem
 		</script>
 	</body>
 </html>

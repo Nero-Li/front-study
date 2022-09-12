@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <script>
+    var str1 = 'softeem'
+    //substring参数不能为负数,可以把substring的负数参数当成0
+    console.log(str1.substring(-3, -1)); //空
+    console.log(str1.slice(-3, -1)); //ee
+    console.log('----------')
+    //substring 参数可以颠倒
+    console.log(str1.substring(3, 1)); //of
+    console.log(str1.slice(3, 1));// 空
+  </script>
+</body>
+</html>

@@ -2,21 +2,21 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title></title> 
+		<title></title>
 	</head>
 	<body>
 		<script>
 			/*
 			 * splice
 			 * 	作用
-			 * 		用新元素替换旧元素，以此修改数组的内容（替换数组）
+			 * 		用新  元素替换旧元素，以此修改数组的内容（替换数组）
 			 * 	语法
-			 * 		数组.splice(start,deleatCount,item)
+			 * 		数组.splice(start,deleteCount,item)
 			 * 	参数
 			 * 		start			开始的位置
-			 * 		deleatCount		删除的个数
+			 * 		deleteCount		删除的个数
 			 * 		item				替换的内容
-			 * 
+			 *
 			 * 		一个参数都不有的话，那直接返回一个空数组
 			 * 		如果参数为一个数字，代表截取数组，从传的那个数字开始，一直截到最后一位数据
 			 * 		如果参数为两个数字，代表截取数组，从第一个参数开始，截取的个数为第二个参数的值
@@ -24,32 +24,32 @@
 			 * 返回值
 			 * 		返回删除的数据
 			 * 		原数组变化了，变成删除后剩下的内容
-			 * 
+			 *
 			 */
 			var color=['red','green','blue','pink','yellow'];
-			
+			//什么都不传,截取0个元素,返回空数组,原数组没有被截取,所有没有变
 			var c1=color.splice();
 			console.log(c1);			//[]
 			console.log(color);		//["red", "green", "blue", "pink", "yellow"]
-			
+
 			var c2=color.splice(3);
 			console.log(c2);			//["pink", "yellow"]
 			console.log(color);		//["red", "green", "blue"]
-			
+
 			var color1=['red','green','blue','pink','yellow'];
 			var c3=color1.splice(1,3);
 			console.log(c3);			//["green", "blue", "pink"]
 			console.log(color1);		//["red", "yellow"]
-			
-			
+
+
 			var color2=['red','green','blue','pink','yellow'];
 			var c4=color2.splice(1,2,'white','black');
 			console.log(c4);		//["green", "blue"]
 			console.log(color2);	//["red", "white", "black", "pink", "yellow"]
-			
+
 			var color3=['red','green','blue','pink','yellow'];
 			var c5='a,b,c';
-			color3.splice(3,2,c5);		
+			color3.splice(3,2,c5);
 			console.log(color3);		//["red", "green", "blue", "a,b,c"]
 		</script>
 	</body>

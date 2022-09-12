@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html> 
+<html>
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
@@ -15,35 +15,35 @@
 			 * 	参数
 			 * 		indexStart		开始的位置
 			 * 		indexEnd			结束的位置
-			 * 		
+			 *
 			 * 		如果一个参数都不有的话，会返回整个字符串
 			 * 		如果只有一个参数，那就从这个参数的位置一直截到最后一个字符
 			 * 		如果有两个参数，那最后一个参数代表结束位置，但是不包含它
 			 * 返回值
 			 * 		返回截取后的字符串，原字符串不变
-			 * 
+			 *
 			 * 与slice的区别
 			 * 	1、slice起始位置不能大于结束位置，而substring起始位置可以大于结束位置
 			 * 	2、slice可以放负数，而substring是不能放负数的
-			 * 	
+			 *
 			 */
-			var str='kaivon';
+			var str='softeem';
 			var s1=str.substring();
-			console.log(s1);			//kaivon
-			
+			console.log(s1);			//softeem
+
 			var s2=str.substring(2);
-			console.log(s2);			//ivon
-			
+			console.log(s2);			//fteem
+
 			var s3=str.substring(3,5);
-			console.log(s3);			//vo
-			
+			console.log(s3);			//te
+
 			var s4=str.substring(5,3);
-			console.log(s4);			//vo
-			
+			console.log(s4);			//te
+
 			var s5=str.substring(-3,-2);
 			console.log(s5);			//空
-			
-			console.log(str);		//kaivon
+
+			console.log(str);		//softeem
 		</script>
 	</body>
 </html>
