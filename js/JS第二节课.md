@@ -947,7 +947,41 @@ fn();
 >
 > 
 
-##### 2.5.4 split 分割成数组
+##### 2.5.5 substr 截取字符串
+
+```javascript
+<script>
+   /*
+    * substr
+    *     作用
+    *        截取一段指定开始位置与个数的字符串
+    *     语法
+    *        字符串.substr(start,length)
+    *     参数
+    *        start     开始的位置
+    *        length    截取的个数
+    *
+    *        一个参数都没有，它会把整个字符串全部返回
+    *        如果有两个参数，那默认会从第一个参数的位置截到最后一位字符
+    * 返回值
+    *        返回截取到的字符串，原字符串不变
+    *
+    */
+   var str='softeem';
+   var s1=str.substr();
+   console.log(s1);      //softeem
+
+   var s2=str.substr(2);
+   console.log(s2);      //fteem
+
+   var s3=str.substr(3,2);
+   console.log(s3);      //te
+
+   console.log(str);  //softeem
+</script>
+```
+
+##### 2.5.6 split 分割成数组
 
 > 和数组的join相反
 
@@ -987,5 +1021,133 @@ fn();
    console.log(s5);      //["so"]
 
    console.log(str);  //softeem
+</script>
+```
+
+##### 2.5.7 toUpperCase/toLowerCase 大小写转换
+
+```javascript
+<script>
+   /*
+    * toLowerCase
+    *     作用
+    *        把字符串转成小写
+    *     语法
+    *        字符串.toLowerCase()
+    *     参数
+    *        没有参数
+    *     返回值
+    *        返回字符串转成小写的结果，原来的字符串不有变化
+    */
+   var str='SofteeM';
+   var s1=str.toLowerCase();
+   console.log(s1);         //softeem
+
+   console.log(str);     //SofteeM
+</script>
+```
+
+```javascript
+<script>
+   /*
+    * toUpperCase
+    *     作用
+    *        把字符串转成大写
+    *     语法
+    *        字符串.toUpperCase()
+    *     参数
+    *        没有参数
+    *     返回值
+    *        返回字符串转成大写的结果，原字符串不变
+    */
+   var str='SofteeM';
+   var s1=str.toUpperCase();
+   console.log(s1);      //SOFTEEM
+   console.log(str);  //SofteeM
+</script>
+```
+
+---
+
+##### 2.5.8 trim 去掉首尾的空格
+
+```javascript
+<script>
+   /*
+    * trim
+    *     作用
+    *        去掉字符串的首发空格
+    *     语法
+    *        字符串.trim()
+    *     参数
+    *        没有参数
+    *     返回值
+    *        返回字符串去掉首尾空格的结果，原字符串不变
+    *
+    */
+   var str='    softeem     ';
+   var s1=str.trim();
+   console.log(s1);      //softeem
+   console.log(str);  //    softeem
+</script>
+```
+
+#### 2.6 JSON
+
+##### 2.6.1 parse json字符串转对象
+
+```javascript
+<script>
+   /*
+    * 		JSON规则
+		* 		数据放在了一对引号当中，用{}或者[]括起来
+		* 		里面的每个数据都以键值对来表示		key:value
+		* 		key必需放双引号
+		* 		每个数据之间用逗号隔开
+    * 
+    *     JSON(JavaScript Object Notation) 是一种轻量级的数据交换格式
+    *     一种类似JS中的对象格式的字符串(JSON它是一个字符串，只不过内容长得像对象),用于js与后端进行数据交互
+    * 
+    * JSON.parse(json字符串)
+    *     把一个JSON格式的字符串转成对象，返回转过后的对象
+    */
+
+   console.log(JSON);
+
+   var j1="[1,2,3]";
+   var j2='{"name":"muzi","age":18}';
+
+   var obj1=JSON.parse(j1);
+   console.log(obj1,typeof obj1);    //[1, 2, 3]       "object"
+
+   var obj2=JSON.parse(j2);
+   console.log(obj2,typeof obj2);    //{name: "muzi", age: 18} "object"
+
+   var j3='{name:"kaivon"}';
+   var obj3=JSON.parse(j3);      //报错   key没有加引号
+</script>
+```
+
+##### 2.6.2 stringify 对象转json字符串
+
+```javascript
+<script>
+   /*
+    * JSON.stringify(对象)
+    *     把一个对象转换成JSON格式的字符串
+    *     如果对象当中的key没有加引号，也可以转换，转换后的结果会自动给它加上引号
+    */
+   var obj1=[1,2,3];
+   var obj2={"name":'木子',"age":18};
+   var obj3={name:'木子',"age":18};
+
+   var s1=JSON.stringify(obj1);
+   console.log(s1);         //[1,2,3]
+
+   var s2=JSON.stringify(obj2);
+   console.log(s2);         //{"name":"木子","age":18}
+
+   var s3=JSON.stringify(obj3);
+   console.log(s3);         //{"name":"木子","age":18}
 </script>
 ```

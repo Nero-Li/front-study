@@ -1,27 +1,32 @@
 <!DOCTYPE html>
 <html>
-	<head> 
+	<head>
 		<meta charset="UTF-8">
 		<title></title>
 	</head>
 	<body>
 		<script>
 			/*
+			 *
+			 *
+			 * 	JSON(JavaScript Object Notation) 是一种轻量级的数据交换格式
+			 * 	一种类似JS中的对象格式的字符串(JSON它是一个字符串，只不过内容长得像对象),用于js与后端进行数据交互
+			 *
 			 * JSON.parse(json字符串)
 			 * 	把一个JSON格式的字符串转成对象，返回转过后的对象
 			 */
-			
-			//console.log(JSON);
-			
+
+			console.log(JSON);
+
 			var j1="[1,2,3]";
-			var j2='{"name":"老王","age":30}';
-			
+			var j2='{"name":"muzi","age":18}';
+
 			var obj1=JSON.parse(j1);
 			console.log(obj1,typeof obj1);		//[1, 2, 3]		"object"
-			
+
 			var obj2=JSON.parse(j2);
-			console.log(obj2,typeof obj2);		//{name: "老王", age: 30} "object"
-			
+			console.log(obj2,typeof obj2);		//{name: "muzi", age: 18} "object"
+
 			var j3='{name:"kaivon"}';
 			var obj3=JSON.parse(j3);		//报错	key没有加引号
 		</script>

@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e974bdb5-d67c-41e9-9f7c-0ce45aaf753d" name="Changes" comment="# JS4">
-      <change afterPath="$PROJECT_DIR$/js/Function.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第十六章 字符串方法、JSON方法、数组方法/字符串substring和slice.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/字符串补充.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/数组补充.html" afterDir="false" />
+    <list default="true" id="e974bdb5-d67c-41e9-9f7c-0ce45aaf753d" name="Changes" comment="# JS5">
+      <change afterPath="$PROJECT_DIR$/js/JS第三节课.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/test.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/JS第二节课.md" beforeDir="false" afterPath="$PROJECT_DIR$/js/JS第二节课.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/第十六章 字符串方法、JSON方法、数组方法/2-字符串的方法-charAt.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十六章 字符串方法、JSON方法、数组方法/2-字符串的方法-charAt.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/第十六章 字符串方法、JSON方法、数组方法/3-字符串方法-charCodeAt.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十六章 字符串方法、JSON方法、数组方法/3-字符串方法-charCodeAt.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/第十六章 字符串方法、JSON方法、数组方法/32-Array-splice.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十六章 字符串方法、JSON方法、数组方法/32-Array-splice.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/第十六章 字符串方法、JSON方法、数组方法/4-字符串方法-indexOf.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十六章 字符串方法、JSON方法、数组方法/4-字符串方法-indexOf.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/第十六章 字符串方法、JSON方法、数组方法/5-字符串方法-lastIndexOf.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十六章 字符串方法、JSON方法、数组方法/5-字符串方法-lastIndexOf.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/第十六章 字符串方法、JSON方法、数组方法/6-字符串方法-slice.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十六章 字符串方法、JSON方法、数组方法/6-字符串方法-slice.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/第十六章 字符串方法、JSON方法、数组方法/7-字符串方法-split.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十六章 字符串方法、JSON方法、数组方法/7-字符串方法-split.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/第十六章 字符串方法、JSON方法、数组方法/8-字符串方法-substring.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十六章 字符串方法、JSON方法、数组方法/8-字符串方法-substring.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/第十七章 DOM结构、关系、节点、属性/2-DOM节点.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十七章 DOM结构、关系、节点、属性/2-DOM节点.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/第十三章 JavaScript入门、语法、变量、流程控制/16-属性操作.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十三章 JavaScript入门、语法、变量、流程控制/16-属性操作.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/第十三章 JavaScript入门、语法、变量、流程控制/17-value属性.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十三章 JavaScript入门、语法、变量、流程控制/17-value属性.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/第十三章 JavaScript入门、语法、变量、流程控制/34-querySelector.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十三章 JavaScript入门、语法、变量、流程控制/34-querySelector.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/第十六章 字符串方法、JSON方法、数组方法/10-字符串方法-toLowerCase.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十六章 字符串方法、JSON方法、数组方法/10-字符串方法-toLowerCase.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/第十六章 字符串方法、JSON方法、数组方法/11-字符串方法-toUpperCase.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十六章 字符串方法、JSON方法、数组方法/11-字符串方法-toUpperCase.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/第十六章 字符串方法、JSON方法、数组方法/12-字符串方法-trim.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十六章 字符串方法、JSON方法、数组方法/12-字符串方法-trim.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/第十六章 字符串方法、JSON方法、数组方法/14-JSON.parse.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十六章 字符串方法、JSON方法、数组方法/14-JSON.parse.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/第十六章 字符串方法、JSON方法、数组方法/15-JSON.stringIfy.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十六章 字符串方法、JSON方法、数组方法/15-JSON.stringIfy.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/第十六章 字符串方法、JSON方法、数组方法/9-字符串的方法-substr.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十六章 字符串方法、JSON方法、数组方法/9-字符串的方法-substr.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +88,8 @@
       <workItem from="1662531055117" duration="12996000" />
       <workItem from="1662615352860" duration="9714000" />
       <workItem from="1662701141807" duration="4760000" />
-      <workItem from="1662960655047" duration="12112000" />
+      <workItem from="1662960655047" duration="12514000" />
+      <workItem from="1663047610350" duration="6590000" />
     </task>
     <task id="LOCAL-00001" summary="# 海棠">
       <created>1662460306951</created>
@@ -125,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662733887468</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="# JS5">
+      <created>1662993198532</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1662993198532</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,6 +156,7 @@
     <MESSAGE value="# JS第二节课" />
     <MESSAGE value="# JS第三节课" />
     <MESSAGE value="# JS4" />
-    <option name="LAST_COMMIT_MESSAGE" value="# JS4" />
+    <MESSAGE value="# JS5" />
+    <option name="LAST_COMMIT_MESSAGE" value="# JS5" />
   </component>
 </project>
