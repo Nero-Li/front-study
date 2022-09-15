@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#box{
+				width: 100px;
+				height: 100px;
+				background: red;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+		</style>
+		<script>
+			window.onload=function(){
+				var box=document.getElementById("box");
+				var step=5;
+				
+				document.onkeydown=function(ev){
+					//console.log(ev.keyCode);
+					//左：37		上：38		右：39		下：40
+					
+					if(ev.keyCode==37){
+						box.style.left=box.offsetLeft-step+'px';
+					}
+					
+					if(ev.keyCode==38){
+						box.style.top=box.offsetTop-step+'px';
+					}
+					
+					if(ev.keyCode==39){
+						box.style.left=box.offsetLeft+step+'px';
+					}
+					
+					if(ev.keyCode==40){
+						box.style.top=box.offsetTop+step+'px';
+					}
+					
+				}
+			};
+		</script>
+	</head>
+	<body>
+		<div id="box"></div>
+	</body>
+</html>

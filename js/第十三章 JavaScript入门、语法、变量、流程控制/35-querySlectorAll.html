@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
-	<head> 
+	<head>
 		<meta charset="UTF-8">
 		<title></title>
 		<style>
 			/*#color>li:first-child{
 				background: #f00;
 			}
-			
+
 			#color>li:nth-child(4){
 				background: yellow;
 			}*/
@@ -17,33 +17,35 @@
 			 * querySelectorAll(css的选择器)
 			 * 	通过css选择器获取到一组元素
 			 * 	它获取到的也是一组元素，它也是一个类数组
-			 * 
+			 *
 			 * 主语
 			 * 		document			从整个页面中去获取一组元素
 			 * 		父级				从父级下去获取一组元素
-			 * 
+			 *
 			 */
 			window.onload=function(){
 				var lis=document.querySelectorAll('li');
-				
+				var li = document.querySelector('li');
 				console.dir(lis);
-				
+				console.dir(li)
+
+				console.log('----------')
 				var color=document.getElementById('color');
 				var lis1=color.querySelectorAll('li');
 				var lis2=document.querySelectorAll('#color li');
-				
+
 				console.dir(lis1);
 				console.dir(lis2);
-				
+
 				var lis3=document.querySelectorAll('#color ul li');
 				console.dir(lis3);
 				lis3[lis3.length-1].style.background='gold';
-				
+				//
 				var greens=document.querySelectorAll('.green');
 				console.dir(greens);
 				greens[0].style.background='green';
-				
-				
+				// greens.style.background='green'; //报错
+
 				var uls=document.querySelectorAll('ul');
 				console.dir(uls);
 				uls[2].style.background='blue';
@@ -63,7 +65,7 @@
 					<li>black</li>
 					<li>gold</li>
 				</ul>
-				
+
 			</li>
 		</ul>
 		<ul class="color2">

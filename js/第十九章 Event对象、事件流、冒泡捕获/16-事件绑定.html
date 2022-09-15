@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			/*
+			 * 事件绑定
+			 * 	1、on
+			 * 		方法
+			 * 			对象.on事件名称＝函数;
+			 * 			注意：on只能给元素添加一个事件。如果说有多个on，那后面的会把前面的给覆盖了
+			 * 	2、addEventListener
+			 * 		方法
+			 * 			对象.addEventListener(事件名称,事件绑定函数,boolean);
+			 * 		参数
+			 * 			参数1：事件名称，不加on，它是一个字符串
+			 * 			参数2：事件绑定函数，这个事件绑定函数可以是匿名函数也可以是命名函数
+			 * 			参数3：布尔值
+			 * 				true			事件是在捕获的阶段发生的
+			 * 				false		事件是在冒泡的阶段发生的（默认为false）
+			 *			
+			 * 			注意：事件绑定函数里的this是指向事件触发的那个对象的，不是指向window
+			 */
+			
+			window.onload=function(){
+				var btn1=document.getElementById("btn1");
+				var btn2=document.getElementById("btn2");
+				
+				//on的方式添加事件
+				btn1.onclick=function(){
+					console.log('这是按钮一的第一次点击');
+				};
+				
+				btn1.onclick=function(){
+					console.log('这是按钮一的第二次点击');
+				};
+				
+				//addEventListener方式添加的事件(匿名函数)
+				btn2.addEventListener('click',function(){
+					console.log('这是按钮二的第一次点击');
+					console.log(this);			//指向事件发生的那个对象
+				},false);
+				btn2.addEventListener('click',function(){
+					console.log('这是按钮二的第二次点击');
+				},false);
+				
+				
+				//addEventListener方式添加的事件(命名函数)
+				btn2.addEventListener('mouseover',fn1,false);
+				btn2.addEventListener('mouseover',fn2,false);
+				
+				function fn1(){
+					console.log('这是按钮二的第一个mouseover事件');
+					console.log(this);			//指向事件发生的那个对象
+				}
+				function fn2(){
+					console.log('这是按钮二的第二个mouseover事件');
+				}
+			};
+		</script>
+	</head>
+	<body>
+		<input type="button" id="btn1" value="按钮1" />
+		<input type="button" id="btn2" value="按钮2" />
+	</body>
+</html>

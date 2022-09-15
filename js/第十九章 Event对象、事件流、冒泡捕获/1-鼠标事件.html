@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				width: 150px;
+				height: 150px;
+				float: left;
+				margin-right: 10px;
+			}
+			div:nth-of-type(1){
+				background: green;
+			}
+			div:nth-of-type(2){
+				background: pink;
+			}
+			div:nth-of-type(3){
+				background: yellow;
+			}
+			div:nth-of-type(4){
+				background: blue;
+			}
+			div:nth-of-type(5){
+				background: orange;
+			}
+			div:nth-of-type(6){
+				background: red;
+			}
+			div:nth-of-type(7){
+				background: greenyellow;
+			}
+		</style>
+		<script>
+			window.onload=function(){
+				var div=document.querySelectorAll("div");
+				
+				//鼠标点击事件，在一个元素上鼠标的左键（只能是左键，mac上可以是滚轮）点击(按下去并抬起)下去就会触发
+				div[0].onclick=function(){
+					console.log('click');
+				}
+				
+				//鼠标双击事件，在一个元素上鼠标左键（只能是左键，mac上可以是滚轮）双击下去就会触发
+				div[1].ondblclick=function(){
+					console.log('dblclick')	
+				};
+				
+				//鼠标按下事件，在一个元素上鼠标左中右按下去（不需要抬起）的时候就会触发
+				div[2].onmousedown=function(){
+					console.log('mousedown');	
+				};
+				
+				//鼠标抬起事件，在一个元素上鼠标左中右（mac下右键不行）按下去并抬起来的时候就会触发
+				div[3].onmouseup=function(){
+					console.log('mouseup');	
+				};
+				
+				//鼠标移动事件，在一个元素上鼠标只要移动的时候就会触发
+				div[4].onmousemove=function(){
+					console.log('mousemove');
+				};
+				
+				//鼠标移入事件，鼠标移到一个元素身上的时候就会触发
+				div[5].onmouseover=function(){
+					console.log('mouseover');	
+				};
+				//鼠标移出事件，鼠标从一个元素身上移出的时候就会触发
+				div[5].onmouseout=function(){
+					console.log('mouseout');	
+				};
+				
+				//鼠标移入事件，鼠标移到一个元素身上的时候就会触发
+				div[6].onmouseenter=function(){
+					console.log('mouseenter');	
+				};
+				//鼠标移出事件，鼠标从一个元素身上移出的时候就会触发
+				div[6].onmouseleave=function(){
+					console.log('mouseleave');	
+				};
+			};
+		</script>
+	</head>
+	<body>
+		<!--
+			事件
+				当发生某一个动作的时候，会触发一个函数
+			
+			
+			mouseover/mouseout与mouseenter/mouseleave的区别
+			mouseover/mouseout会把事件传递给子级元素
+			mouseenter/mouseleave不会把事件传递给子级元素
+		-->
+		<div>click</div>
+		<div>dblclick</div>
+		<div>mousedown</div>
+		<div>mouseup</div>
+		<div>mousemove</div>
+		<div><span>mouseover</span><br /><span>mouseout</span></div>
+		<div><span>mouseenter</span><br /><span>mouseleave</span></div>
+	</body>
+</html>

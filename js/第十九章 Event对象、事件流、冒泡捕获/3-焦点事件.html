@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			/*
+			 * 焦点事件
+			 * 	onfocus			有焦点事件的元素获取焦点后就会触发
+			 * 	onblur			有焦点事件的元素失去焦点后就会触发
+			 * 
+			 * 	tabindex			用来改变tab键切换的顺序
+			 * 
+			 * 
+			 * 设置焦点的方法
+			 * 		focus();			让元素获取到焦点
+			 * 		blur();			让元素失去焦点		
+			 */
+			window.onload=function(){
+				var text=document.querySelector("input[type=text]");
+				var textarea=document.querySelector("textarea");
+				var btn=document.querySelector("button");
+				var select=document.querySelector("select");
+				var check=document.querySelector("input[type=checkbox]");
+				var radio=document.querySelector("input[type=radio]");
+				var tex=document.getElementById("tex");
+				
+				text.onfocus=function(){
+					this.value='';
+				};
+				
+				text.onblur=function(){
+					this.value='kaivon';
+				};
+				
+				//textarea的焦点事件
+				textarea.onfocus=function(){
+					this.style.background='red';
+				}
+				textarea.onblur=function(){
+					this.style.background='';
+				}
+				
+				//button的焦点事件
+				btn.onfocus=function(){
+					this.style.width='200px';
+				};
+				btn.onblur=function(){
+					this.style.width='100px';
+				}
+				
+				//select的焦点事件
+				select.onfocus=function(){
+					this.style.width='200px';
+				};
+				select.onblur=function(){
+					this.style.width='100px';
+				}
+				
+				
+				//checkbox的焦点事件
+				check.onfocus=function(){
+					this.style.width='100px';	
+				};
+				check.onblur=function(){
+					this.style.width='50px';
+				};
+				
+				//radio的焦点事件
+				radio.onfocus=function(){
+					this.style.width='100px';	
+				};
+				radio.onblur=function(){
+					this.style.width='50px';
+				};
+				
+				
+//				tex.focus();
+//				tex.blur();
+				
+//				tex.onfocus=function(){
+//					this.blur();		//获取到焦点后就让他失去焦点了
+//				}
+				
+				tex.onblur=function(){
+					this.focus();		//失去焦点后就让他获取焦点
+				}
+				
+			};
+		</script>
+	</head>
+	<body>
+		<input type="text" value="kaivon" tabindex="3" />
+		<textarea tabindex="2"></textarea>
+		<button tabindex="1">kaivon</button>
+		<select name="" id="" tabindex="4">
+			<option value="">123</option>
+			<option value="">456</option>
+		</select>
+		<input type="checkbox" tabindex="6" />
+		<input type="radio" tabindex="5" />
+		
+		<input type="text" id="tex" />
+	</body>
+</html>

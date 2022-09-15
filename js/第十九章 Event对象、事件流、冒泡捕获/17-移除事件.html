@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			/*
+			 * 移除事件
+			 * 	1、移除on添加的事件
+			 * 		对象.on事件名称＝null;
+			 * 	2、移除addEventListener添加的事件
+			 * 		对象.removeEventListener(事件名称,事件绑定函数,boolean);
+			 * 		注意：1、不能移除掉addEventListener添加的匿名函数
+			 * 			2、只能移除同一阶段的绑定函数
+			 */
+			
+			window.onload=function(){
+				var btn1=document.getElementById("btn1");
+				var btn2=document.getElementById("btn2");
+				
+				//on的方式添加事件
+				btn1.onclick=function(){
+					console.log('这是按钮一的第一次点击');
+				};
+				
+				btn1.onclick=function(){
+					console.log('这是按钮一的第二次点击');
+				};
+				
+				//移除on添加的事件
+				btn1.onclick=null;
+				
+				
+				
+				
+				//addEventListener方式添加的事件(匿名函数)
+				btn2.addEventListener('click',function(){
+					console.log('这是按钮二的第一次点击');
+					console.log(this);			//指向事件发生的那个对象
+				},false);
+				btn2.addEventListener('click',function(){
+					console.log('这是按钮二的第二次点击');
+				},false);
+				
+				
+				//removeEventListener移除不了匿名函数
+				/*btn2.removeEventListener('click',function(){
+					console.log('这是按钮二的第一次点击');
+					console.log(this);			//指向事件发生的那个对象
+				},false);*/
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				//addEventListener方式添加的事件(命名函数)
+				btn2.addEventListener('mouseover',fn1,true);
+				btn2.addEventListener('mouseover',fn2,false);
+				
+				function fn1(){
+					console.log('这是按钮二的第一个mouseover事件');
+					console.log(this);			//指向事件发生的那个对象
+				}
+				function fn2(){
+					console.log('这是按钮二的第二个mouseover事件');
+				}
+				
+				
+				//removeEventListener移除命名函数
+				btn2.removeEventListener('mouseover',fn1,true);
+				btn2.removeEventListener('mouseover',fn2,false);
+			};
+		</script>
+	</head>
+	<body>
+		<input type="button" id="btn1" value="按钮1" />
+		<input type="button" id="btn2" value="按钮2" />
+	</body>
+</html>

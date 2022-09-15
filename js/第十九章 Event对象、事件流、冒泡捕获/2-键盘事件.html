@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				width: 100px;
+				height: 100px;
+				background: red;
+			}
+		</style>
+		<script>
+			window.onload=function(){
+				var div=document.querySelector("div");
+				var input=document.querySelector("input");
+				var text=document.querySelectorAll("textarea");
+				
+				div.onkeydown=function(){
+					console.log('keydow');	
+				};
+				
+				input.onkeydown=function(){
+					console.log('inputkeydow');
+				};
+				
+				input.onkeyup=function(){
+					console.log('keyup');
+				};
+				
+				text.onkeypress=function(){
+					console.log('keypress');
+				};
+			}
+		</script>
+	</head>
+	<body>
+		<!--
+			键盘事件
+				不是所有的元素都会有键盘事件，只有有焦点的元素才会有
+			keydown
+				当键盘按下去的时候就会触发，如果按下不抬起，这个事件会一直触发
+			keyup
+				当键盘抬起的时候就会触发
+			keypress
+				当键盘近下字母或者数字就会触发这个事件，如果按下了是功能键（ctrl、shift、alt、backspace）
+		-->
+		<div></div>
+		<input type="text" />
+		<textarea></textarea>
+	</body>
+</html>

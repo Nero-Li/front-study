@@ -6,22 +6,27 @@
 		<script>
 			/*
 			 * getElementsByClassName(class名称)
-			 * 	通过class去获取到一组元素 
+			 * 	通过class去获取到一组元素
 			 * 	获取到的结果也是一个类数组
-			 * 
+			 *
 			 * 主语
 			 * 		document		从整个文档里去获取class元素
 			 * 		父级			从父级下去获取class元素
-			 * 	
+			 *
 			 */
 			window.onload=function(){
 				var greens=document.getElementsByClassName('green');
-				
+				for (let i = 0; i < greens.length; i++) {
+					console.log(greens[i])
+				}
+				console.log('-----------')
+
 				console.dir(greens);
-				
+
 				var color=document.getElementById('color');
+				//也可以用父级元素调用
 				var greens1=color.getElementsByClassName('green');
-				
+
 				console.dir(greens1);
 			};
 		</script>
@@ -29,14 +34,14 @@
 	<body>
 		<ul id="color">
 			<li>red</li>
-			<li class="green">green</li>
+			<li class="green">green1</li>
 			<li>blue</li>
 			<li>yellow</li>
 			<li>pink</li>
 		</ul>
 		<ul>
 			<li>red</li>
-			<li class="green">green</li>
+			<li class="green">green2</li>
 			<li>blue</li>
 			<li>yellow</li>
 			<li>pink</li>

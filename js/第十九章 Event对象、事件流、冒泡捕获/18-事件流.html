@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html id="html"> 
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				width: 200px;
+				height: 200px;
+				font-size: 30px;
+				color: #fff;
+				background: green;
+			}
+			span{
+				display: block;
+				width: 100px;
+				height: 100px;
+				background: goldenrod;
+				color: #fff;
+				font-size: 30px;
+			}
+			body{
+				border: 1px solid #000;
+			}
+		</style>
+		<script>
+			/*
+			 * 事件流
+			 * 	事件流指事件在触发时的一个流程，就像for循环一样有一个执行的过程。
+			 * 	在事件触发时，会先执行一个阶段叫做“捕获阶段”，从最外层向触发该事件元素寻找的一个过程。最终找到触发该事件的元素，如果该元素有绑定事件处理函数则执行该函数。
+			 * 	在找到触发该事件的元素之后，如果这元素身上有事件，就会执行他的事件，称为“目标阶段”
+			 * 	接下来会进行下一个阶段“冒泡阶段”，冒泡阶段是从目标元素的上一层开始往外层寻找，直到最外层时结束整个事件流程。
+			 * 	不论是捕获阶段还是冒泡阶段，在寻找目标元素的过程和向外返回的过程中，所遇到每一个元素身上如果有相同事件的事件处理函数都会被调用。
+			 * 	
+			 * 	注意：低版本IE浏览器的事件只能绑定在冒泡阶段
+			 */
+			
+			
+			window.onload=function(){
+				var div=document.getElementById("div");
+				var span=document.getElementById("span");
+				var html=document.getElementById("html");
+				var body=document.getElementById("body");
+				window.id='window1';
+				
+				function fn(){
+					console.log(this.id);
+				}
+				
+				
+				//用on的方法给元素添加事件，所有的浏览器都是一样的，先触发事件源对象，然后再往外执行（冒泡的阶段）
+				/*window.onclick=fn;			//window1
+				html.onclick=fn;				//html	window1
+				body.onclick=fn;				//body	html		window1
+				div.onclick=fn;				//div	body		html		window1
+				span	.onclick=fn;				//span	div		body		html		window1*/
+				
+				
+				//用addEventListener给元素添加事件，最后一个参数为false，表示事件会在冒泡的阶段执行，与on添加的事情执行顺序是一样的
+				/*window.addEventListener('click',fn,false);		//window1
+				html.addEventListener('click',fn,false);			//html	window1
+				body.addEventListener('click',fn,false);			//body	html		window1
+				div.addEventListener('click',fn,false);			//div	body		html		window1
+				span.addEventListener('click',fn,false);			//span	div		body		html		window1*/
+				
+				
+				//用addEventListener给元素添加事件，最后一个参数为true，表示事件会在捕获的阶段执行
+				window.addEventListener('click',fn,true);		//window1
+				html.addEventListener('click',fn,true);			//window1	html	
+				body.addEventListener('click',fn,true);			//window1	html		body	
+				div.addEventListener('click',fn,true);			//window1	html		body		div		
+				span.addEventListener('click',fn,true);			//window1	html		body		div		span	
+			};
+		</script>
+	</head>
+	<body id="body">
+		<div id="div">div
+			<span id="span">span</span>
+		</div>
+	</body>
+</html>

@@ -4,13 +4,15 @@
 		<meta charset="UTF-8">
 		<title></title>
 		<style>
-			/*#color>li:first-child{
-				background: #f00;
+
+			#color{
+				background: blue;
 			}
 
-			#color>li:nth-child(4){
-				background: yellow;
-			}*/
+			/*#color>li:first-child{*/
+			/*	background: #f00;*/
+			/*}*/
+
 		</style>
 		<script>
 			/*
@@ -25,14 +27,21 @@
 			 */
 
 			window.onload=function(){
+
+				var element = document.querySelector('#color');
+
+				console.log(element)
+				element.style.background='red'
+
 				var red=document.querySelector('#color li:first-child');
-				red.style.background='red';
-
-				var ul=document.querySelector('.color2');
-				ul.style.background='yellow';
-
-				var ul=document.querySelector('.green');
-				ul.style.background='pink';
+				console.log(red)
+				// red.style.background='red';
+				//
+				// var ul=document.querySelector('.color2');
+				// ul.style.background='yellow';
+				//
+				// var ul=document.querySelector('.green');
+				// ul.style.background='pink';
 			};
 		</script>
 	</head>

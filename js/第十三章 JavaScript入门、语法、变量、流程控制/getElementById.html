@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <script>
+            /*
+             * document.getElementById(id名称)
+             * 	通过id名称去获取一个元素,它只有一个主语,document(整个文档)
+             */
+            window.onload = function () {
+                var students = document.getElementById('students');
+                console.dir(students);
+                console.log(students)
+                // students.style.background = 'red'
+
+                console.log('------------')
+                //如果出现多个id相同的元素,只会取到第一个
+                var muzi = document.getElementById('muzi');
+                console.log(muzi)
+
+            };
+        </script>
+    </head>
+    <body>
+    <ul id="students">
+        <li id="muzi">木子</li>
+        <li id="muzi">锤子</li>
+        <li>斧子</li>
+        <li>刀子</li>
+        <li>刷子</li>
+    </ul>
+    </body>
+</html>
