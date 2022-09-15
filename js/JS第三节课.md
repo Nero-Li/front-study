@@ -462,6 +462,8 @@
 
 #### 1.4 属性操作
 
+##### 1.4.1 id,value,自定义属性
+
 ```javascript
 <head>
    <meta charset="UTF-8">
@@ -488,8 +490,8 @@
          console.log(btn.value);    //按钮
 
          btn.value='小按钮';      //修改属性
-
-         //font-size    这个属性不能用点直接去获取，因为js不谁横杠
+				 // font是复合属性,size是单一属性
+         // font-size    这个属性不能用点直接去获取，因为js不谁横杠
          // console.log(btn.style.font-size);
 
          console.log(btn.style['font-size']);      //20px
@@ -507,3 +509,83 @@
    </script>
 </body>
 ```
+
+##### 1.4.2 className
+
+```javascript
+<div class="kaivon" id="kaivon"></div>
+<script>
+   /*
+    * className
+    * 注意：class是js中的一个保留字。它是不允许我们用的
+    *        在获取class的时候，不能用class，用className
+    */
+   var kaivon=document.getElementById('kaivon');
+   
+   console.log(kaivon.class);    //undefined
+   console.log(kaivon.className); //kaivon
+</script>
+```
+
+##### 1.4.3 innerHtml
+
+```javascript
+<body>
+   <script>
+      /*
+       * innerHTML
+       *     获取到是一个标签对里的所有内容
+       *     如果标签对当中有其它的标签，那一样会拿的到
+       * 
+       * 在给innerHTML设置值的时候，如果这个值里面有html标签，那放到网页当中，会把它解析成一个真正的html标签
+       */
+      window.onload=function(){
+         var btn=document.getElementById('btn');
+         var box=document.getElementById('box');
+         
+         btn.onclick=function(){
+            console.log(box.innerHTML);    
+            
+            //设置
+            box.innerHTML='<span>kaivon</span>';
+         };
+      };
+   </script>
+   <input type="button" id="btn" value="按钮" />
+   <div id="box"><p>标题</p>这里是一段文字</div>
+</body>
+```
+
+##### 1.4.4 src,href
+
+```javascript
+<body>
+   <script>
+      /*
+       * href       连接的地址
+       * src    图片的地址
+       * 
+       * 
+       * href与src取到的是绝对地址，不是属性里的值
+       * 切记不要拿href与src取到的值去做判断
+       * 
+       */
+      window.onload=function(){
+         var pic=document.getElementById('pic');
+         var link=document.getElementById('link');
+         
+         console.log(pic.src);  //http://127.0.0.1:8020/javascript%E7%B2%BE%E5%93%81%E8%AF%BE%E7%A8%8B/%E7%AC%AC%E4%B8%80%E7%AB%A0/002.jpg
+         
+         console.log(link.href);    //http://127.0.0.1:8020/javascript%E7%B2%BE%E5%93%81%E8%AF%BE%E7%A8%8B/%E7%AC%AC%E4%B8%80%E7%AB%A0/1-js%E7%9A%84%E4%BD%8D%E7%BD%AE.html
+      };
+   </script>
+   <img id="pic" src="002.jpg"/>
+   <a href="1-js的位置.html" id="link">js</a>
+</body>
+```
+
+---
+
+#### 1.5 节点选择
+
+##### 1.5.1 
