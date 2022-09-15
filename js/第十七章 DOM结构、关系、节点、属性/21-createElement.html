@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html> 
+<html>
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
@@ -18,7 +18,7 @@
 			 * 	注意
 			 * 		只能用来创建元素节点，不能创建文本、注释节点
 			 * 		创建后的标签可以对它进行操作
-			 * 		
+			 *
 			 */
 			window.onload=function(){
 				var btn=document.getElementById("btn");
@@ -26,11 +26,18 @@
 					var div=document.createElement('div');
 					div.style.background='red';
 					div.className='active';
-					
+
 					console.log(div);
+
 				}
 			}
 		</script>
+		<style>
+			.active {
+				width: 100px;
+				height: 100px;
+			}
+		</style>
 	</head>
 	<body>
 		<input type="button" id="btn" value="创建元素" />
