@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-	<head> 
+	<head>
 		<meta charset="UTF-8">
 		<title></title>
 		<script>
@@ -12,15 +12,20 @@
 			 */
 			window.onload=function(){
 				var box=document.getElementById("box");
-				
+
 				box.setAttribute('id','box2');
 				console.log(box);
-				
+
 				box.setAttribute('n','海棠');
 				console.log(box);
-				
+
 				box.setAttribute('style','width:200px;height:100px');
 				console.log(box);
+
+				console.log(box.getAttribute('style'));
+				console.log('--------')
+				console.log(getComputedStyle(box)["width"]);
+				console.log(box.style.width);
 			}
 		</script>
 	</head>
