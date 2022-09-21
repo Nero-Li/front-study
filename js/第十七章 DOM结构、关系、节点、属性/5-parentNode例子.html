@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
@@ -6,10 +6,11 @@
 		<script>
 			window.onload=function(){
 				var spans=document.querySelectorAll("span");
-				
+
 				for(var i=0;i<spans.length;i++){
 					spans[i].onclick=function(){
 						this.parentNode.style.display='none';
+						this.style.display='none';
 						//this.parentNode						//li
 						//this.parentNode.parentNode				//ul
 						//this.parentNode.parentNode.parentNode	//body
@@ -18,7 +19,7 @@
 						//this.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode		//null
 					}
 				}
-				
+
 			}
 		</script>
 	</head>

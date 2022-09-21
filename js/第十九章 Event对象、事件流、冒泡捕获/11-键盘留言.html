@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html>
-	<head> 
+	<head>
 		<meta charset="UTF-8">
 		<title></title>
 		<script>
 			window.onload=function(){
 				var text=document.querySelector("input");
 				var ul=document.querySelector("ul");
-				
+
 				text.onkeydown=function(ev){
+					console.log(ev.key)
+					console.log(ev.keyCode)
 					if(ev.keyCode==13 && ev.altKey){
 						//这个条件成立，说明用户按下了回车键
-						
+
 						//console.log('回车键');
-						
+
 						var li=document.createElement("li");
 						li.innerHTML=this.value;
-						
+
 						ul.appendChild(li);
 						this.value='';
 					}

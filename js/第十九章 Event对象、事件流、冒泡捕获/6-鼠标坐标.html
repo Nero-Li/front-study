@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html> 
+<html>
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
@@ -19,18 +19,18 @@
 			 * 	event.clientX/event.clientY			事件发生的时候，鼠标的位置信息
 			 * 	坐标的值是根据可视区的左上角进行计算
 			 */
-			
+
 			window.onload=function(){
 				var div=document.getElementById("div1");
-				
-				document.onmousemove=function(ev){
+
+				div.onmousemove=function(ev){
 					//console.log(ev.clientX,ev.clientY);
-					
+
 					div.style.left=ev.clientX+'px';
 					div.style.top=ev.clientY+'px';
 				};
-				
-				
+
+
 			};
 		</script>
 	</head>

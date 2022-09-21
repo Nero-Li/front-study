@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
@@ -30,32 +30,32 @@
 			 * 	event.target
 			 * 	它会一层一层往里面去找，直到找到最里层的那个元素
 			 */
-			
+
 			window.onload=function(){
 				var box=document.getElementById("box");
 				box.onclick=function(ev){
 					console.log(ev.target);
 				};
-				
+
 				var list=document.getElementById("list");
 				var lis=document.querySelectorAll("li");
-				
+
 				/*for(var i=0;i<lis.length;i++){
 					lis[i].onclick=function(){
 						console.log(this.innerHTML);
 					};
 				}*/
-				
+
 				//事件委托（代理）
 				list.onclick=function(ev){
-					//console.log(ev.target)
+					console.log(ev.target)
 					if(ev.target.tagName=='LI'){
 						console.log(ev.target.innerHTML);
 					}
-					//console.log(ev.target.tagName)
+					console.log(ev.target.tagName)
 				};
-				
-				
+
+
 				list.innerHTML+='<li>yellow</li>';
 			};
 		</script>
@@ -66,8 +66,8 @@
 				<span>kaivon</span>
 			</p>
 		</div>
-		
-		
+
+
 		<ul id="list">
 			<li>red</li>
 			<li>green</li>

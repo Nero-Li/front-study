@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html> 
+<html>
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
@@ -44,15 +44,17 @@
 				var small=document.getElementById("small");
 				var div=document.querySelector("#small div");
 				var big=document.getElementById("big");
-				
+
 				//给左边的框添加鼠标移入事件，鼠标移入后，让两个东西显示
 				small.onmouseover=function(){
+					console.log('鼠标移入small')
 					div.style.display='block';
 					big.style.display='block';
 				}
-				
+
 				//鼠标移动的时候，让方块跟着鼠标走
 				small.onmousemove=function(ev){
+					console.log(ev.clientX+" "+ev.clientY)
 					/*
 					 * 问题：要让鼠标在方块的中心
 					 * 		鼠标的位置是不能动，那只能动方块的位置了
@@ -60,13 +62,14 @@
 					div.style.left=ev.clientX-div.offsetWidth/2-small.offsetLeft+'px';
 					div.style.top=ev.clientY-div.offsetHeight/2-small.offsetTop+'px';
 				}
-				
+
 				//给左边的框添加鼠标移出事件，鼠标移出后，让两个东西不显示
 				small.onmouseout=function(){
+					console.log('鼠标移出small')
 					div.style.display='none';
 					big.style.display='none';
 				}
-				
+
 			};
 		</script>
 	</head>

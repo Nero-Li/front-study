@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html> 
+<html>
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
@@ -14,21 +14,24 @@
 			window.onload=function(){
 				var div=document.querySelector("div");
 				var input=document.querySelector("input");
-				var text=document.querySelectorAll("textarea");
-				
+				var text=document.querySelector("textarea");
+
 				div.onkeydown=function(){
-					console.log('keydow');	
+					console.log('keydow');
 				};
-				
+
 				input.onkeydown=function(){
 					console.log('inputkeydow');
 				};
-				
+
 				input.onkeyup=function(){
 					console.log('keyup');
 				};
-				
+
 				text.onkeypress=function(){
+					console.log('keypress');
+				}
+				input.onkeypress=function(){
 					console.log('keypress');
 				};
 			}

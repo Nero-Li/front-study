@@ -1,29 +1,31 @@
 <!DOCTYPE html>
-<html> 
+<html>
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
 		<script>
 			/*
-			 * select();	
+			 * select();
 			 * 	在表单元素里，选中用户输入的内容
 			 */
-			
+
 			window.onload=function(){
-				var input=document.querySelector("input");
+				// var input=document.querySelector("input");
+				var input=document.getElementById("inp");
+				console.log(input)
 				var btn=document.querySelector("button");
 				var textarea=document.querySelector("textarea");
-				
+
 				btn.onclick=function(){
 					//同时出现两个方法，后面会把前面的覆盖了
 					input.select();
-					textarea.select();
+					// textarea.select();
 				};
 			};
 		</script>
 	</head>
 	<body>
-		<input type="text" />
+		<input type="text" id="inp"/>
 		<button>点击选中文字</button>
 		<textarea></textarea>
 	</body>

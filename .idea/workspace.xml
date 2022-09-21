@@ -1,40 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e974bdb5-d67c-41e9-9f7c-0ce45aaf753d" name="Changes" comment="# JS6">
-      <change afterPath="$PROJECT_DIR$/js/第十三章 JavaScript入门、语法、变量、流程控制/getElementById.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/1-鼠标事件.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/10-键盘事件中的常用属性.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/11-键盘留言.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/12-键盘控制div移动.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/13-放大镜.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/14-放大镜.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/15-放大镜.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/16-事件绑定.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/17-移除事件.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/18-事件流.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/19-目标阶段.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/2-键盘事件.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/20-阻止事件冒泡.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/21-下拉菜单.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/22-浏览器的默认行为.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/23-模拟右键菜单.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/3-焦点事件.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/4-select方法.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/5-事件对象.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/6-鼠标坐标.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/7-跟随鼠标的方块.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/8-鼠标点击小圆圈效果.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/9-target.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/images/big.jpg" afterDir="false" />
+    <list default="true" id="e974bdb5-d67c-41e9-9f7c-0ce45aaf753d" name="Changes" comment="# JS8">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/JS第三节课.md" beforeDir="false" afterPath="$PROJECT_DIR$/js/JS第三节课.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/第十七章 DOM结构、关系、节点、属性/2-DOM节点.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十七章 DOM结构、关系、节点、属性/2-DOM节点.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/第十三章 JavaScript入门、语法、变量、流程控制/16-属性操作.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十三章 JavaScript入门、语法、变量、流程控制/16-属性操作.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/第十三章 JavaScript入门、语法、变量、流程控制/32-getElementsByTagName.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十三章 JavaScript入门、语法、变量、流程控制/32-getElementsByTagName.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/第十三章 JavaScript入门、语法、变量、流程控制/33-getElementsByClassName.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十三章 JavaScript入门、语法、变量、流程控制/33-getElementsByClassName.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/第十三章 JavaScript入门、语法、变量、流程控制/34-querySelector.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十三章 JavaScript入门、语法、变量、流程控制/34-querySelector.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/第十三章 JavaScript入门、语法、变量、流程控制/35-querySlectorAll.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十三章 JavaScript入门、语法、变量、流程控制/35-querySlectorAll.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/第十七章 DOM结构、关系、节点、属性/5-parentNode例子.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十七章 DOM结构、关系、节点、属性/5-parentNode例子.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/11-键盘留言.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/11-键盘留言.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/13-放大镜.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/13-放大镜.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/2-键盘事件.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/2-键盘事件.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/3-焦点事件.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/3-焦点事件.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/4-select方法.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/4-select方法.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/6-鼠标坐标.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/6-鼠标坐标.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/7-跟随鼠标的方块.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/7-跟随鼠标的方块.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/8-鼠标点击小圆圈效果.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/8-鼠标点击小圆圈效果.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/9-target.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/9-target.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/第十五章 定时器、运动框架、日期对象/2-重复执行定时器.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十五章 定时器、运动框架、日期对象/2-重复执行定时器.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,18 +42,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/lyming/WebstormProjects/front-study/js",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/lyming/WebstormProjects/front-study/js&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/js" />
@@ -109,7 +88,15 @@
       <workItem from="1662701141807" duration="4760000" />
       <workItem from="1662960655047" duration="12514000" />
       <workItem from="1663047610350" duration="7305000" />
-      <workItem from="1663133524784" duration="14073000" />
+      <workItem from="1663133524784" duration="17190000" />
+      <workItem from="1663306942441" duration="125000" />
+      <workItem from="1663307318696" duration="7065000" />
+      <workItem from="1663392716605" duration="1800000" />
+      <workItem from="1663403771066" duration="711000" />
+      <workItem from="1663569883502" duration="3415000" />
+      <workItem from="1663583345130" duration="854000" />
+      <workItem from="1663595885505" duration="472000" />
+      <workItem from="1663738744419" duration="5642000" />
     </task>
     <task id="LOCAL-00001" summary="# 海棠">
       <created>1662460306951</created>
@@ -160,7 +147,42 @@
       <option name="project" value="LOCAL" />
       <updated>1663068390704</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="# JS7">
+      <created>1663239795163</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1663239795163</updated>
+    </task>
+    <task id="LOCAL-00009" summary="# JS7 补充图片">
+      <created>1663239908777</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1663239908777</updated>
+    </task>
+    <task id="LOCAL-00010" summary="# JS7 补充2">
+      <created>1663240309344</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1663240309344</updated>
+    </task>
+    <task id="LOCAL-00011" summary="# JS7 补充3">
+      <created>1663241176360</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1663241176360</updated>
+    </task>
+    <task id="LOCAL-00012" summary="# JS8">
+      <created>1663310428000</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1663310428000</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,6 +207,11 @@
     <MESSAGE value="# JS4" />
     <MESSAGE value="# JS5" />
     <MESSAGE value="# JS6" />
-    <option name="LAST_COMMIT_MESSAGE" value="# JS6" />
+    <MESSAGE value="# JS7" />
+    <MESSAGE value="# JS7 补充图片" />
+    <MESSAGE value="# JS7 补充2" />
+    <MESSAGE value="# JS7 补充3" />
+    <MESSAGE value="# JS8" />
+    <option name="LAST_COMMIT_MESSAGE" value="# JS8" />
   </component>
 </project>
