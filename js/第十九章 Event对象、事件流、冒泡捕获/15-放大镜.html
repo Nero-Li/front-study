@@ -6,8 +6,8 @@
 		<style>
 			#small{
 				width: 300px;
-				height: 300px;
-				position: relative; 
+				height: 385px;
+				position: relative;
 				float: left;
 				margin-right: 10px;
 			}
@@ -45,23 +45,23 @@
 				var div=document.querySelector("#small div");
 				var big=document.getElementById("big");
 				var bigImg=document.querySelector("#big img");
-				
+
 				//给左边的框添加鼠标移入事件，鼠标移入后，让两个东西显示
 				small.onmouseover=function(){
 					div.style.display='block';
 					big.style.display='block';
 				}
-				
+
 				//鼠标移动的时候，让方块跟着鼠标走
 				small.onmousemove=function(ev){
 					/*
 					 * 问题：要让鼠标在方块的中心
 					 * 		鼠标的位置是不能动，那只能动方块的位置了
 					 */
-					
+
 					var l=ev.clientX-div.offsetWidth/2-small.offsetLeft;
 					var t=ev.clientY-div.offsetHeight/2-small.offsetTop;
-					
+
 					//限制X轴上的移动范围
 					if(l<0){
 						//绿色块是相对于父级定位的，如果小于0的话，就代表已经超出父级的左边了，所以让他等于0
@@ -70,55 +70,55 @@
 						//方块在X轴上能够走的最大的距离是父级的宽度减去自己的宽度
 						l=small.offsetWidth-div.offsetWidth;
 					}
-					
+
 					//限制Y轴上的移动范围
 					if(t<0){
 						t=0;
 					}else if(t>small.offsetHeight-div.offsetHeight){
 						t=small.offsetHeight-div.offsetHeight;
 					}
-					
+
 					/*
 					 * l											现在走的距离
 					 * small.offsetWidth-div.offsetWidth			总距离
-					 * 
+					 *
 					 * 比例＝l/(small.offsetWidth-div.offsetWidth)
 					 */
 					var scaleX=l/(small.offsetWidth-div.offsetWidth);
 					var scaleY=t/(small.offsetHeight-div.offsetHeight);
-					
+
 					/*
 					 * 已知右侧图片最大的移动距离（总距离）、比例
-					 * 
-					 * 
+					 *
+					 *
 					 * 比例＝走的距离/总距离;
 					 * 走的距离=比例*总距离;
 					 */
-					
+
 					bigImg.style.left=-scaleX*(bigImg.offsetWidth-big.offsetWidth)+'px';
 					bigImg.style.top=-scaleY*(bigImg.offsetHeight-big.offsetHeight)+'px';
-					
-					
+
+
 					div.style.left=l+'px';
 					div.style.top=t+'px';
 				}
-				
+
 				//给左边的框添加鼠标移出事件，鼠标移出后，让两个东西不显示
 				small.onmouseout=function(){
 					div.style.display='none';
 					big.style.display='none';
 				}
-				
+
 			};
 		</script>
 	</head>
 	<body>
 		<div id="small">
-			<img src="images/big.jpg"/>
+			<img src="images/1.png"/>
 			<div></div>
 		</div>
 		<div id="big">
-			<img src="images/big.jpg"/>
+			<img src="images/1.png"/>
 		</div>
 	</body>
 </html>

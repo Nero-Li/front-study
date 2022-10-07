@@ -22,6 +22,10 @@
 			body{
 				border: 1px solid #000;
 			}
+
+			#html {
+				border: 1px solid #000;
+			}
 		</style>
 		<script>
 			/*
@@ -41,35 +45,18 @@
 				var span=document.getElementById("span");
 				var html=document.getElementById("html");
 				var body=document.getElementById("body");
-				window.id='window1';
 
 				function fn(){
 					console.log(this.id);
 				}
 
 
-				//用on的方法给元素添加事件，所有的浏览器都是一样的，先触发事件源对象，然后再往外执行（冒泡的阶段）
-				window.onclick=fn;			//window1
-				html.onclick=fn;				//html	window1
-				body.onclick=fn;				//body	html		window1
-				div.onclick=fn;				//div	body		html		window1
-				span.onclick=fn;				//span	div		body		html		window1
-
-
-				//用addEventListener给元素添加事件，最后一个参数为false，表示事件会在冒泡的阶段执行，与on添加的事情执行顺序是一样的
-				/*window.addEventListener('click',fn,false);		//window1
-				html.addEventListener('click',fn,false);			//html	window1
-				body.addEventListener('click',fn,false);			//body	html		window1
-				div.addEventListener('click',fn,false);			//div	body		html		window1
-				span.addEventListener('click',fn,false);			//span	div		body		html		window1*/
-
 
 				//用addEventListener给元素添加事件，最后一个参数为true，表示事件会在捕获的阶段执行
-				// window.addEventListener('click',fn,true);		//window1
-				// html.addEventListener('click',fn,true);			//window1	html
-				// body.addEventListener('click',fn,true);			//window1	html		body
-				// div.addEventListener('click',fn,true);			//window1	html		body		div
-				// span.addEventListener('click',fn,true);			//window1	html		body		div		span
+				html.addEventListener('click',fn,true);
+				body.addEventListener('click',fn,false);
+				div.addEventListener('click',fn,true);
+				span.addEventListener('click',fn,false);  // html div span body
 			};
 		</script>
 	</head>

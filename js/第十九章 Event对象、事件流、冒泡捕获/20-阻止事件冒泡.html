@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-	<head> 
+	<head>
 		<meta charset="UTF-8">
 		<title></title>
 		<style>
@@ -28,17 +28,17 @@
 			 * 		在函数中将event对象身上的cancelBubble的值设为true
 			 * 		他有一个默认值为false，代表事件可以冒泡
 			 * 		在哪一层上添加这个属性，那事件就会停在这里，不会往外冒泡
-			 * 
+			 *
 			 * 	2、用addeventListener添加的事件
 			 * 		在事件函数内调用event身上的stopPropagation()方法
 			 * 		在哪一层上添加这个方法，那事件就会停在这里，不会往外冒泡
-			 * 	
+			 *
 			 */
 			window.onload=function(){
 				var box1=document.getElementById("box1");
 				var box2=document.getElementById("box2");
 				var box3=document.getElementById("box3");
-				
+
 				//用on添加事件
 				box1.onclick=function(ev){
 					console.log('box1点击了');
@@ -46,32 +46,33 @@
 				};
 				box2.onclick=function(ev){
 					console.log('box2点击了');
-					ev.cancelBubble=true;
+					// ev.cancelBubble=true;
 				};
 				box3.onclick=function(ev){
 					console.log('box3点击了');
-					ev.cancelBubble=true;
+					// ev.cancelBubble=true;
+					ev.stopPropagation()
 				};
-				
-				
+
+
 				//用addeventListener添加的事件
 				var box4=document.getElementById("box4");
 				var box5=document.getElementById("box5");
 				var box6=document.getElementById("box6");
-				
+
 				box4.addEventListener('click',function(ev){
 					console.log('box4点击了');
-					
+
 					ev.stopPropagation();
 				});
 				box5.addEventListener('click',function(ev){
 					console.log('box5点击了');
-					
+
 					ev.stopPropagation();
 				});
 				box6.addEventListener('click',function(ev){
 					console.log('box6点击了');
-					
+
 					ev.stopPropagation();
 				});
 			};
@@ -83,7 +84,7 @@
 				<div id="box3">box3</div>
 			</div>
 		</div>
-		
+
 		<div id="box4">box4
 			<div id="box5">box5
 				<div id="box6">box6</div>
