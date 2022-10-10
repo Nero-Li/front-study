@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
@@ -7,36 +7,45 @@
 	<body>
 		<script>
 			//var a=undefined;
-			
+
 			/*var b=undefined;
 			function fn(){
 				console.log(b);	//undefined
 				var b=20;
 			}*/
-			
+
 			/*
 			 * 预解析
-			 * 	函数或者变量都会有一个提解析的过程，js会把函数或者变量提前解析一下，解析到它们对应的作用域最开始的僧
+			 * 	函数或者变量都会有一个提解析的过程，js会把函数或者变量提前解析一下，解析到它们对应的作用域最开始的位置
 			 * 步骤
 			 * 	1、先找var 、function关键字以及参数
 			 * 	2、如果找到了var(声明的变量，参数)，会给他赋一个undefined。如果找到了function,那它会把整个函数都拿过来
+			 * 		函数执行才会预解析里面的内容
 			 * 	3、把找到的东西，放到对应的作用域的最开始的位置
 			 * 	4、逐行执行代码
-			 * 	
+			 *
 			 */
-			
-			
+
+
 			console.log(a);		//undefined
 			var a=10;
+			// a=10;
 			console.log(a);		//10
-			
+			console.log(window);		//10
+			let c = 99
+			console.log('第一个c:'+c)
 			var b=12;
 			function fn(){
 				//var b=undefined;
 				console.log(b);	//undefined
 				var b=20;
+				// b=20;
+				console.log(b);
 			}
 			fn();
 		</script>
+	<script>
+		console.log('第二个c:'+c)
+	</script>
 	</body>
 </html>

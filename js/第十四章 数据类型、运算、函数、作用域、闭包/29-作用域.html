@@ -1,26 +1,39 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="UTF-8"> 
+		<meta charset="UTF-8">
 	</head>
 	<body>
 		<script>
 			/*
 			 * 作用域
 			 * 	变量戓者函数可访问的一个范围，以函数来划分，一个函数块就是一个作用域
-			 * 
-			 * 全局作用域
+			 *
+			 * 全局作用域:整个文档
+			 * 		变量或者函数在函数外声明,那他们就是全局函数/函数
+			 * 		全局作用域的范围是整个文档,在这个页面任何地方都可以访问到
+			 * 声明全局全局域的方法:
+			 * 	1. 当变量和函数在函数外声明
+			 *  2.
 			 * 局部作用域
 			 */
-			
-			var a=12;
+
+			var a=12;  //没有在函数外声明
 			console.log(a);
-			
+
 			function fn(){
 				var b=20;
 			}
 			fn()
-			console.log(b);	//报错
+			// console.log(b);	//报错
+
+
+			window.onload = function () {
+				console.log("onload中a:"+a);
+				var c = 99
+				console.log("onload内c:"+c)
+			}
+			console.log("onload外c:"+c) //报错
 		</script>
 	</body>
 </html>

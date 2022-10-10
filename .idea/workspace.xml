@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e974bdb5-d67c-41e9-9f7c-0ce45aaf753d" name="Changes" comment="# JS9">
-      <change afterPath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/18-事件流2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/images/1.png" afterDir="false" />
+    <list default="true" id="e974bdb5-d67c-41e9-9f7c-0ce45aaf753d" name="Changes" comment="# JS10">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/15-放大镜.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/15-放大镜.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/18-事件流.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/18-事件流.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/19-目标阶段.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/19-目标阶段.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/20-阻止事件冒泡.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/20-阻止事件冒泡.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/22-浏览器的默认行为.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/22-浏览器的默认行为.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/第十四章 数据类型、运算、函数、作用域、闭包/5-转数字.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十四章 数据类型、运算、函数、作用域、闭包/5-转数字.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/第十四章 数据类型、运算、函数、作用域、闭包/29-作用域.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十四章 数据类型、运算、函数、作用域、闭包/29-作用域.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/第十四章 数据类型、运算、函数、作用域、闭包/31-局部作用域.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十四章 数据类型、运算、函数、作用域、闭包/31-局部作用域.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/第十四章 数据类型、运算、函数、作用域、闭包/33-预解析.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十四章 数据类型、运算、函数、作用域、闭包/33-预解析.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,18 +34,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/lyming/WebstormProjects/front-study/js/第十九章 Event对象、事件流、冒泡捕获/images",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/lyming/WebstormProjects/front-study/js/第十九章 Event对象、事件流、冒泡捕获/images&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/images" />
@@ -98,7 +93,8 @@
       <workItem from="1663738744419" duration="6267000" />
       <workItem from="1663914710438" duration="1734000" />
       <workItem from="1664006193699" duration="1819000" />
-      <workItem from="1665055804461" duration="691000" />
+      <workItem from="1665055804461" duration="3176000" />
+      <workItem from="1665392628218" duration="3090000" />
     </task>
     <task id="LOCAL-00001" summary="# 海棠">
       <created>1662460306951</created>
@@ -191,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663769425514</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="# JS10">
+      <created>1665133155177</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1665133155178</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,6 +225,7 @@
     <MESSAGE value="# JS7 补充3" />
     <MESSAGE value="# JS8" />
     <MESSAGE value="# JS9" />
-    <option name="LAST_COMMIT_MESSAGE" value="# JS9" />
+    <MESSAGE value="# JS10" />
+    <option name="LAST_COMMIT_MESSAGE" value="# JS10" />
   </component>
 </project>

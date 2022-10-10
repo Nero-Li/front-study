@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
-	</head> 
+	</head>
 	<body>
 		<script>
 			/*
@@ -14,23 +14,26 @@
 			 * 	声明局部作用域的方法
 			 * 		var 变量
 			 * 		function 函数名(){}
-			 * 
+			 *
 			 * 	注意：局部变量与局部函数只能在声明它们的地方用，在其它的地方是用不到的
 			 */
-			
+
 			function fn(){
 				var a=10;		//变量a b是在函数内部声明的，所以它们俩是局部变量
 				var b=20;
-				
+
 				//fn1是在函数内部声明的，所它是一个局部函数
 				function fn1(){
+					console.log(window)
+					var a = 30
 					console.log(a+b);	//30
 				}
 				fn1();
+				console.log('fn1外a:'+a)
 			}
-			
+
 			fn();
-			
+
 			//console.log(a);	//报错	a是一个局部变量，在外面是访问不到的
 			//fn1();				//报错	fn1是一个局部函数，在外面是访问不到的
 		</script>
