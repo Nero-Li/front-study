@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e974bdb5-d67c-41e9-9f7c-0ce45aaf753d" name="Changes" comment="# JS10">
+    <list default="true" id="e974bdb5-d67c-41e9-9f7c-0ce45aaf753d" name="Changes" comment="# JS11">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/第十四章 数据类型、运算、函数、作用域、闭包/29-作用域.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十四章 数据类型、运算、函数、作用域、闭包/29-作用域.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/第十四章 数据类型、运算、函数、作用域、闭包/31-局部作用域.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十四章 数据类型、运算、函数、作用域、闭包/31-局部作用域.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/第十四章 数据类型、运算、函数、作用域、闭包/33-预解析.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十四章 数据类型、运算、函数、作用域、闭包/33-预解析.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/第十四章 数据类型、运算、函数、作用域、闭包/34-预解析题目.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十四章 数据类型、运算、函数、作用域、闭包/34-预解析题目.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/第十四章 数据类型、运算、函数、作用域、闭包/35-函数预解析.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十四章 数据类型、运算、函数、作用域、闭包/35-函数预解析.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/第十四章 数据类型、运算、函数、作用域、闭包/38-闭包的作用.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十四章 数据类型、运算、函数、作用域、闭包/38-闭包的作用.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +96,7 @@
       <workItem from="1663914710438" duration="1734000" />
       <workItem from="1664006193699" duration="1819000" />
       <workItem from="1665055804461" duration="3176000" />
-      <workItem from="1665392628218" duration="3090000" />
+      <workItem from="1665392628218" duration="9851000" />
     </task>
     <task id="LOCAL-00001" summary="# 海棠">
       <created>1662460306951</created>
@@ -194,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665133155178</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="# JS11">
+      <created>1665401539249</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1665401539249</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,6 +235,7 @@
     <MESSAGE value="# JS8" />
     <MESSAGE value="# JS9" />
     <MESSAGE value="# JS10" />
-    <option name="LAST_COMMIT_MESSAGE" value="# JS10" />
+    <MESSAGE value="# JS11" />
+    <option name="LAST_COMMIT_MESSAGE" value="# JS11" />
   </component>
 </project>

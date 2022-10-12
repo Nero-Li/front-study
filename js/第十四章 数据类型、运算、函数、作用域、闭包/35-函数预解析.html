@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html> 
+<html>
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
@@ -13,7 +13,7 @@
 			function(){
 				console.log('fn2');
 			}*/
-			
+
 			/*
 			 * 函数
 			 * 	1、函数声明
@@ -21,19 +21,26 @@
 			 * 	2、函数表达式
 			 * 		函数表达式，不会被预解析，所以只能先声明再调用，不能把调用放在声明的前面（不然就报错）
 			 */
-			
+
 			fn1();	//在这里fn1是可以调用
 			function fn1(){
 				console.log('fn1');
 			}
 			//fn1();
-			
-			
-			//fn2();		//报错
+
+
+			// fn2();		//报错
 			var fn2=function(){
 				console.log('fn2');
 			}
 			fn2();	//fn2
+
+
+			// fn3() //报错
+			const fn3 = ()=>{
+				console.log('fn3');
+			}
+			fn3()
 		</script>
 	</body>
 </html>

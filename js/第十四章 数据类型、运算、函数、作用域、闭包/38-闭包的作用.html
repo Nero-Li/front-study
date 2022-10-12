@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-	<head> 
+	<head>
 		<meta charset="{CHARSET}">
 		<title></title>
 	</head>
@@ -8,12 +8,12 @@
 		<script>
 			/*
 			 * 我想在函数外面访问a与fn2，怎么去访问到？？？
-			 * 
+			 *
 			 * 闭包的作用
 			 * 	让函数内的局部变量与局部函数，在外面可以访问到
-			 * 
+			 *
 			 */
-			
+
 			var innerFn=null;		//全局变量，用来存储内部函数
 			function fn1(){
 				var n=10;
@@ -22,14 +22,16 @@
 					console.log(n);
 				}
 				fn2();
-				
+				window.memeda = fn2
 				innerFn=fn2;
 			}
 			fn1();		//11
-			
-			innerFn();		//12		把fn2整个函数赋给了innerFn，而它本身就是一个全局变量，有了值以后在其它的地方就可以访问到它了
-			innerFn();		//13
-			
+
+			// innerFn();		//12		把fn2整个函数赋给了innerFn，而它本身就是一个全局变量，有了值以后在其它的地方就可以访问到它了
+			// innerFn();		//13
+
+			memeda()
+			memeda()
 			//console.log(n);
 		</script>
 	</body>
