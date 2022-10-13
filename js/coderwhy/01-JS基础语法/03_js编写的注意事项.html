@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+  </head>
+  <body>
+    <!--  1. 在标准中script元素不能写成单标签,但是有效果,而且标准的单标签元素不需要/>结尾,
+  但是script不以/>结尾,编译器会提示报错,虽然js可以运行,但是下面的代码会被影响   -->
+    <!--  <script src="js/01_js.js">-->
+    <!--  <p>123</p>-->
+
+    <!-- 2. 用了src后,标签的内容会不生效,所以要么在标签体中写js,要么引入外部js -->
+    <script src="js/01_js.js">
+      alert('么么哒2')
+    </script>
+
+    <!-- 3.script标签以前会写type=application/javascript 但是现在可以省略,因为js是现在浏览器和h5页面默认使用的脚本语言
+          还有defer和async属性,后面讲
+          -->
+    <script type="text/javascript">
+      console.log("么么哒3");
+    </script>
+  </body>
+</html>

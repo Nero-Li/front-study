@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!-- noscript元素
+          早期浏览器有的不支持js,需要对页面进行降级
+          最终noscript元素出现,是用于给不支持js的浏览器提供的替代内容
+
+         chrome关闭js支持
+              设置==>安全隐私==>网站设置==>内容==>JavaScript
+      -->
+
+    <script>
+        alert('你的浏览器支持js')
+    </script>
+    <!--  在不支持js的情况下才会有效   -->
+    <noscript>
+       <h1>请打开javascript支持,或者替换浏览器</h1>
+    </noscript>
+</body>
+</html>
