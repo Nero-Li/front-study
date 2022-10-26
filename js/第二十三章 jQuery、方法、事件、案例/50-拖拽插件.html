@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				width: 100px;
+				height: 100px;
+				background: green;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			#box2{
+				background: red;
+				left: 200px;
+			}
+		</style>
+		<script src="jquery-3.1.0.js"></script>
+		<script>
+			(function($,undefined){
+				var Drag=function(){};
+				Drag.prototype={
+					constructor:Drag,
+					init:function(obj,opt){
+						this.disX=0;
+						this.disY=0;
+						this.obj=obj;
+						
+						this.settings={
+							downFn:function(){},
+							moveFn:function(){},
+							upFn:function(){}
+						};
+						
+						for(var attr in opt){
+							if(this.settings.hasOwnProperty(attr)){
+								this.settings[attr]=opt[attr];
+							}
+						}
+						
+						
+						var This=this;
+						this.obj.mousedown(function(ev){
+							This.down(ev);
+							
+							return false;
+						});
+					},
+					down:function(ev){
+						this.disX=ev.clientX-this.obj.offset().left;
+						this.disY=ev.clientY-this.obj.offset().top;
+						
+						var This=this;
+						document.onmousemove=function(ev){
+							This.move(ev);
+						};
+						document.onmouseup=function(){
+							This.up();
+						};
+					},
+					move:function(ev){
+						this.obj.css({
+							'left':ev.clientX-this.disX,
+							'top':ev.clientY-this.disY
+						});
+					},
+					up:function(){
+						document.onmousemove=null;
+					}
+				};
+				
+				$.fn.extend({
+					drag:function(){
+						//this指的是获取到的jquery对象
+						var newDrag=new Drag();
+						newDrag.init(this,{});
+					}
+				});
+			})(window.$||window.jQuery,undefined);
+			
+			
+			$(function(){
+				$('#box').drag();
+				$('#box2').drag();
+			});
+		</script>
+	</head>
+	<body>
+		<div id="box"></div>
+		<div id="box2"></div>
+	</body>
+</html>

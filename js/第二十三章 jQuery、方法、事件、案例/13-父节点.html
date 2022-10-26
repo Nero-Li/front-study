@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html style="padding: 20px;"> 
+	<head> 
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="jquery-3.1.0.js"></script>
+		<script>
+			/*
+			 * 父节点
+			 * 	.parent()			元素的第一层父节点
+			 * 	.parents()			元素的所有父节点，它会一直往上找，直到找到html
+			 * 
+			 */
+			$(function(){
+				//$('#div2').parent().css('border','1px solid #f00');
+				$('#div2').parents().css('border','1px solid green');
+			})
+		</script>
+	</head>
+	<body style="padding: 10px;">
+		<div id="div1">div1
+			<div id="div2">div2</div>
+		</div>
+	</body>
+</html>

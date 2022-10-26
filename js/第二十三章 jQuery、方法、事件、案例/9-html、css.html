@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="jquery-3.1.0.js"></script>
+		<script>
+			/*
+			 * html()		取元素里的内容，与js中的innerHTML的效果是一样的
+			 * text()		取元素里的文字，不取标签
+			 */
+			$(function(){
+				console.log($('div').html());
+				console.log($('div').text());
+				
+				$('div').html('<p><span>kaivon</span></p>');
+				$('div').text('haitang');
+			})
+		</script>
+	</head>
+	<body>
+		<div>欢迎<span>大家</span>来到<span>海棠学院</span></div>
+	</body>
+</html>

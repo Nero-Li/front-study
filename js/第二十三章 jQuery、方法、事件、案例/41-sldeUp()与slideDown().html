@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				width: 100px;
+				height: 100px;
+				background: red;
+				position: absolute;
+				left: 20px;
+				top: 50px;
+			}
+		</style>
+		<script src="jquery-3.1.0.js"></script>
+		<script>
+			/*
+			 * slideUp(duration,easing,complate)			收缩
+			 * slideDown(duration,easing,complate)		展开
+			 * 
+			 * duration
+			 * 		slow		600
+			 * 		normal	400
+			 * 		fast		200
+			 * 
+			 * easing
+			 * 		linear,swing(默认)
+			 * 
+			 * complate
+			 * 		运动完成后执行的回调函数
+			 */
+			
+			$(function(){
+				var btn=true;
+				$('input').click(function(){
+					if(btn){
+						$('div').slideUp(500,'linear',function(){
+							console.log('隐藏运动完成了');
+						});
+						
+						//$('div').slideUp(400);		//默认是没有时间的，需要传一个时间参数
+					}else{
+						$('div').slideDown(500,'linear',function(){
+							console.log('显示运动完成了');
+						});
+						
+						//$('div').slideDown(400);		//默认是没有时间的，需要传一个时间参数
+					}
+					
+					btn=!btn;
+				});
+			})
+		</script>
+	</head>
+	<body>
+		<input type="button" value="点击" />
+		<div></div>
+	</body>
+</html>

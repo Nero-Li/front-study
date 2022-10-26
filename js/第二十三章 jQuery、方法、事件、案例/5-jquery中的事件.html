@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#box{
+				width: 100px;
+				height: 100px;
+				background: red;
+			}
+		</style>
+		<script src="jquery-3.1.0.js"></script>
+		<script>
+			/*
+			 * jquery里的事件(没有on)
+			 * 	语法
+			 * 		$(元素).click(callBack);
+			 * 
+			 * 
+			 */
+			$(function(){
+				$('#btn').click(function(){
+					//alert(1);
+					console.log(this);		//原生的this一样是指向触发事件的对象
+					console.log($(this));	//指向jquery的对象
+				});
+				
+				$('#box').mouseover(function(){
+					$(this).css('background','green');
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<input type="button" id="btn" value="按钮" />
+		<div id="box"></div>
+	</body>
+</html>

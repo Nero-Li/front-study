@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="jquery-3.1.0.js"></script>
+		<script>
+			/*
+			 * $(选择器).css()	$(选择器).html()	$(选择器).trigger()
+			 * 	以上这些都是jquery里的方法，原生的不能直接用
+			 * 
+			 * $.xxx()	$.yyy()
+			 * 	这些方法是jquery里的方法，原生的也可以直接用
+			 * 
+			 * $.type()
+			 * 	检测参数的类型
+			 * 	http://www.jquery123.com/jQuery.type/
+			 * 
+			 * $.isFunction()
+			 * 	检测参数是不是函数
+			 * 	http://www.jquery123.com/jQuery.isFunction/
+			 * 
+			 * $.isNumeric()
+			 * 	检测参数是不是个数字
+			 * 	http://www.jquery123.com/jQuery.isNumeric/
+			 * 
+			 * $.isArray()
+			 * 	检测参数是不是数组
+			 * 	http://www.jquery123.com/jQuery.isArray/
+			 * 
+			 * $.isWindow()
+			 * 	检测参数是不是window对象
+			 * 
+			 * $.isEmptyObject()
+			 * 	检测对象是否为空
+			 * 
+			 * $.isPlainObject()
+			 * 	检测对象是不是纯粹的对象
+			 * 	通过{}、new Object()创建的对象称为纯粹的对象
+			 */
+			
+			$(function(){
+				var a=null;
+				console.log(typeof a);		//object
+				console.log($.type(a));		//null
+				
+				var b=[];
+				var c=function(){};
+				
+				console.log($.isFunction(b));			//false
+				console.log($.isFunction(c));			//true
+				
+				console.log($.isNumeric(123));			//true
+				console.log($.isNumeric([]));			//false
+				console.log($.isNumeric('123'));			//true
+				
+				
+				console.log($.isArray([]));				//true
+				console.log($.isArray({}));				//false
+				
+				
+				console.log($.isWindow(window));			//true
+				console.log($.isWindow(document));		//false
+				
+				console.log($.isEmptyObject({}));		//true
+				console.log($.isEmptyObject({a:10}));	//false
+				
+				var e={};
+				var f=new Object();
+				console.log($.isPlainObject(e));			//true
+				console.log($.isPlainObject(f));			//true
+				console.log($.isPlainObject(b));			//false
+			})
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

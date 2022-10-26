@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			img{
+				display: block;
+				margin-top: 500px;
+			}
+		</style>
+		<script src="jquery-3.1.0.js"></script>
+		<script>
+			/*
+			 * scroll()		滚动事件
+			 */
+			$(function(){
+				$(document).scroll(function(){
+					var sTop=$(document).scrollTop();
+					var viewHeight=$(window).height();
+					
+					$('img').each(function(i,elem){
+						//图片离文档最上面的距离如果比可视区的距离+滚动条的距离要小，说明图片已经进入到了可视区
+						if($(elem).offset().top<viewHeight+sTop){
+							$(elem).attr('src',$(elem).attr('_src'));
+						}
+					});
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<img _src="img1/1.jpg"/>
+		<img _src="img1/2.jpg"/>
+		<img _src="img1/3.jpg"/>
+		<img _src="img1/4.jpg"/>
+		<img _src="img1/5.jpg"/>
+	</body>
+</html>

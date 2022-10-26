@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="jquery-3.1.0.js"></script>
+		<script>
+			/*
+			 * 扩展方法
+			 * 	$.extend()				扩展工具方法下的插件		$.xxx()
+			 * 	$.fn.extend()			扩展jquery对象下的插件	$().xxx()
+			 */
+			
+			$.extend({
+				leftTrim:function(str){
+					return str.replace(/^\s+/,'');
+				},
+				rightTrim:function(str){
+					return str.replace(/\s+$/,'');
+				}
+			});
+			
+			var str=' kaivon ';
+			console.log(str);
+			console.log($.leftTrim(str));
+			console.log($.rightTrim(str));
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

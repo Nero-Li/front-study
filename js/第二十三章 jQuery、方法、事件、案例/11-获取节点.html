@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="jquery-3.1.0.js"></script>
+		<script>
+			/*
+			 * 获取节点
+			 * 	.first()					获取第一个子节点
+			 * 	.last()					获取最后一个子节点
+			 * 	.slice(start,end)		截取部分子节点
+			 * 		start				起始位置
+			 * 		end					结束位置,不包含结束位置，第二个参数不写的话，截到最后一位
+			 */
+			$(function(){
+				$('li').first().css('background','red');
+				//$('li').last().css('background','green');
+				$('li').slice(2,4).css('background','yellow');
+				$('li').slice(3).css('background','blue');
+			});
+		</script>
+	</head>
+	<body>
+		<ul>
+			<li>red</li>
+			<li>green</li>
+			<li>blue</li>
+			<li>yellow</li>
+			<li>pink</li>
+		</ul>
+	</body>
+</html>

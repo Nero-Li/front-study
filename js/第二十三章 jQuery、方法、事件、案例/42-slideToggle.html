@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				width: 100px;
+				height: 100px;
+				background: red;
+				position: absolute;
+				left: 20px; 
+				top: 50px;
+				/*display: none;*/
+			}
+		</style>
+		<script src="jquery-3.1.0.js"></script>
+		<script>
+			/*
+			 * slideToggle(duration,easing,complate)		在两种效果之间进行切换
+			 * 
+			 * duration
+			 * 		slow		600
+			 * 		normal	400
+			 * 		fast		200
+			 * 
+			 * easing
+			 * 		linear,swing(默认)
+			 * 
+			 * complate
+			 * 		运动完成后执行的回调函数
+			 */
+			
+			$(function(){
+				//它会参考display的值，让运动在显示与隐藏之间进行切换，会运动宽高透明这些属性
+				/*$('div').slideToggle(500,'linear',function(){
+					console.log('toggle完了');
+				});*/
+				
+				/*$('div').slideToggle(500);
+				$('div').slideToggle('normal');*/
+				
+				$('input').click(function(){
+					$('div').slideToggle(500,'linear',function(){
+						console.log('toggle完了');
+					});
+				});
+			})
+		</script>
+	</head>
+	<body>
+		<input type="button" value="点击" />
+		<div></div>
+	</body>
+</html>

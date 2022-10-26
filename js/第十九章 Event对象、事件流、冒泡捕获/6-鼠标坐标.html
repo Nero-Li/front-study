@@ -4,7 +4,15 @@
 		<meta charset="UTF-8">
 		<title></title>
 		<style>
-			div{
+			#div1{
+				width: 100px;
+				height: 100px;
+				background: red;
+				/*position: absolute;*/
+				/*left: 0;*/
+				/*top: 0;*/
+			}
+			#div2{
 				width: 100px;
 				height: 100px;
 				background: red;
@@ -21,9 +29,9 @@
 			 */
 
 			window.onload=function(){
-				var div=document.getElementById("div1");
+				var div=document.getElementById("div2");
 
-				div.onmousemove=function(ev){
+				document.onmousemove=function(ev){
 					//console.log(ev.clientX,ev.clientY);
 
 					div.style.left=ev.clientX+'px';
@@ -36,5 +44,6 @@
 	</head>
 	<body>
 		<div id="div1"></div>
+		<div id="div2"></div>
 	</body>
 </html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="jquery-3.1.0.js"></script>
+		<script>
+			/*
+			 * get(index)		把jquery对象转成原生对象
+			 * 		index		是元素的索引值
+			 * 
+			 * 原生对象转jquery对象用$
+			 * jquery转原生对象用get(index);
+			 */
+			
+			$(function(){
+				console.log($('#div1').html());				//kaivon
+				console.log($('#div1').innerHTML);			//undefined
+				console.log($('#div1').get(0).innerHTML);	//kaivon
+				console.log($('div').eq(1).html());			//haitang
+			})
+		</script>
+	</head>
+	<body>
+		<div id="div1">kaivon</div>
+		<div>haitang</div>
+	</body>
+</html>

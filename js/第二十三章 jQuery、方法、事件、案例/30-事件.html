@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#box{
+				width: 100px;
+				height: 100px;
+				background: #f00;
+			}
+		</style>
+		<script src="jquery-3.1.0.js"></script>
+		<script>
+			$(function(){
+				$('#box').click(function(){
+					console.log(1);
+				});
+				$('#box').click(function(){
+					console.log(2);
+				});
+				
+				$('#box').on('click',function(){
+					console.log(3);
+				});
+				$('#box').on('click mouseover',function(){
+					console.log(4);
+				});
+				
+				
+				$('#box').on('click',function(){
+					console.log(5);
+					$(this).off();		//移除事件
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div id="box"></div>
+	</body>
+</html>

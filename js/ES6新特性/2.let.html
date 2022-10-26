@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+  </head>
+  <body>
+    <script>
+      /*
+       * let 声明变量的关键字
+       * 1. 在同一个作用域中let不能重复声明一个变量,不同的作用域是可以的
+       * 2. 使用let的变量声明只能先声明再使用,标准说法叫做暂时性的死区
+       */
+      'use strict'
+
+      console.log(a); //使用var的变量声明可以预解析,也称为变量提升
+
+      var a = 12;
+      var a = "muzi"; //var还可以重新声明
+      console.log(a);
+      debugger
+      // console.log(b) //报错,使用let的变量声明只能先声明再使用
+
+      let b = 13;
+      //let b = 'niuzi' //报错 let不可以重新声明
+      b = "niuzi"; //重新赋值是可以的
+      console.log(b);
+
+      // {
+      //     c = 14
+      //     console.log("块中"+c)
+      // }
+
+      window.onload = function () {
+        let b = "haha";
+        console.log("onload中:" + b);
+        // c = 14;
+        // console.log("块中" + c); //报错,把use strict注释掉就不报错,就是我们之前学的全局变量的写法之一
+        console.log(window);
+      };
+    </script>
+  </body>
+</html>

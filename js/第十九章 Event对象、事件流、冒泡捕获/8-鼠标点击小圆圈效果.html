@@ -8,7 +8,7 @@
 				width: 10px;
 				height: 10px;
 				border-radius: 50%;
-				border: 2px solid #000;
+				border: 2px solid black;
 				position: absolute;
 				left: 0;
 				top: 0;
@@ -23,15 +23,15 @@
 					//走第一个圈
 					move(divs[0],ev);
 
-					//走第二个圈
-					setTimeout(function(){
-						move(divs[1],ev);
-					},100);
-
-					//走第三个圈
-					setTimeout(function(){
-						move(divs[2],ev);
-					},200);
+					// //走第二个圈
+					// setTimeout(function(){
+					// 	move(divs[1],ev);
+					// },100);
+					//
+					// //走第三个圈
+					// setTimeout(function(){
+					// 	move(divs[2],ev);
+					// },200);
 				}
 
 
@@ -60,7 +60,7 @@
 							obj.style.height='10px';
 							obj.style.opacity=0;
 						}
-					},16);
+					},20);
 				}
 			};
 		</script>

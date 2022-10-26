@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="UTF-8">
+		<title></title> 
+		<script src="jquery-3.1.0.js"></script>
+		<script>
+			/*
+			 * 最近的节点
+			 * 	.closest()			从自身开始找，一层一层往外找，找到最近满足条件的元素，找到一个以后就不再找了
+			 */
+			$(function(){
+				$('#div2').closest('.div1').css('border','1px solid #f00');
+				
+				$('span').click(function(){
+					$(this).closest('li').css('background','red');
+				});
+			})
+		</script>
+	</head>
+	<body>
+		<div class="div1">
+			<div class="div1">div1
+				<div id="div2">div2</div>
+			</div>
+		</div>
+		
+		<ul>
+			<li>12121212<span>span</span></li>
+			<li>222222<span>span</span></li>
+			<li>333333<span>span</span></li>
+			<li>444444<span>span</span></li>
+		</ul>
+	</body>
+</html>

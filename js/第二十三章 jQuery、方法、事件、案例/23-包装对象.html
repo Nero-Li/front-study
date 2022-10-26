@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="jquery-3.1.0.js"></script>
+		<script>
+			/*
+			 * 包装对象：在外层包一层标签
+			 * 	wrap()			在标签外在加一层父级	
+			 * 	wrapAll()		把所有的标签都拿过来，放在一起，然后在他们的外面加一个父级
+			 * 	wrapInner()		在父级的里面添加一个标签，并把内容放到这个标签里面
+			 * 	unwrap()			删除父级(不包含body标签)
+			 */
+			
+			$(function(){
+				//$('span').wrap('<div style="color: #f00;"></div>');
+				//$('span').wrapAll('<h2 style="color: green;"></h2>');
+				//$('span').wrapInner('<a href="#"></a>');
+				$('span').unwrap();
+			});
+		</script>
+	</head>
+	<body>
+		<div><span>kaivon1</span></div>
+		<span>kaivon2</span>
+		<p><span>kaivon3</span></p>
+	</body>
+</html>

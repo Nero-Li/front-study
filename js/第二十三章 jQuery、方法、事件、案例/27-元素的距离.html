@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#div1{
+				width: 200px;
+				height: 200px;
+				background: red;
+				position: absolute;
+				left: 50px;
+				top: 50px;
+			}
+			#div2{
+				width: 100px;
+				height: 100px;
+				background: green;
+				margin: 50px;
+				position: absolute;
+				left: 20px;
+				top: 20px;
+			}
+		</style>
+		<script src="jquery-3.1.0.js"></script>
+		<script>
+			/*
+			 * 元素相对于文档的距离
+			 * 		offset().left
+			 * 		offset().top
+			 * 
+			 * 元素相对于父级的距离
+			 * 		position().left
+			 * 		position().top
+			 * 	position的值是不会受margin影响的，或者说它的值不加margin
+			 * 
+			 * offsetParent()
+			 * 	找到最近的有定位的父级
+			 */
+			
+			
+			
+			$(function(){
+				console.log($('#div1').offset().top);		//50
+				console.log($('#div1').offset().left);		//50
+				console.log($('#div2').offset().top);		//120
+				console.log($('#div2').offset().left);		//120
+				
+				console.log($('#div2').position().left);		//20
+				console.log($('#div2').position().top);		//20
+				
+				
+				//绿色块离红色块的真正距离
+				console.log($('#div2').offset().left-$('#div1').offset().left);
+				
+				
+				console.log($('#div2').offsetParent());		//div1
+			})
+		</script>
+	</head>
+	<body>
+		<div id="div1">
+			<div id="div2"></div>
+		</div>
+	</body>
+</html>

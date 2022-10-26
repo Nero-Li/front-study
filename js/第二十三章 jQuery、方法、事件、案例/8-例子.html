@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				width: 100px;
+				height: 100px;
+				background: red;
+				transition: 1s;
+			}
+		</style>
+		<script src="jquery-3.1.0.js"></script>
+		<script>
+			$(function(){
+				$('div').attr('on','false');
+				
+				$('input').click(function(){
+					if($('div').attr('on')=='false'){
+						$('div').css({width:200,height:200,background:'green'});
+						$('div').attr('on','true');
+					}else{
+						$('div').css({width:100,height:100,background:'red'});
+						$('div').attr('on','false');
+					}
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<input type="button"  value="按钮"/>
+		<div></div>
+	</body>
+</html>

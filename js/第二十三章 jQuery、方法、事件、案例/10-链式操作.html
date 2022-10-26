@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="jquery-3.1.0.js"></script>
+		<script>
+			/*
+			 * 链式操作
+			 * 	对一个元素进行连续的操作
+			 */
+			var arr=[1,2,3,4,5];
+			//arr.join().split().push()
+			
+			$(function(){
+				$('div').css({width:100,height:100,background:'red'}).html('<span>kaivon</span>').click(function(){
+					$(this).css('color','blue');
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div><span>欢迎大家来到海棠学院</span></div>
+	</body>
+</html>

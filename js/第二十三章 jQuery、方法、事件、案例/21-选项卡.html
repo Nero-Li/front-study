@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#box div{
+				width: 200px;
+				height: 200px;
+				border: 1px solid #f00;
+				display: none;
+			}
+			.active{
+				background: red;
+			}
+		</style>
+		<script src="jquery-3.1.0.js"></script>
+		<script>
+			/*
+			 * 通过索引找到对应的元素
+			 * 	eq(index)			参数为下标
+			 */
+			$(function(){
+				$('input').click(function(){
+					$('input').attr('class','');
+					$(this).attr('class','active');
+					
+					$('#box div').css('display','none');
+					$('#box div').eq($(this).index()).css('display','block');
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<input class="active" type="button" value="按钮一" />
+			<input type="button" value="按钮二" />
+			<input type="button" value="按钮三" />
+			<div style="display: block;">1111</div>
+			<div>2222</div>
+			<div>3333</div>
+		</div>
+	</body>
+</html>

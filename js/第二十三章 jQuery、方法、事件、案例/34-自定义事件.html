@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				width: 100px;
+				height: 100px;
+				border: 1px solid #f00;
+			}
+		</style>
+		<script src="jquery-3.1.0.js"></script>
+		<script>
+			$(function(){
+				$('div').on('kaivon',function(){
+					console.log('这是一个鼠标点击的自定义事件');
+				});
+				$('div').on('鼠标移入',function(){
+					console.log('这是一个鼠标移入的自定义事件');
+				});
+				
+				
+				$('div').click(function(){
+					$('div').trigger('kaivon');
+				});
+				
+				$('div').mouseover(function(){
+					$(this).trigger('鼠标移入');
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div>kaivon</div>
+	</body>
+</html>

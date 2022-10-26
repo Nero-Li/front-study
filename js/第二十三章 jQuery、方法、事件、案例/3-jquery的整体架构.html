@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body id="box">
+		<script> 
+			(function(global,factory){
+				factory(global);
+			})(typeof window !== "undefined" ? window : this, function(global,noGlobal){
+				
+				//声明一个构造函数
+				function jQuery(select){
+					/*
+					 * 在构造函数内部实例化
+					 * 	1、避免每次调用生成实例的时候加new关键字
+					 * 	2、如果直接new jQuery的话就是一个死循环，所以把构造函数放在jQuery.fn.init
+					 */
+					return new jQuery.fn.init(select);
+				}
+				
+				//把原型对象赋值给了jQuery.fn，只是起了一个名字而已
+				jQuery.fn=jQuery.prototype={
+					constructor:jQuery,
+					css:function(){
+						console.log(1);
+					}
+				};
+				
+				/*
+				 * 构造函数（初始化函数）
+				 * 	1、把初始化的方法赋值给一个变量，这个变量就代表了构造函数，它就是jQuery中的真正的构造函数
+				 * 	2、为了解决在生成实例的时候不加new关键字，所以把jQuery的构造函数赋值给了jQuery.fn.init
+				 * 	3、这种写法不是赋值，只是两个变量都指向了同一个值
+				 */
+				var init=jQuery.fn.init=function(select){
+					select=select.substring(1);
+					var temp=document.getElementById(select);
+					
+					return temp;
+				}
+				
+				//将jquery身上的所有方法都赋值给init
+				init.prototype=jQuery.fn;
+				
+				
+				//为了在外面能访问到jquery对象，所以把jqueyr对象赋值给window身上的一个属性
+				global.$=jQuery;
+			});
+			
+			console.log($('#box'));
+		</script>
+	</body>
+</html>

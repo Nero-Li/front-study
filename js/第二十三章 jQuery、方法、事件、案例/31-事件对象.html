@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#box{
+				width: 100px;
+				height: 100px;
+				background: #f00;
+			}
+		</style>
+		<script src="jquery-3.1.0.js"></script>
+		<script>
+			/*
+			 * clientX		不带滚动条的距离
+			 * pageX			带滚动条的距离
+			 */
+			$(function(){
+				$('#box').click(function(ev){
+					console.log(ev.clientY);
+					console.log(ev.pageY);
+					
+					/*ev.preventDefault();
+					ev.stopPropagation();*/
+					
+					return false;		//preventDefault+stopPropagation
+				});
+				
+				$(document).keydown(function(ev){
+					console.log(ev.keyCode);
+				});
+			});
+		</script>
+	</head>
+	<body style="height: 2000px;">
+		<div id="box"></div>
+	</body>
+</html>

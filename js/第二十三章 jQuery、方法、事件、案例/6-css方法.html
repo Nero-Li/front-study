@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#box{
+				width: 100px;
+				height: 100px;
+				background: red;
+			}
+		</style>
+		<script src="jquery-3.1.0.js"></script>
+		<script>
+			/*
+			 * css()			关于样式的一些操作
+			 * 	一个参数		获取属性的值
+			 * 		参数为一个对象的话，表示设置属性，可以同时设置多个属性的值
+			 * 	两个参数		设置属性的值
+			 * 		第一个参数是属性名，第二个参数为属性名对应的值(不带单位也是可以的)
+			 * 	
+			 * 
+			 * 表单的value值
+			 * 	val()			获取表单对应的value值
+			 * 	val(values)		设置表单的value值
+			 */
+			$(function(){
+				console.log($('#box').css('width'));			//100px		获取属性的值
+				
+				$('#btn').click(function(){
+					/*$('#box').css('background','green');	
+					$('#box').css('width',200);	
+					$('#box').css('height',200);	*/
+					
+					$('#box').css({width:200,height:200,background:'green'});
+				});
+				
+				
+				console.log($('#btn').val());			//按钮
+				$('#btn').val('kaivon');					//有参数的话就是设置value值
+			});
+		</script>
+	</head>
+	<body>
+		<input type="button" id="btn" value="按钮" />
+		<div id="box"></div>
+	</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				width: 200px;
+				height: 100px;
+				background: green;
+				color: #fff;
+				margin-top: 10px;
+			}
+		</style>
+		<script src="jquery-3.1.0.js"></script>
+		<script>
+			/*
+			 * animate(property,duration,easing,complate)
+			 * 	property			要运动的属性，它是一个对象
+			 * 	duration			运动的时间（默认为400）
+			 * 	easing			运动的形式
+			 * 					swing		缓冲
+			 * 					linear		匀速
+			 * 	complate			回调函数（运动完成后触发）
+			 */
+			$(function(){
+				$('input').eq(0).click(function(){
+					$('#div1').animate({width:400},2000,'linear',function(){
+						console.log('运动完成了');
+					});
+					$('#div2').animate({width:400},2000,'swing');
+				});
+				
+				/*
+				 * +=		在原有的基础上加上一个数值
+				 * -=		在原有的基础上减去一个数值
+				 */
+				$('input').eq(1).click(function(){
+					//$('#div3').animate({width:'+=100'},500,'linear');
+					$('#div3').animate({width:'-=100'},500,'linear');
+				});
+				
+				
+				$('input').eq(2).click(function(){
+					$('#div4').animate({width:'toggle',height:"toggle"},500,'linear');
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<input type="button" value="点击" />
+		<div id="div1">div1</div>
+		<div id="div2">div2</div>
+		
+		<input type="button" value="点击" />
+		<div id="div3">div3</div>
+		
+		<input type="button" value="点击" />
+		<div id="div4">div4</div>
+	</body>
+</html>

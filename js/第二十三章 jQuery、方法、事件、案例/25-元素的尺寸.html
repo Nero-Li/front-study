@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#box{
+				width: 100px;
+				height: 150px;
+				background: red;
+				padding: 10px;
+				margin: 10px;
+				border: 1px solid #000;
+			}
+		</style>
+		<script src="jquery-3.1.0.js"></script>
+		<script>
+			/*
+			 * width()			获取元素的宽度（值不带单位）
+			 * 		有参数的话，代表设置宽度，参数不用带单位
+			 * height()			获取元素的高度
+			 * 		有参数的话，代表设置高度，参数不用带单位
+			 * innerWidth()		width+padding
+			 * innerHeight()		height+padding
+			 * outerWidth()		width+padding+border
+			 * outerHeight()		height+padding+border
+			 * 
+			 * 
+			 */
+			
+			$(function(){
+				console.log($('#box').width());				//100
+				console.log($('#box').height());				//150
+				console.log($('#box').innerWidth());			//120
+				console.log($('#box').innerHeight());		//170
+				console.log($('#box').outerWidth());			//122
+				console.log($('#box').outerHeight());		//172
+				
+				$('#box').width(200);
+				$('#box').height(300);
+				
+				console.log($('#box').get(0).offsetWidth);	//222
+			});
+		</script>
+	</head>
+	<body>
+		<div id="box"></div>
+	</body>
+</html>

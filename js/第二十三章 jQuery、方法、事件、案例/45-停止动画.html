@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				width: 200px;
+				height: 100px;
+				background: green;
+				color: #fff;
+				margin-top: 10px;
+			}
+		</style>
+		<script src="jquery-3.1.0.js"></script>
+		<script>
+			/*
+			 * animate(property,duration,easing,complate)
+			 * 	property			要运动的属性，它是一个对象
+			 * 	duration			运动的时间（默认为400）
+			 * 	easing			运动的形式
+			 * 					swing		缓冲
+			 * 					linear		匀速
+			 * 	complate			回调函数（运动完成后触发）
+			 * 
+			 * 	设置延迟
+			 * 		delay(time);
+			 * 
+			 * 	停止动画
+			 * 		stop()				只停止当前的运动（属性），后面的运动还会接着走
+			 * 		stop(true)			所有的运动都停了
+			 * 		stop(true,true)		当前的属性会马上到达目标点，后面的运动不会走
+			 * 		finish()				所有的属性都会马上到达目标点，没运动的效果
+			 */
+			$(function(){
+				$('input').eq(0).click(function(){
+					$('#div1').animate({width:300},1000,'linear').animate({height:300},1000,'linear');
+				});
+				
+				$('input').eq(1).click(function(){
+					//$('#div1').stop();
+					//$('#div1').stop(true);
+					//$('#div1').stop(true,true);
+					$('#div1').finish();
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<input type="button" value="开始" />
+		<input type="button" value="停止" />
+		<div id="div1">div1</div>
+	</body>
+</html>

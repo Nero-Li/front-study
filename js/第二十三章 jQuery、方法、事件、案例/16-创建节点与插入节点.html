@@ -1,0 +1,31 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="jquery-3.1.0.js"></script>
+		<script>
+			/*
+			 * 要添加的元素.appendTo(父级)			把要添加的元素添加到父级的最后面
+			 * 要添加的元素.prependTo(父级)			把要添加的元素添加到父级的最前面
+			 * 要添加的元素.insertBefore(元素)		把要添加的元素添加到一个指定的元素的前面
+			 * 要添加的元素.insertAfter(元素)			把要添加的元素添加到一个指定的元素的后面
+			 * 
+			 */
+			$(function(){
+				var li1=$('<li>red</li>');
+				var li2=$('<li>green</li>');
+				var div3=$('<div>blue</div>');
+				var div4=$('<div>yellow</div>');
+				
+				li1.appendTo($('#list'));
+				li2.prependTo($('#list'));
+				div3.insertBefore($('#list'));
+				div4.insertAfter($('#list'));
+			});
+		</script>
+	</head>
+	<body>
+		<ul id="list"></ul>
+	</body>
+</html>

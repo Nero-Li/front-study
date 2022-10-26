@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="jquery-3.1.0.js"></script>
+		<script>
+			/*
+			 * attr()			关于标签属性的操作
+			 * 	一个参数			获取元素的某个属性
+			 * 		参数的值就是属性名字
+			 * 	两个参数			设置元素的某个属性
+			 * 		第一个参数为属性名字，第二个参数为属性要设置成的值
+			 * 	
+			 * data()		给标签添加数据
+			 * 		有参数的话，是添加数据（用对象的形式去表示）
+			 * 		没参数的话，是获取数据
+			 */
+			
+			$(function(){
+				console.log($('p').attr('class'));		//con
+				$('p').attr('class','neirong');
+				
+				$('input').attr('value','kaivon');		//这种方法这样写的话与val()这个方法的效果是一样的
+				$('input').attr('name',123);				//可以添加自定义属性
+				console.log($('input').attr('name'));		//123
+				
+				
+				$('p').data({'name':'kaivon','age':18});
+				console.log($('p').data());
+			});
+		</script>
+	</head>
+	<body>
+		<p class="con">kaivonkaivon</p>
+		<input type="button" value="按钮" />
+	</body>
+</html>

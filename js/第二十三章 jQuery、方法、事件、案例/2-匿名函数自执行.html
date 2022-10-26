@@ -1,0 +1,42 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*
+			 * 匿名函数自执行
+			 * 
+			 * 
+			 * 好处
+			 * 	1、使用匿名函数自执行，创建一个私有空间，这样内外部的命名空间就不会相互干扰了。可以避免变量全局污染
+			 * 	2、把window做为参数传进来
+			 * 		1、一是便于代码压缩，有时候关键字是没法被压缩的
+			 * 		2、兼容模块化写法。在浏览器环境下，给factory传入的是window
+			 * 		3、可以节省查找全局window的时间，提高性能
+			 * 	3、noGlobal为undefined，确保undefined可以使用
+			 * 		在低版本undefined会被修改的，函数不传参就是undefined
+			 * 
+			 * 
+			 * 	global			typeof window !== "undefined" ? window : this
+			 * 	factory			function(global,noGlobal){console.log('这里才是jquery的源码',global,noGlobal);}
+			 */
+			
+			(function(a){
+				console.log(a);
+			})(10);
+			
+			var undefined=20;
+			console.log(undefined);
+			
+			
+			(function(global,factory){
+				factory(global);
+			})(typeof window !== "undefined" ? window : this, function(global,noGlobal){
+				console.log('这里才是jquery的源码',global,noGlobal);
+			});
+		</script>
+	</body>
+</html>

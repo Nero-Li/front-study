@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html> 
+<html>
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
@@ -8,7 +8,7 @@
 				width: 100px;
 				height: 100px;
 				background: #f00;
-				position: absolute;
+				/*position: absolute;*/
 				left: 0;
 				top: 50px;
 			}
@@ -18,34 +18,34 @@
 			 * 1、点击的时候需要getComputedStyle去获取到元素的属性值
 			 * 2、点击开始按钮后开启一个重复执行定时器
 			 * 3、在定时器里不断的修改元素的属性
-			 * 
+			 *
 			 */
 			window.onload=function(){
 				var begin=document.getElementById("begin");
 				var stop=document.getElementById("stop");
 				var box=document.getElementById("box");
 				var timer;
-				
+
 				//给开始按钮添加点击事件
 				begin.onclick=function(){
-					var l=parseInt(getComputedStyle(box).left);
-					var t=parseInt(getComputedStyle(box).top);
+					// var l=parseInt(getComputedStyle(box).left);
+					// var t=parseInt(getComputedStyle(box).top);
 					var w=parseInt(getComputedStyle(box).width);
 					var h=parseInt(getComputedStyle(box).height);
-					
+
 					timer=setInterval(function(){
-						l++;
-						t++;
+						// l++;
+						// t++;
 						w++;
 						h++;
-						
-						box.style.left=l+'px';
-						box.style.top=t+'px';
+
+						// box.style.left=l+'px';
+						// box.style.top=t+'px';
 						box.style.width=w+'px';
 						box.style.height=h+'px';
 					},16);
 					//console.log(l);
-					
+
 					stop.onclick=function(){
 						clearInterval(timer);
 					};

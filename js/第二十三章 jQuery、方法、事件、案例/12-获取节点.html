@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>  
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="jquery-3.1.0.js"></script>
+		<script>
+			/*
+			 * 获取节点
+			 * 	.first()					获取第一个子节点
+			 * 	.last()					获取最后一个子节点
+			 * 	.slice(start,end)		截取部分子节点
+			 * 		start				起始位置
+			 * 		end					结束位置,不包含结束位置，第二个参数不写的话，截到最后一位
+			 * 
+			 * .children	(selector)		获取到元素里的第一层子节点
+			 * 		参数如果没有的话，获取到父级下的所有子节点
+			 * 		有参数的话，参数是一个选择器，找到对应选择器的节点
+			 * .find()					获取元素里的所有节点
+			 * 
+			 */
+			
+			$(function(){
+				$('ul').children().css('color','red');
+				$('ul').children('.blue').css('color','blue');
+				$('ul').find('li').css('background','pink');
+				$('ul').find('span').css('background','black');
+			})
+		</script>
+	</head>
+	<body>
+		<ul>
+			<li>red</li>
+			<li>green</li>
+			<li class="blue">blue</li>
+			<li>yellow</li>
+			<li>pink<span>black</span></li>
+		</ul>
+	</body>
+</html>

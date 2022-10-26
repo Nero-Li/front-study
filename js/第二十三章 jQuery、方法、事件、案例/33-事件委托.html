@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="jquery-3.1.0.js"></script> 
+		<script>
+			//第二个参数是把事件添加到谁的身上
+			$(function(){
+				$('ul').on('click','li',function(){
+					//console.log(1);
+					//这里面的this指向第二个参数
+					//console.log($(this));
+					
+					$(this).css('background','red');
+				});
+				
+				//添加li
+				$('input').click(function(){
+					var li=$('<li>2222</li>');
+					
+					//li.appendTo($('ul'));
+					$('ul').append(li);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<input type="button" value="添加" />
+		<ul style="border: 1px solid #f00;">
+			<li>111</li>
+			<li>111</li>
+			<li>111</li>
+			<li>111</li>
+			<li>111</li>
+		</ul>
+	</body>
+</html>

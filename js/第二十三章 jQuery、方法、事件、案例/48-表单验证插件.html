@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.error{
+				color: red;
+			}
+		</style>
+		<script src="jquery-3.1.0.js"></script>
+		<script src="jquery.validate.js"></script>
+		<script>
+			$(function(){
+				$('#form1').validate({
+					rules:{
+						username: {
+							required: true,
+							minlength: 2
+						},
+						password: {
+							required: true,
+							minlength: 5
+						},
+						confirm_password: {
+							required: true,
+							minlength: 5,
+							equalTo: "#password"
+						},
+						email: {
+							required: true,
+							email: true
+						}
+					},
+					messages:{
+						username: {
+							required: "请输入用户名",
+							minlength: "用户名长度至少两位"
+						},
+						password: {
+							required: "请输入密码",
+							minlength: "密码长度至少为5位"
+						},
+						confirm_password: {
+							required: "请重复输入密码",
+							minlength: "密码长度至少为5位",
+							equalTo: "密码不一至"
+						},
+						email: "请输入正确的邮箱"
+					}
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<form action="#" name="form1" id="form1">
+			<p>
+				<label for="username">用户名：</label>
+				<input type="text" name="username" id="username">
+			</p>
+			<p>
+				<label for="password">密码：</label>
+				<input type="password" name="password" id="password">
+			</p>
+			<p>
+				<label for="confirm_password">重复密码：</label>
+				<input type="password" name="confirm_password" id="confirm_password">
+			</p>
+			<p>
+				<label for="email">邮箱：</label>
+				<input type="text" name="email" id="email">
+			</p>
+			<p><input type="submit" value="注册"></p>
+		</form>
+	</body>
+</html>

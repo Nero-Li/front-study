@@ -48,6 +48,7 @@
 
 				//事件委托（代理）
 				list.onclick=function(ev){
+					console.log(this)
 					console.log(ev.target)
 					if(ev.target.tagName=='LI'){
 						console.log(ev.target.innerHTML);

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			* { padding: 0; margin: 0; }
+			li { list-style: none; }
+			body { background: #44aacf; }
+			img{vertical-align: middle;}
+			
+			#focus { 
+				width: 500px; 
+				height: 300px; 
+				overflow: hidden; 
+				border: 1px solid #d8d8d8; 
+				margin: 100px auto 0; 
+				position: relative; 
+			}
+			ol { 
+				position: absolute; 
+				right: 5px; 
+				bottom: 5px; 
+				z-index: 2; 
+			}
+			ol li { 
+				float: left; 
+				margin-right: 3px; 
+				cursor: pointer; 
+				background: #44aacf; 
+				border: 1px solid #6664b0; 
+				padding: 2px 6px; 
+				color: #fff; 
+				font-family: arial; 
+				font-size: 12px; 
+			}
+			.active { 
+				padding: 4px 10px; 
+				font-weight: bold; 
+				color: #fff; 
+				background: #ff590f; 
+				position: relative; 
+				bottom: 2px; 
+				border: 1px solid #f8ab17; 
+			}
+			
+			ul { 
+				position: absolute; 
+				top: 0px; 
+				left: 0px; 
+				z-index: 1; 
+			}
+			ul li { 
+				width: 500px; 
+				height: 300px; 
+			}
+		</style>
+		<script src="jquery-3.1.0.js"></script>
+		<script>
+			$(function(){
+				var n=0;
+				var timer;
+				
+				change();
+				function change(){
+					$('ol li').attr('class','');
+					$('ol li').eq(n).attr('class','active');
+					$('ul').stop().animate({top:-300*n},500);
+				}
+				
+				$('ol li').mouseover(function(){
+					clearInterval(timer);
+					
+					n=$(this).index();
+					change();
+				});
+				
+				$('#focus').mouseover(function(){
+					clearInterval(timer);
+				});
+				$('#focus').mouseout(function(){
+					atuoPlay();
+				});
+				
+				
+				atuoPlay();
+				function atuoPlay(){
+					timer=setInterval(function(){
+						n++;
+						
+						if(n>$('ol li').length-1){
+							n=0;
+						}
+						
+						change();
+					},2000);
+				}
+			});
+		</script>
+	</head>
+	<body>
+		<div id="focus">
+		    <ol>
+		    		<li class="active">1</li>
+		        <li>2</li>
+		        <li>3</li>
+		        <li>4</li>
+		        <li>5</li>
+		    </ol>
+			<ul>
+				<li><a href="javascript:;"><img src="img2/1.jpg" /></a></li>
+			    <li><a href="javascript:;"><img src="img2/2.jpg" /></a></li>
+			    <li><a href="javascript:;"><img src="img2/3.jpg" /></a></li>
+			    <li><a href="javascript:;"><img src="img2/4.jpg" /></a></li>
+				<li><a href="javascript:;"><img src="img2/5.jpg" /></a></li>
+			</ul>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="jquery-3.1.0.js"></script>
+		<script>
+			/*
+			 * index()		
+			 * 	没有参数
+			 * 		第一个元素（获取到的这个元素，因为jquery获取到的是一组数据）在兄弟元素中的排行
+			 * 	有参数
+			 * 		代表前面的元素在参数的标签（所有标签，不分兄弟）里排行第几
+			 * 		
+			 */
+			$(function(){
+				console.log($('#div1').index());			//0
+				console.log($('div').index());			//1
+				
+				console.log($('span').index());			//4
+				console.log($('#s1').index('span'));		//2
+				console.log($('#s2').index('span'));		//5
+				
+				console.log($('.box').index('span'));	//-1		表示没有找到
+			});
+		</script>
+	</head>
+	<body>
+		<p>p</p>
+		<div>div</div>
+		<div>div</div>
+		<!--<div id="div1"></div>-->
+		<div>
+			<div id="div1"></div>
+		</div>
+		
+		
+		<span></span>
+		<span></span>
+		<div class="box">
+			<span id="s1">s1</span>
+			<span></span>
+			<span></span>
+		</div>
+		<div><span id="s2">s2</span></div>
+	</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+  </head>
+  <body>
+
+    <script>
+      "use strict";
+
+      /*
+       * 块级作用域 :指的在一对大括号中,就是一个块级作用域
+       * ES5有两种作用域:
+       *  1. 全局作用域:变量的生命周期是页面加载到页面关闭
+       *  2. 局部作用域:函数里面声明的变量,生命周期为函数执行到结束
+       *
+       * ES6 新增了块级作用域
+       *   块级作用域:变量声明在一对大括号中,且使用let/const关键字声明
+       */
+
+      if (true) {
+        var a = 10; //全局作用域  global 本质是window
+      }
+      console.log(a);
+      let b = 11
+      debugger //Script作用域(ES6的全局作用域),和window脱离关系
+
+      function fn1() {
+        var c = 20; //局部作用域  local
+        console.log("fn1:" + c);
+        console.log(this);
+      }
+      fn1();
+
+      if (true){
+          let d = 30; //块级作用域 Block
+          debugger
+          console.log(d);
+      }
+      // console.log(d); //报错
+
+      if (true){
+          let d = 31; //块级作用域 Block
+          // debugger
+          console.log(d); //不同的作用域(两个块级),是可以重复声明的
+      }
+
+      {
+          let e = 40
+
+          function fn2() {
+              let e = 41
+              console.log(e) //41
+          }
+          fn2()
+          console.log(e) //40
+
+      }
+
+      //局部作用域优先级 > 块级作用域
+      //在函数体中使用let声明的变量拥有局部作用域
+      function fn3() {
+        var f = 20 //局部作用域
+        let g = 30 //局部作用域
+        console.log(this)
+        debugger
+      }
+      fn3()
+    </script>
+
+
+  </body>
+</html>

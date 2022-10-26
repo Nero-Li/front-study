@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <style>
+      div {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        border: 2px solid black;
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: none;
+      }
+    </style>
+    <script>
+      window.onload = function () {
+        var divs = document.querySelectorAll("div");
+
+        document.onclick = function (ev) {
+          //走第一个圈
+          move(divs[0], ev);
+
+        };
+
+        function move(obj, ev) {
+          obj.style.display = "block";
+
+          var opc = 100; //初始透明度
+
+          var timer = setInterval(function () {
+            obj.style.width = obj.offsetWidth + 4 + "px";
+            obj.style.height = obj.offsetHeight + 4 + "px";
+            //每走一次让透明度减个4，同时要除上个100，因为透明度的值是从0-1，所以要让他变成这个范围内
+            obj.style.opacity = (opc -= 4) / 100;
+
+            obj.style.left = ev.clientX - obj.offsetWidth / 2 + "px";
+            obj.style.top = ev.clientY - obj.offsetHeight / 2 + "px";
+
+            //清除定时器
+            if (opc <= 0) {
+              clearInterval(timer);
+
+              //在定时器停的时候，把它们的值都回到最初的状态，为了下一次点击还从最初的状态开始运动
+              obj.style.width = "10px";
+              obj.style.height = "10px";
+              obj.style.opacity = 0;
+            }
+          }, 20);
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>

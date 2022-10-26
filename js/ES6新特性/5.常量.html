@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <script>
+    'use strict'
+    // console.log(a) // 报错 和let一样,必须先初始化,再使用
+    debugger
+    const a = 10
+    // a=20  //报错
+    console.log(a)
+
+    const obj = {
+      name:'muzi'
+    }
+
+    obj.name = '牛子'
+    console.log(obj) //可以变
+
+    /*
+    * 3、最终解决方案
+
+    　　为了使对象完全不可变，我们还需要freeze()所有的嵌套对象。例如：
+
+    function deepFreeze(obj) {
+        var propNames = Object.getOwnPropertyNames(obj);
+        propNames.forEach(function(name) {
+            var prop = obj[name];
+            if (typeof prop == 'object' && prop !== null) {
+                deepFreeze(prop);
+            }
+        });
+        return Object.freeze(obj);
+    }
+    　　使用这个函数，现在我们可以创建完全不可变的对象：
+
+    deepFreeze(obj);
+    obj.num = 5;
+    obj.obj = { content: "changed!" }
+
+    console.log(obj);
+
+    // {
+    //     num: 10,
+    //     obj: {
+    //         content: "mutable object"
+    //     }
+    // }
+    * */
+  </script>
+</body>
+</html>
