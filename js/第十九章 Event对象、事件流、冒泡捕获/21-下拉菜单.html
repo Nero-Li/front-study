@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html> 
+<html>
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
@@ -8,21 +8,21 @@
 				var input=document.querySelector("input");
 				var ul=document.querySelector("ul");
 				var lis=document.querySelectorAll("li");
-				
+
 				input.onclick=function(ev){
 					ul.style.display='block';
 					ev.cancelBubble=true;
 				};
-				
-				
+
+
 				for(var i=0;i<lis.length;i++){
 					lis[i].onclick=function(){
 						input.value=this.innerHTML;
-						
+
 						ul.style.display='none';
 					};
 				}
-				
+
 				document.onclick=function(){
 					ul.style.display='none';
 				};

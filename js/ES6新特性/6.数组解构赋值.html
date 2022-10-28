@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+  </head>
+  <body>
+    <script>
+      /*
+       * 解构赋值
+       * 按照一定的模式,从数组或者对象中把数据拿出来,对变量进行赋值
+       *
+       * 数组解构赋值
+       *
+       *
+       * 对象解构赋值
+       * */
+      "use strict";
+      // var a = 1;
+      // var b = 2;
+
+      var [a, b, c] = [1, 2, 3];
+      // var a, b, c = [1, 2, 3]; //这是声明3个变量a,b,c 但是只给c赋值,值为数组
+      console.log(a, b, c);
+
+      // var [x,y]=[[1,2],[3,4]]
+      // var [x,[y,z]]=[[1,2],[3,4]]
+      var [[x,y],[z,p]]=[[1,2],[3,4]]
+      console.log(x,y,z,p)
+
+      //常用场景,交换a,b的值
+      // ①异或运算
+      var a = 10
+      var b = 20
+      a = a^b
+      b = a^b //a^b^b = a
+      a = a^b // a^b^a = b
+      console.log(a,b)
+      // ②引入第三方变量
+      var a = 10
+      var b = 20
+      var temp = a
+      a = b
+      b = temp
+      console.log(a,b)
+
+      // ③解构
+      var a = 10
+      var b = 20
+      var [a,b] = [b,a]
+      console.log(a,b)
+
+
+      //常用场景,对方法返回值获取
+      function fn1() {
+          return ["red","green",true]
+      }
+
+      var [a,b,c] = fn1()
+      console.log(a,b,c)
+    </script>
+  </body>
+</html>

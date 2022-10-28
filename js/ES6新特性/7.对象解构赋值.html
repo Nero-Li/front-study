@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+  </head>
+  <body>
+    <script>
+      /*
+       * 解构赋值
+       * 按照一定的模式,从数组或者对象中把数据拿出来,对变量进行赋值
+       *
+       * 数组解构赋值
+       *    等号左右两边都要是数组,变量和值要对应
+       *
+       * 对象解构赋值
+       *    等号左右两边都要是对象,变量名要存在即可,顺序无所谓
+       * */
+      "use strict";
+      var obj = {
+        username:'muzi',
+        phone:'13112345678',
+        study:function () {
+          console.log('学习')
+        }
+      }
+
+      var {username,study,phone} = obj
+      console.log(username)
+      console.log(study)
+      console.log(phone)
+
+      function fn() {
+        return {
+          p1:'value1',
+          p2:true,
+          p3:100
+        }
+      }
+
+      var {p2} = fn()
+      console.log(p2)
+    </script>
+  </body>
+</html>

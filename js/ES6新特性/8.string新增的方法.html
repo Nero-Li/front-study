@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+  </head>
+  <body>
+    <script>
+
+      /**
+       * 1. includes('str'): 调用方字符串是否包含str子字符串,返回布尔类型
+       * 2. startWith('str',beginIndex) :调用方字符串从下标为beginIndex的位置开始,是否以str开头,beginIndex如果不传,默认为0
+       * 3. repeat():重复字符串,创建新字符串,不会改变原字符串
+       *
+       *
+       */
+      "use strict";
+
+      let str = 'helloword'
+
+      console.log(str.includes('w')); //true
+      console.log(str.includes('word')); //true
+      console.log(str.includes('wowo')); //false
+
+      console.log(str.startsWith('h')); //true
+      console.log('---'+str.startsWith('hello')); //true
+      console.log('---'+str.startsWith('hellw')); //true
+      console.log(str.startsWith('w'));//false
+
+      console.log(str.startsWith('e', 1)); //true
+      console.log(str.startsWith('ello', 1)); //true
+
+      var s = str.repeat(2);
+      console.log(str)
+      console.log(s)
+
+    </script>
+  </body>
+</html>
