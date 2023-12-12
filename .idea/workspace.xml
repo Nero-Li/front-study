@@ -1,86 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="e974bdb5-d67c-41e9-9f7c-0ce45aaf753d" name="Changes" comment="# 看coderwhy js部分 308级">
-      <change afterPath="$PROJECT_DIR$/js/ES6新特性/1.简介.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/ES6新特性/2.let.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/ES6新特性/3.块级作用域.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/ES6新特性/4.let和for循环.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/ES6新特性/5.常量.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/1-jquery简介.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/10-链式操作.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/11-获取节点.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/12-获取节点.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/13-父节点.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/14-最近的节点.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/15-创建节点与插入节点.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/16-创建节点与插入节点.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/17-remove()、clone().html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/18-上移下移例子.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/19-索引.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/2-匿名函数自执行.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/20-循环.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/21-选项卡.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/22-get.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/23-包装对象.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/24-包装标签例子.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/25-元素的尺寸.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/26-可视区的尺寸.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/27-元素的距离.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/28-滚动距离.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/29-进入可视区加载图片.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/3-jquery的整体架构.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/30-事件.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/31-事件对象.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/32-拖拽.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/33-事件委托.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/34-自定义事件.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/35-自定义事件拖拽.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/36-工具方法.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/37-show()与hide().html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/38-toggle.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/39-fadeIn()与fadeOut().html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/4-获取元素.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/40-fadeToggle.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/41-sldeUp()与slideDown().html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/42-slideToggle.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/43-animate.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/44-延迟动画.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/45-停止动画.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/46-先停止再运动.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/47-轮播图.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/48-表单验证插件.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/49-扩展方法.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/5-jquery中的事件.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/50-拖拽插件.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/6-css方法.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/7-attr()与data().html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/8-例子.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/9-html、css.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/img1/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/img1/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/img1/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/img1/4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/img1/5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/img2/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/img2/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/img2/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/img2/4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/img2/5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/jquery-1.11.0.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/jquery-2.1.0.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/jquery-3.1.0.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/jquery-3.1.0.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第二十三章 jQuery、方法、事件、案例/jquery.validate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/作业.html" afterDir="false" />
+    <list default="true" id="e974bdb5-d67c-41e9-9f7c-0ce45aaf753d" name="Changes" comment="# 备课ES6新特性2">
+      <change afterPath="$PROJECT_DIR$/css/css_selector/text_decoration/01_text_decoration.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/css_selector/text_decoration/02_text_transform.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/css_selector/text_decoration/03_text_indent.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/css_selector/text_decoration/04_text_align.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/第十七章 DOM结构、关系、节点、属性/19-可视区的宽高.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十七章 DOM结构、关系、节点、属性/19-可视区的宽高.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/1-鼠标事件.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/1-鼠标事件.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/6-鼠标坐标.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/6-鼠标坐标.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/7-跟随鼠标的方块.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/7-跟随鼠标的方块.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/8-鼠标点击小圆圈效果.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/8-鼠标点击小圆圈效果.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/9-target.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/9-target.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/第十五章 定时器、运动框架、日期对象/7-用定时器不断修改元素的属性.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十五章 定时器、运动框架、日期对象/7-用定时器不断修改元素的属性.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/1.测试.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/1.测试.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/ES6新特性/10.函数的默认值.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/ES6新特性/10.函数的默认值.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/ES6新特性/11.箭头函数.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/ES6新特性/11.箭头函数.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/第十四章 数据类型、运算、函数、作用域、闭包/18-if.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十四章 数据类型、运算、函数、作用域、闭包/18-if.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/字符串补充.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/字符串补充.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/数组补充.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/数组补充.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,6 +36,10 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2ECc3Jj8nY4S6Isl5UwJWvevADY" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -109,21 +48,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/lyming/WebstormProjects/front-study/js",
-    "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "/usr/local/lib/node_modules/prettier",
-    "settings.editor.selected.configurable": "watcher.settings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/lyming/WebstormProjects/front-study/js/ES6新特性&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/usr/local/lib/node_modules/prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/js/ES6新特性" />
       <recent name="$PROJECT_DIR$/js" />
       <recent name="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/images" />
       <recent name="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获" />
@@ -186,7 +131,14 @@
       <workItem from="1666603294180" duration="235000" />
       <workItem from="1666621276493" duration="518000" />
       <workItem from="1666678006848" duration="1042000" />
-      <workItem from="1666762934494" duration="10199000" />
+      <workItem from="1666762934494" duration="11258000" />
+      <workItem from="1666793887496" duration="4086000" />
+      <workItem from="1666937412388" duration="5721000" />
+      <workItem from="1666966703395" duration="1143000" />
+      <workItem from="1667301195613" duration="641000" />
+      <workItem from="1668157249174" duration="1200000" />
+      <workItem from="1702353116866" duration="783000" />
+      <workItem from="1702361873432" duration="4141000" />
     </task>
     <task id="LOCAL-00001" summary="# 海棠">
       <created>1662460306951</created>
@@ -314,7 +266,28 @@
       <option name="project" value="LOCAL" />
       <updated>1665745390861</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="# 备课ES6新特性1">
+      <created>1666784266310</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1666784266310</updated>
+    </task>
+    <task id="LOCAL-00020" summary="# 备课ES6新特性1 补充图片">
+      <created>1666784302626</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1666784302626</updated>
+    </task>
+    <task id="LOCAL-00021" summary="# 备课ES6新特性2">
+      <created>1666956615950</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1666956615950</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -349,6 +322,9 @@
     <MESSAGE value="# JS11" />
     <MESSAGE value="# JS12" />
     <MESSAGE value="# 看coderwhy js部分 308级" />
-    <option name="LAST_COMMIT_MESSAGE" value="# 看coderwhy js部分 308级" />
+    <MESSAGE value="# 备课ES6新特性1" />
+    <MESSAGE value="# 备课ES6新特性1 补充图片" />
+    <MESSAGE value="# 备课ES6新特性2" />
+    <option name="LAST_COMMIT_MESSAGE" value="# 备课ES6新特性2" />
   </component>
 </project>

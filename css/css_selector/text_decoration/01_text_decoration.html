@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文本的装饰线</title>
+    <!--
+      none: 无任何装饰线
+          可以去除a元素默认的下划线
+      underline: 下划线
+      overline: 上划线
+      line-through: 删除线
+      -->
+    <style>
+        .baidu {
+            text-decoration: underline;
+            cursor: pointer; //鼠标放置,显示手指
+        }
+
+        .google {
+            text-decoration: line-through; //删除线
+        }
+
+        .bing {
+            text-decoration: overline; //上面的线,但是一般用border-top
+        }
+
+        a {
+            text-decoration: none; //a标签的下划线一般会覆盖掉,不显示下划线
+        }
+    </style>
+</head>
+<body>
+<!--a元素自带text-decoration:underline-->
+<a href="http://www.baidu.com">百度</a>
+<!--  为span设置下划线,其他的样式,比如点一下之后颜色变化,涉及到伪类的设置  -->
+<span class="baidu">百度一下</span>
+<span class="google">Google一下</span>
+<span class="bing">Bing一下</span>
+</body>
+</html>

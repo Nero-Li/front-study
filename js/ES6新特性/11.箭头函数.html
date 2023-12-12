@@ -24,14 +24,20 @@
        *  2. 箭头函数不能当做构造函数使用,不能使用new
        *  3. 函数内部不能使用arguments对象
        */
-        var fn1 = ()=>console.log('箭头函数1')
-        fn1()
+        var fn1 = ()=>{console.log('箭头函数1')}
+        // fn1()
 
         var fn2 = a=>{
+          var b = 3
+          debugger
           console.log('箭头函数2')
           console.log('箭头函数2')
         }
-        fn2()
+        fn2();
+      (function () {
+        console.log('匿名函数自执行')
+      })();
+      (()=> console.log('我是一个箭头函数'))()
     </script>
   </body>
 </html>

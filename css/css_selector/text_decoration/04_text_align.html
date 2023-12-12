@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文本对齐(重要)</title>
+    <!--
+        设置文本对齐的方式
+        left/right : 左/右对齐,默认为left
+        center: 居中显示
+        justify: 两端对齐(需要多行文本,很少使用),最后一行默认左对齐,除非单独设置text-align-last:justify
+        实际上,text-align不仅可以让文本居中,也可以让图片之类的元素
+        所以在官方中定义text-align为:行内内容相对于块级父元素的对齐方式,所以是行级元素在块级父元素中的对齐方式
+    -->
+    <style>
+        .box{
+            background-color: red;
+            color: white;
+            text-align: center;
+            height: 300px;
+        }
+
+        .content{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            /* ①改成行内级元素就可以 */
+            //display: inline-block;
+            /* ②左右auto也可以 */
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">我是div元素
+        <input />
+        <div class="content"></div>
+    </div>
+</body>
+</html>
