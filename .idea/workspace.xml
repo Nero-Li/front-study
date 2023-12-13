@@ -5,17 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e974bdb5-d67c-41e9-9f7c-0ce45aaf753d" name="Changes" comment="# 备课ES6新特性2">
-      <change afterPath="$PROJECT_DIR$/css/css_selector/text_decoration/01_text_decoration.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/css_selector/text_decoration/02_text_transform.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/css_selector/text_decoration/03_text_indent.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/css_selector/text_decoration/04_text_align.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/01文本属性/05_letter_word_spacing.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/02字体属性/01_font_size.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/02字体属性/02_font_family.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/02字体属性/03_font_weight.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/02字体属性/04_font_style.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/02字体属性/05_font_variant.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/CSS属性.assets/image-20231212232934041.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/CSS属性.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/1.测试.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/1.测试.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/ES6新特性/10.函数的默认值.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/ES6新特性/10.函数的默认值.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/ES6新特性/11.箭头函数.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/ES6新特性/11.箭头函数.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/第十四章 数据类型、运算、函数、作用域、闭包/18-if.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/第十四章 数据类型、运算、函数、作用域、闭包/18-if.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/字符串补充.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/字符串补充.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/数组补充.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/数组补充.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/css_selector/text_decoration/01_text_decoration.html" beforeDir="false" afterPath="$PROJECT_DIR$/css/01文本属性/01_text_decoration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/css_selector/text_decoration/02_text_transform.html" beforeDir="false" afterPath="$PROJECT_DIR$/css/01文本属性/02_text_transform.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/css_selector/text_decoration/03_text_indent.html" beforeDir="false" afterPath="$PROJECT_DIR$/css/01文本属性/03_text_indent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/css_selector/text_decoration/04_text_align.html" beforeDir="false" afterPath="$PROJECT_DIR$/css/01文本属性/04_text_align.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +36,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -48,32 +54,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/lyming/WebstormProjects/front-study/js/ES6新特性&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/usr/local/lib/node_modules/prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/Users/apple/WebstormProjects/front-study/css",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "/usr/local/lib/node_modules/prettier",
+    "settings.editor.selected.configurable": "settings.javascript.prettier",
+    "show.migrate.to.gradle.popup": "false",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/css" />
       <recent name="$PROJECT_DIR$/js/ES6新特性" />
       <recent name="$PROJECT_DIR$/js" />
       <recent name="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获/images" />
       <recent name="$PROJECT_DIR$/js/第十九章 Event对象、事件流、冒泡捕获" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/css" />
       <recent name="$PROJECT_DIR$/js" />
     </key>
   </component>
@@ -94,6 +104,13 @@
         <item itemvalue="JavaScript Debug.3-字符串方法-charCodeAt.html" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-56bbcd2c060c-JavaScript-WS-233.11799.229" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -139,6 +156,7 @@
       <workItem from="1668157249174" duration="1200000" />
       <workItem from="1702353116866" duration="783000" />
       <workItem from="1702361873432" duration="4141000" />
+      <workItem from="1702391122834" duration="4398000" />
     </task>
     <task id="LOCAL-00001" summary="# 海棠">
       <created>1662460306951</created>
